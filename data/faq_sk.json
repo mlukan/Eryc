@@ -1,0 +1,660 @@
+{
+    "data": [
+      {
+        "id": 4,
+        "attributes": {
+          "Sekcia": "ZÓNA DARCU A MOBILNÁ APLIKÁCIA",
+          "createdAt": "2022-10-05T16:09:06.235Z",
+          "updatedAt": "2025-01-07T10:45:20.038Z",
+          "locale": "sk",
+          "publishedAt": "2022-10-05T16:09:06.235Z",
+          "SekciaID": null,
+          "Podsekcia_s_otazkami_a_odpovedami": [
+            {
+              "id": 9,
+              "Podsekcia": "Registrácia",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 36,
+                  "Otazka": "Aké údaje potrebujem na registráciu?",
+                  "Odpoved": "Na registráciu v Zóne darcu od Vás budeme potrebovať meno, priezvisko, dátum narodenia, evidenčné číslo darcu, mobilné telefónne číslo a email."
+                },
+                {
+                  "id": 37,
+                  "Otazka": "Kde nájdem svoje evidenčné číslo darcu?",
+                  "Odpoved": "Vaše 10-miestne evidenčné číslo darcu sa nachádza na preukaze darcu krvi (legitimácii) pod čiarovým kódom."
+                },
+                {
+                  "id": 38,
+                  "Otazka": "Na mojom preukaze darcu krvi nie je evidenčné číslo darcu, ako sa k nemu dostanem?",
+                  "Odpoved": "Ak na Vašom preukaze darcu krvi nemáte čiarový kód a evidenčné číslo darcu, je to pravdepodobne z dôvodu, že ste ešte nedarovali krv na pracovisku NTS SR (alebo mobilnom odbere zabezpečovanom tímom NTS SR), a teda Vás zatiaľ nemáme v našej evidencii. Objednať sa na darovanie krvi môžete aj [bez registrácie](https://ntssr.sk/zona_darcu/neregistrovany) - príďte darovať krv a na mieste Vám bude poskytnuté evidenčné číslo darcu krvi.  \n\nAk ste u nás v minulosti absolvovali aspoň jeden odber, v našej databáze o tom určite budeme mať záznam a vieme Vám pomôcť s dohľadaním Vášho evidenčného čísla.\nNapíšte nám na [info@ntssr.sk](mailto:info@ntssr.sk) alebo [web@ntssr.sk](mailto:web@ntssr.sk) a do správy nezabudnite uviesť nasledujúce údaje:\n- meno a priezvisko,\n- dátum narodenia,\n- mobilné telefónne číslo (ktoré ste uviedli na dotazník darcu pri Vašom poslednom odbere na pracovisku NTS SR - platí aj pre výjazdové odbery),\n- Vaše domovské pracovisko NTS SR, prípadne miesto Vášho posledného absolvovaného odberu (pracovisko NTS SR alebo výjazdový odber zabezpečovaný NTS SR).\n"
+                },
+                {
+                  "id": 39,
+                  "Otazka": "Môžem sa registrovať aj keď som ešte nedaroval krv?",
+                  "Odpoved": "Nie, Zóna darcu je prístupná iba darcom krvi, ktorí absolvovali aspoň jeden odber na ktoromkoľvek pracovisku NTS SR (aj mobilnom).\nTo sa však dá jednoducho zmeniť - príďte k nám darovať krv. Objednať sa na darovanie krvi môžete online aj [bez registrácie](https://ntssr.sk/zona_darcu/neregistrovany). "
+                },
+                {
+                  "id": 40,
+                  "Otazka": "Pri registrácii sa mi v mene/priezvisku podaril preklep, ako si ho môžem opraviť?",
+                  "Odpoved": "Po úspešnej registrácii nie je možné jednoducho zmeniť údaje. Môžete si však vymazať svoj účet a opäť sa zaregistrovať so správnymi údajmi. Záznamy o Vašich predošlých odberoch \u003Cu\u003Enebudú dotknuté\u003C/u\u003E, avšak prípadné plánované termíny odberov Vám budú zrušené a bude potrebná opätovná rezervácia termínu odberu.\n\n**Postup na webe:**\n1. prihláste sa do Zóny darcu,\n2. prejdite na Profil darcu,\n3. zvoľte Vymazať účet a potvrďte,\n4. vytvorte si novú registráciu so správnymi údajmi.\n\n**Postup v mobilnej aplikácii NTS SR:**\n1. prejdite na záložku Profil,\n2. prejdite na Nastavenia,\n3. zvoľte Vymazať účet a potvrďte,\n4. vytvorte si novú registráciu so správnymi údajmi."
+                },
+                {
+                  "id": 53,
+                  "Otazka": "Stratil som/neviem nájsť svoj preukaz darcu, ako môžem zistiť svoje evidenčné číslo?",
+                  "Odpoved": "Ak ste u nás absolvovali aspoň jeden odber, v našej databáze o tom určite budeme mať záznam a vieme Vám pomôcť s dohľadaním Vášho evidenčného čísla.\nNapíšte nám na [info@ntssr.sk](mailto:info@ntssr.sk) alebo [web@ntssr.sk](mailto:web@ntssr.sk) a do správy nezabudnite uviesť nasledujúce údaje:\n- meno a priezvisko,\n- dátum narodenia,\n- mobilné telefónne číslo (ktoré ste uviedli na dotazník darcu pri Vašom poslednom odbere na pracovisku NTS SR - platí aj pre výjazdové odbery),\n- Vaše domovské pracovisko NTS SR, prípadne miesto posledného absolvovaného odberu - voliteľné, avšak táto informácia nám pomôže urýchliť dohľadávanie Vašich záznamov.\n\nNáhradný preukaz darcu krvi Vám na počkanie vystavia na ktoromkoľvek odberovom centre NTS SR. Pri najbližšej návšteve NTS SR požiadajte evidenčných pracovníkov o vydanie nového preukazu."
+                },
+                {
+                  "id": 66,
+                  "Otazka": "Nepodarilo sa mi registrovať, pretože \"zadané údaje sa nepodarilo overiť v informačnom systéme NTS SR\", ako mám postupovať?",
+                  "Odpoved": "Informačný systém pri registrácii overuje zadané telefónne číslo s tým, ktoré ste uviedli na dotazník darcu pri poslednom darovaní krvi - teda s Vaším telefónnym číslom, ktoré máme v evidencii. Ak ste Vaše telefónne číslo zmenili a pôvodným už nedisponujete, zmenu záznamu v našej evidencii je možné vykonať výlučne osobne na odberovom pracovisku NTS SR (aj mobilnom). \n\nZmena v záznamoch sa prejaví do 24 hodín, registrácia bude preto možná až nasledujúci deň.\n\nBudeme radi, ak Vašu návštevu spojíte s darovaním krvi - termín si môžete rezervovať aj [bez registrácie](https://www.ntssr.sk/zona_darcu/neregistrovany) (kliknite pre presmerovanie).    "
+                },
+                {
+                  "id": 67,
+                  "Otazka": "Prečo musím pre zmenu telefónneho čísla navštíviť pracovisko NTS SR osobne?",
+                  "Odpoved": "Zmena kontaktných údajov sa môže udiať výlučne osobne na odberných pracoviskách NTS SR po identifikovaní sa dotknutej osoby z dôvodu, že kontaktné údaje dotknutej osoby slúžia ako registračný a identifikačný údaj pre vstup do zóny darcu, ktorá obsahuje osobitnú kategóriu osobných údajov týkajúcu sa zdravia dotknutej osoby. "
+                }
+              ]
+            },
+            {
+              "id": 11,
+              "Podsekcia": "Mobilná aplikácia (technické otázky)",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 57,
+                  "Otazka": "Aplikácia Elektronická karta darcu mi prestala fungovať, čo s tým?",
+                  "Odpoved": "Keďže máme spustenú novú mobilnú aplikáciu NTS SR, funkčnosť pôvodnej aplikácie _Elektronická karta darcu_ bola ukončená. Novú aplikáciu si môžete stiahnuť [\u003ETU\u003C](https://play.google.com/store/apps/details?id=sk.bluelemons.ntssr&hl=sk&gl=US), zaregistrujte sa a môžete naplno využívať všetky funkcie, na ktoré ste boli zvyknutí v aplikácii EKD, s novým dizajnom - a navyše sa môžete sami objednať na darovanie krvi online."
+                },
+                {
+                  "id": 41,
+                  "Otazka": "Mal som pôvodnú mobilnú aplikáciu EKD, musím sa registrovať aj v novej?",
+                  "Odpoved": "Aby ste mohli využívať naplno novú mobilnú aplikáciu, s rovnakými funkciami ako v aplikácii EKD, **áno**. Nová mobilná aplikácia ponúka aj objednanie sa na darovanie krvi a je plne prepojená so [Zónou darcu](https://ntssr.sk/web/prihlasenie_do_zony_darcu) na webe NTS."
+                },
+                {
+                  "id": 43,
+                  "Otazka": "Prečo neviem nájsť novú aplikáciu NTS SR v obchode Google Play? ",
+                  "Odpoved": "Je to pravdepodobne preto, že nová aplikácia nie je kompatibilná s Vaším zariadením z dôvodu zastaranej verzie OS Android. Nová aplikácia NTS SR funguje na zariadeniach s operačným systémom Android verzie 10 a vyššej. Ak Vaše zariadenie nie je možné aktualizovať aspoň na Android 10, aplikáciu si nebudete môcť stiahnuť. Do Zóny darcu sa však stále môžete dostať aj cez webové rozhranie - prejdite na odkaz [Darca prihlásenie](https://ntssr.sk/web/prihlasenie_do_zony_darcu) a budete mať rovnako k dispozícii všetky funkcie, ktoré ponúka mobilná aplikácia."
+                },
+                {
+                  "id": 59,
+                  "Otazka": "Bol som prihlásený v appke EKD, do novej appky NTS SR sa mi nedá prihlásiť, prečo?",
+                  "Odpoved": "Do novej aplikácie je potrebná nová registrácia. Rovnaké prihlasovacie údaje potom môžete použiť aj na webe pri prihlasovaní do Zóny darcu."
+                },
+                {
+                  "id": 62,
+                  "Otazka": "Nainštaloval som si novú aplikáciu, ale nedokážem sa prilhásiť, lebo neviem heslo. Nepomáha ani obnova hesla, ako mám postupovať?",
+                  "Odpoved": "Pred prvým prihlásením je potrebné si vytvoriť novú registráciu (aj keď ste v minulosti používli aplikáciu _Elektronická karta darcu_). Po registrácii a potvrdení overovacieho emailu sa budete môcť prihlásiť aj do aplikácie, aj do Zóny darcu na webe NTS SR."
+                },
+                {
+                  "id": 58,
+                  "Otazka": "Mám zariadenie Huawei, môžem si stiahnuť aplikáciu NTS SR?",
+                  "Odpoved": "Nie, mobilná aplikácia NTS SR vyžaduje pre plnohodnotné fungovanie služby Google Play. Všetky funkcie, ktoré ponúka aplikácia NTS SR, nájdete aj na webe v Zóne darcu. Prejdite na odkaz [Darca prihlásenie](https://www.ntssr.sk/web/prihlasenie_do_zony_darcu), zaregistrujte sa, prihláste sa a budete mať k dispozícii prehľad svojich odberov, preukaz darcu a možnosť objednať sa online na darovanie krvi.\n\nV budúcnosti plánujeme spustiť aj aplikáciu pre zariadenia Huawei."
+                },
+                {
+                  "id": 63,
+                  "Otazka": "Nemôžem si stiahnuť aplikáciu, pretože obchod Google Play mi píše, že zariadenie nie je kompatibilné s touto verziou, prečo?",
+                  "Odpoved": "Nová aplikácia NTS SR funguje na zariadeniach s operačným systémom Android verzie 10 a vyššej. Ak Vaše zariadenie nie je možné aktualizovať aspoň na Android 10, aplikáciu si nebudete môcť stiahnuť. Do Zóny darcu sa však stále môžete dostať aj cez webové rozhranie - prejdite na odkaz [Darca prihlásenie](https://ntssr.sk/web/prihlasenie_do_zony_darcu) a budete mať rovnako k dispozícii všetky funkcie, ktoré ponúka mobilná aplikácia."
+                },
+                {
+                  "id": 64,
+                  "Otazka": "V časti \"Moje ocenenia\" sa mi nesprávne zobrazuje 0 odberov, kde je chyba?",
+                  "Odpoved": "Chyba v tomto prípade nie je v našich informačných systémoch, ani na našom webe, ale v samotnom prehliadači (vo Vašom zariadení) a nastaveniach automatického prekladu stránok.\n \nPoužívate ako prehliadač Google Chrome? Postup na opravu je nasledovný: \n·        ťuknite na možnosti (tri bodky v pravom hornom rohu),\n·        zvoľte „Nastavenia“,\n·        zvoľte „Jazyky“,\n·        vypnite možnosť „Ponúkať odosielanie stránok v cudzích jazykoch do Prekladača Google“,\n·        opäť načítajte web www.ntssr.sk, prihláste sa a overte, či už máte údaje uvedené správne (aj počet odberov v časti „Moje ocenenia“).\n\nAk používate iný prehliadač (napr. Microsoft Edge, ...), vyhľadajte a zrušte v nastaveniach prekladanie stránky."
+                },
+                {
+                  "id": 65,
+                  "Otazka": "Prečo si staršie zariadenia s OS Android verzie 9 a nižšej nemôžu nainštalovať mobilnú aplikáciu NTS SR?",
+                  "Odpoved": "Vývojárske prostredie spoločnosti Google pre tvorbu a akceptáciu aplikácií neumožňuje z bezpečnostných dôvodov uvádzanie aplikácií spätne kompatibilných s OS Android verzie nižšej než 10. \nAk Vaše zariadenie nie je možné aktualizovať na OS Android verzie 10, mobilnú aplikáciu NTS SR si nenainštalujete. Môžete sa však registrovať a prihlásiť do Zóny darcu na webe (cez prehliadač) a rovnako využívať všetky funkcie, ktoré ponúka aj mobilná aplikácia NTS SR (prehľad odberov, preukaz darcu, rezervácia termínu darovania, atď.)."
+                },
+                {
+                  "id": 142,
+                  "Otazka": "Prečo sa mi zobrazuje len jeden parameter krvného obrazu?",
+                  "Odpoved": "Podľa platných noriem je vyšetrenie krvného obrazu pri odbere povinné len raz ročne. Táto možnosť sa využíva pri výjazdových odberoch, kde sa vyšetruje len hladina hemoglobínu (Hgb odber z prsta). Ak pravidelne darujete krv iba na výjazdových odberoch, ostatné parametre krvného obrazu uvidíte iba pri jednom odbere za rok.  "
+                },
+                {
+                  "id": 146,
+                  "Otazka": "Prečo sa mi zobrazuje nesprávny počet absolvovaných odberov?",
+                  "Odpoved": "Bude to pravdepodobne spôsobené tým, že ste darovali krv alebo zložky krvi na inom hematologicko-transfúziologickom pracovisku (HTO), teda mimo NTS SR. Pri najbližšej návšteve ktoréhokoľvek odberového centra NTS SR predložte evidenčným pracovníkom Váš preukaz darcu (alebo inak preukážte Váš reálny počet absolvovaných odberov, napríklad kartičkou Jánskeho plakety) a my Vám údaj o počte odberov opravíme.\nZmena by sa mala prejaviť vo Vašej Zóne darcu do 24 hodín.\nDetailné informácie o Vašom krvnom obraze uvidíte v Zóne darcu iba z odberov absolvovaných na pracovisku NTS SR (vrátane mobilných odberov). "
+                },
+                {
+                  "id": 147,
+                  "Otazka": "Prečo nevidím detailné informácie o krvnom obraze zo všetkých mojich odberov?",
+                  "Odpoved": "V Zóne darcu a aplikácii sa zobrazujú detailné informácie iba z Vašich posledných desiatich odberov, ktoré ste absolvovali na pracoviskách NTS SR (vrátane mobilných odberov). Ak ste darovali krv a zložky z krvi aj na hematologicko-transfúziologickom oddelení inej organizácie než NTS SR, tieto sa Vám v Zóne darcu a mobilnej aplikácii nebudú zobrazovať."
+                },
+                {
+                  "id": 148,
+                  "Otazka": "Dnes som na pracovisku NTS SR daroval krv, v mobilnej aplikácii sa mi však tento odber nezobrazuje, prečo?",
+                  "Odpoved": "V Zóne darcu/mobilnej aplikácii NTS SR sa informácie o odberoch nezobrazujú v reálnom čase. Naše informačné systémy sa synchronizujú a aktualizujú s istým časovým odstupom, preto detaily Vášho odberu uvidíte v prehľade odberov najskôr nasledujúci deň."
+                },
+                {
+                  "id": 149,
+                  "Otazka": "Daroval som krv na hematologicko-transfúziologickom oddelení nemocnice, prečo sa mi nezobrazujú informácie o tomto odbere?",
+                  "Odpoved": "Pokiaľ pracovisko, kde ste darovali krv, nie je súčasťou siete pracovísk Národnej transfúznej služby SR, tento odber sa Vám nemôže zobrazovať v Zóne darcu/mobilnej aplikácii NTS SR. Naše informačné systémy nemajú prístup do databáz iných organizácií (napr. hematologicko-transfúziologické oddelenia nemocničných zariadení), z toho dôvodu nie je technicky možné, aby sa tieto odbery preniesli do našej evidencie a tieto záznamy nevieme doplniť manuálne ani dodatočne. V Zóne darcu/mobilnej aplikácii NTS SR sa Vám odbery, ktoré absolvujete na odberných centrách NTS SR a výjazdových odberoch zabezpečovaných NTS SR, zobrazia automaticky a vždy do 24 hodín od odberu. "
+                },
+                {
+                  "id": 182,
+                  "Otazka": "Zmenil/-a som si priezvisko, ako ho môžem zmeniť aj v Zóne darcu/mobilnej aplikácii?",
+                  "Odpoved": "Osobné údaje (meno, priezvisko, ...) nie je možné jednoducho zmeniť. Môžete si však vymazať svoj účet a opäť sa zaregistrovať so správnymi/aktualizovanými údajmi. Záznamy o Vašich predošlých odberoch \u003Cu\u003Enebudú dotknuté\u003C/u\u003E, avšak prípadné plánované termíny odberov Vám budú zrušené a bude potrebná opätovná rezervácia termínu odberu.\n\n**Postup na webe:**\n1. prihláste sa do Zóny darcu,\n2. prejdite na Profil darcu,\n3. zvoľte Vymazať účet a potvrďte,\n4. vytvorte si novú registráciu so správnymi/aktuálnymi údajmi.\n\n**Postup v mobilnej aplikácii NTS SR:**\n1. prejdite na záložku Profil,\n2. prejdite na Nastavenia,\n3. zvoľte Vymazať účet a potvrďte,\n4. vytvorte si novú registráciu so správnymi/aktuálnymi údajmi."
+                },
+                {
+                  "id": 187,
+                  "Otazka": "Aplikácia mi zobrazuje nereálny počet dní do najbližšieho možného odberu, čo s tým?",
+                  "Odpoved": "Prosíme, kontaktujte lekára Odberného centra NTS SR, kde ste naposledy darovali krv (ak sa jednalo o mobilný odber, kontaktujte pracovisko, ktoré vykonávalo výjazd)."
+                },
+                {
+                  "id": 186,
+                  "Otazka": "Keď sa chcem objednať na odber, aplikácia mi chybne hlási, že môj vek je príliš vysoký na odber, prečo?",
+                  "Odpoved": "Prosíme, kontaktujte lekára Odberného centra NTS SR, kde ste naposledy darovali krv (ak sa jednalo o mobilný odber, kontaktujte pracovisko, ktoré vykonávalo výjazd)."
+                }
+              ]
+            },
+            {
+              "id": 10,
+              "Podsekcia": "Zóna darcu (aj v aplikácii)",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 44,
+                  "Otazka": "Prečo sa mi zobrazuje nesprávny počet absolvovaných odberov?",
+                  "Odpoved": "Bude to pravdepodobne spôsobené tým, že ste darovali krv alebo zložky krvi na inom hematologicko-transfúziologickom pracovisku (HTO), teda mimo NTS SR. Pri najbližšej návšteve ktoréhokoľvek odberového centra NTS SR predložte evidenčným pracovníkom Váš preukaz darcu (alebo inak preukážte Váš reálny počet absolvovaných odberov, napríklad kartičkou Jánskeho plakety) a my Vám údaj o počte odberov opravíme.\nZmena by sa mala prejaviť vo Vašej Zóne darcu do 24 hodín.\nDetailné informácie o Vašom krvnom obraze uvidíte v Zóne darcu iba z odberov absolvovaných na pracovisku NTS SR (vrátane mobilných odberov). "
+                },
+                {
+                  "id": 45,
+                  "Otazka": "Prečo nevidím detailné informácie o krvnom obraze zo všetkých mojich odberov?",
+                  "Odpoved": "V Zóne darcu a aplikácii sa zobrazujú detailné informácie iba z Vašich posledných desiatich odberov, ktoré ste absolvovali na pracoviskách NTS SR (vrátane mobilných odberov). Ak ste darovali krv a zložky z krvi aj na hematologicko-transfúziologickom oddelení inej organizácie než NTS SR, tieto sa Vám v Zóne darcu a mobilnej aplikácii nebudú zobrazovať."
+                },
+                {
+                  "id": 144,
+                  "Otazka": "Dnes som na pracovisku NTS SR daroval krv, v mobilnej aplikácii sa mi však tento odber nezobrazuje, prečo?",
+                  "Odpoved": "V Zóne darcu/mobilnej aplikácii NTS SR sa informácie o odberoch nezobrazujú v reálnom čase. Naše informačné systémy sa synchronizujú a aktualizujú s istým časovým odstupom, preto detaily Vášho odberu uvidíte v prehľade odberov najskôr nasledujúci deň."
+                },
+                {
+                  "id": 145,
+                  "Otazka": "Daroval som krv na hematologicko-transfúziologickom oddelení nemocnice, prečo sa mi nezobrazujú informácie o tomto odbere?",
+                  "Odpoved": "Pokiaľ pracovisko, kde ste darovali krv, nie je súčasťou siete pracovísk Národnej transfúznej služby SR, tento odber sa Vám nemôže zobrazovať v Zóne darcu/mobilnej aplikácii NTS SR. Naše informačné systémy nemajú prístup do databáz iných organizácií (napr. hematologicko-transfúziologické oddelenia nemocničných zariadení), z toho dôvodu nie je technicky možné, aby sa tieto odbery preniesli do našej evidencie a tieto záznamy nevieme doplniť manuálne ani dodatočne. V Zóne darcu/mobilnej aplikácii NTS SR sa Vám odbery, ktoré absolvujete na odberných centrách NTS SR a výjazdových odberoch zabezpečovaných NTS SR, zobrazia automaticky a vždy do 24 hodín od odberu. "
+                },
+                {
+                  "id": 150,
+                  "Otazka": "Prečo sa mi zobrazuje len jeden parameter krvného obrazu?",
+                  "Odpoved": "Podľa platných noriem je vyšetrenie krvného obrazu pri odbere povinné len raz ročne. Táto možnosť sa využíva pri výjazdových odberoch, kde sa vyšetruje len hladina hemoglobínu (Hgb odber z prsta). Ak pravidelne darujete krv iba na výjazdových odberoch, ostatné parametre krvného obrazu uvidíte iba pri jednom odbere za rok.  "
+                }
+              ]
+            },
+            {
+              "id": 12,
+              "Podsekcia": "Objednávanie na darovanie",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 46,
+                  "Otazka": "Môžem sa objednať na darovanie celej krvi, aj keď od posledného odberu neprešli 3 mesiace (muži)/4 mesiace (ženy)?",
+                  "Odpoved": "Za určitých podmienok to možné je - avšak objednávkový systém je nastavený tak, aby medzi jednotlivými odbermi boli dodržané náležité odstupy. Odporúčame Vám kontaktovať Vami vybrané odberové centrum NTS SR telefonicky a informovať sa priamo u kvalifikovaného personálu, ktorý Vám po zvážení okolností vytvorí rezerváciu termínu."
+                },
+                {
+                  "id": 47,
+                  "Otazka": "Bol/-a som darovať plazmu a aplikácia mi ukazuje, že môžem ísť darovať celú krv už o 14 dní, je to v poriadku?",
+                  "Odpoved": "Áno, je to správne. Interval medzi odbermi je nastavený v súlade s normami a s ohľadom na Vaše zdravie. Viac informácií Vám v prípade záujmu poskytnú naši lekári priamo na pracoviskách."
+                },
+                {
+                  "id": 48,
+                  "Otazka": "Pri objednávaní som omylom zvolil/-a nesprávne odberové centrum NTS SR, ako sa to dá zmeniť?",
+                  "Odpoved": "Je potrebné zrušiť rezervovaný termín a vytvoriť novú rezerváciu na požadovanom odberovom pracovisku NTS SR."
+                },
+                {
+                  "id": 49,
+                  "Otazka": "Je možné objednať sa aj na mobilný odber?",
+                  "Odpoved": "Na mobilný (výjazdový) odber nie je možné sa objednať online ani telefonicky. Odporúčame kontaktovať a informovať sa u organizátora mobilného odberu."
+                },
+                {
+                  "id": 60,
+                  "Otazka": "Pri poslednom pokuse darovať som bol dočasne vyradený, objednávkový systém mi nedovolí skoršiu rezerváciu termínu než 3 mesiace (muži)/4 mesiace (ženy), môžem sa objednať aj skôr?",
+                  "Odpoved": "Dĺžka dočasného vyradenia z darcovstva je na posúdení vyšetrujúceho lekára. Ak Vám lekár povie, že môžete darovať napríklad mesiac po dočasnom vyradení, chcete prísť na odber v stanovenej lehote, avšak objednávkový systém Vás nepustí skôr než je štandardný odstup medzi jednotlivými odbermi, kontaktujte odberné centrum telefonicky. Náš personál Vám po zvážení okolností môže vytvoriť rezerváciu termínu odberu aj skôr než po uplynutí štandardného odstupu medzi odbermi."
+                },
+                {
+                  "id": 61,
+                  "Otazka": "Prečo by som sa mal objednať na darovanie krvi?",
+                  "Odpoved": "Nie je to povinné, neodmietneme Vás ani keď prídete na odber bez predošlej rezervácie termínu odberu. Darcov, ktorí sú objednaní na konkrétny čas však uprednostňujeme tak, aby sme v maximálnej možnej miere dodržali rezervovaný termín a zároveň predišli hromadeniu väčšieho počtu darcov na odberných pracoviskách.\nObjednať sa dá online ([aj bez registrácie](https://www.ntssr.sk/zona_darcu/neregistrovany)) alebo telefonicky. Kontakty na pracoviská nájdete [TU](https://www.ntssr.sk/web/odberove_centra)."
+                }
+              ]
+            }
+          ],
+          "localizations": {
+            "data": []
+          }
+        }
+      },
+      {
+        "id": 5,
+        "attributes": {
+          "Sekcia": "BENEFITY PRE DARCOV KRVI",
+          "createdAt": "2022-10-15T15:45:24.582Z",
+          "updatedAt": "2024-10-01T14:50:01.915Z",
+          "locale": "sk",
+          "publishedAt": "2022-10-15T15:45:24.582Z",
+          "SekciaID": null,
+          "Podsekcia_s_otazkami_a_odpovedami": [
+            {
+              "id": 14,
+              "Podsekcia": "Zákonom určené kompenzácie",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 50,
+                  "Otazka": "Aké sú zákonom určené kompenzácie pre darcov krvi?",
+                  "Odpoved": "Národná transfúzna služba SR poskytuje darcom krvi výhody, ktoré sú v súlade\ns legislatívou SR. Na Slovensku upravuje dobrovoľné darovanie krvi zákon č. 362/2011 Z.z. o liekoch a zdravotníckych pomôckach a o zmene a doplnení niektorých zákonov v znení neskorších predpisov, kde § 13 ods. 11 ustanovuje:\n“Odber krvi a zložiek z krvi možno uskutočniť len bezodplatne. Poskytovateľ zdravotnej starostlivosti nemôže za odber krvi a zložiek z krvi priamo ani nepriamo sľúbiť, poskytnúť alebo nechať poskytnúť, a to ani prostredníctvom tretej osoby, žiadnu odmenu, náhradu ani protihodnotu v akejkoľvek forme **okrem poskytnutia jednorazového drobného občerstvenia a príspevku na občerstvenie najviac vo výške 75 % stravného poskytovaného podľa osobitného predpisu (zákon o cestovných náhradách) a preukázaných nákladov na cestovné.**”\n\nV zmysle § 138 ods. 2 Zákonníka práce je darovanie krvi a aferézy prekážkou v práci na strane zamestnanca z dôvodu všeobecného záujmu, pri ktorej patrí zamestnancovi náhrada mzdy v sume jeho priemerného zárobku. **Pracovné voľno patrí na nevyhnutne potrebný čas a to za čas cesty na odber a späť a za čas na zotavenie po odbere, pokiaľ tieto skutočnosti zasahujú do pracovného času zamestnanca.** Podľa charakteru odberu a zdravotného stavu darcu môže lekár určiť, že čas potrebný na jeho zotavenie sa predlžuje, najviac po dobu zasahujúcu do pracovného času v rámci 96 hodín od nástupu cesty na odber. Ak nedôjde k odberu, poskytne sa pracovné voľno s náhradou mzdy v sume jeho priemerného zárobku len za preukázaný nevyhnutne potrebný čas neprítomnosti v práci."
+                }
+              ]
+            },
+            {
+              "id": 13,
+              "Podsekcia": "Zákonom určené výhody",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 51,
+                  "Otazka": "Aké sú zákonom určené výhody pre darcov krvi?",
+                  "Odpoved": "Podľa § 2 ods. 1 písm. k) zákona č. 577/2004 Z.z. o rozsahu zdravotnej starostlivosti uhrádzanej na základe verejného zdravotného poistenia a o úhradách za služby súvisiace s poskytovaním zdravotnej starostlivosti v znení neskorších predpisov je na základe verejného zdravotného poistenia **plne uhrádzaná jedna preventívna prehliadka poistenca raz za rok** evidovaným darcom krvi, darcom orgánov alebo tkanív, u lekára so špecializáciou v špecializačnom odbore všeobecné lekárstvo alebo u lekára so špecializáciou v špecializačnom odbore všeobecná starostlivosť o deti a dorast (v porovnaní s jednou prehliadkou raz za dva roky v prípade poistencov, ktorí nie sú darcami).\n\nPodľa § 38 ods. 8 písm. a) zákona č. 577/2004 Z. z. o rozsahu zdravotnej starostlivosti uhrádzanej na základe verejného zdravotného poistenia a o úhradách za služby súvisiace s poskytovaním zdravotnej starostlivosti v znení neskorších predpisov **nositeľ najmenej striebornej Janského plakety je oslobodený od povinnosti úhrady za stravovanie a pobyt na lôžku pri poskytovaní ústavnej starostlivosti a ústavnej starostlivosti v liečebni, v prírodných liečebných kúpeľoch a kúpeľných liečebniach** (platí pri zdravotnej starostlivosti plne uhrádzanej alebo čiastočne uhrádzanej na základe verejného zdravotného poistenia. Podľa § 38 ods. 9 zákona č. 577/2004 Z. z. sa vyššie uvedené nevzťahuje na poistencov, ktorým sa poskytuje zdravotná starostlivosť v prírodných liečebných kúpeľoch s indikáciami B)."
+                }
+              ]
+            },
+            {
+              "id": 16,
+              "Podsekcia": "Preplácanie cestovných nákladov darcom krvi a zložiek krvi",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 69,
+                  "Otazka": "Mám nárok na preplatenie cestovného?",
+                  "Odpoved": "**Pre účely preukázania nákladov darcu na cestovné postupujte prosím nasledovne:**\n\nCestovné náhrady sa poskytujú bezpríspevkovým darcom krvi v prípade, že o to požiadajú z miesta trvalého resp. prechodného pobytu alebo obvyklého pobytu (ďalej len „bydlisko“) do Odberného centra Národnej transfúznej služby SR (ďalej len „OC NTS SR“) resp. miesta mobilného odberu a späť z dôvodu darovania krvi. Obvyklý pobyt sa preukazuje čestným vyhlásením darcu krvi (tlačivo je k dispozícii na každom OC NTS SR).\n\nPríslušným OC NTS SR sa rozumie také pracovisko NTS SR, ktoré je miestne príslušné k obci bydliska darcu krvi. Toto obmedzenie sa vo **výnimočných prípadoch nepoužije, keď je darca krvi telefonicky pozvaný na odber priamo** na vzdialenejšie OC NTS SR.\n\nDarca preukazuje nárok na vyplatenie cestovných náhrad predložením cestovných lístkov použitých na cestu z bydliska do OC NTS SR resp. miesta mobilného odberu.\n\nV prípade, ak darca krvi použije na dopravu osobné motorové vozidlo, má nárok na vyplatenie cestovných výdavkov v sume zodpovedajúcej cene spiatočného cestovného lístka pravidelnej verejnej dopravy. Použitie osobného motorového vozidla darcom krvi sa preukazuje čestným vyhlásením (tlačivo je k dispozícii na každom OC NTS SR).\n\nVzdialenosť z bydliska ku konkrétnemu OC NTS SR resp. miestu mobilného odberu a výšku cestovných náhrad pre darcu krvi vypočíta zamestnanec evidencie darcov na základe zadanej informácie [cez internet](https://cp.hnonline.sk/vlakbusmhd/spojenie/).\n\nDarca krvi je na požiadanie zamestnanca povinný predložiť k nahliadnutiu technický preukaz motorového vozidla, ktoré použil na dopravu.\n\nCestovné náhrady sa vyplácajú darcom krvi proti podpisu darcu na dotazníku.\n\nPri použití osobného motorového vozidla v prípade dovezenia viacerých darcov krvi v tom istom vozidle sa preplácajú cestovné náhrady v sume zodpovedajúcej cene cestovného lístka pravidelnej verejnej dopravy, avšak len jednému darcovi krvi."
+                }
+              ]
+            }
+          ],
+          "localizations": {
+            "data": [
+              {
+                "id": 7,
+                "attributes": {
+                  "Sekcia": "BENEFITS FOR BLOOD DONORS",
+                  "createdAt": "2023-04-21T10:20:35.656Z",
+                  "updatedAt": "2024-01-19T12:30:30.497Z",
+                  "locale": "en",
+                  "publishedAt": "2023-04-21T10:20:35.656Z",
+                  "SekciaID": null
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 1,
+        "attributes": {
+          "Sekcia": "O DAROVANÍ KRVI",
+          "createdAt": "2022-06-09T14:27:39.178Z",
+          "updatedAt": "2024-09-27T13:03:37.859Z",
+          "locale": "sk",
+          "publishedAt": "2022-06-09T14:27:39.178Z",
+          "SekciaID": "o_darovani_krvi",
+          "Podsekcia_s_otazkami_a_odpovedami": [
+            {
+              "id": 1,
+              "Podsekcia": "Všeobecne o darovaní krvi",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 1,
+                  "Otazka": "Kde môžem darovať krv",
+                  "Odpoved": "Krv môžete darovať na pracovisku každého odberného centra NTS SR v čase odberových hodín a taktiež prostredníctvom mobilnej výjazdovej jednotky, kedy náš výjazdový tím príde priamo za darcami (do firiem, škôl, organizácií)."
+                },
+                {
+                  "id": 2,
+                  "Otazka": "Aké sú minimálne požiadavky na prijatie darcu krvi?",
+                  "Odpoved": "Musíte mať vek medzi 18- 60 rokov, vážiť minimálne 50 kg, a môžete byť darcom až do vašich 65 rokov. Nemali by ste trpieť chronickým a infekčným ochorením ani sa na žiadne liečiť. "
+                },
+                {
+                  "id": 4,
+                  "Otazka": "Musia byť otázky ohľadom môjho zdravotného stavu zodpovedané vždy pri každom mojom odbere?",
+                  "Odpoved": "Pre ochranu zdravia možného príjemcu transfúzie (pacienta) je nutné, aby dotazníky pre darcov boli vyplnené pravdivo a vždy nanovo pri každom darovaní krvi. Zákony požadujú, aby boli transfúziologické zariadenia v tomto postupe jednotné. "
+                },
+                {
+                  "id": 5,
+                  "Otazka": "Koľko krvi sa odoberá?",
+                  "Odpoved": "Celkovo je to približne 450 ml krvi."
+                },
+                {
+                  "id": 6,
+                  "Otazka": "Ako dlho asi trvá bežný odber krvi ?",
+                  "Odpoved": "Samotný odber krvi trvá asi 5-15 minút. Celý proces darovania krvi, od registrácie až po poodberové občerstvenie a odchod domov, trvá asi jednu hodinu."
+                },
+                {
+                  "id": 7,
+                  "Otazka": "Ako dlho asi trvá bežný odber plazmy a krvných doštičiek (trombocytov) ?",
+                  "Odpoved": "Odber plazmy pomocou aferetického prístroja (separátora), inak povedané plazmaferéza, trvá približne 30-40 minút. Odber krvných doštičiek pomocou aferetického prístroja (separátora), ináč povedané trombocytaferéza, trvá približne 60 minút."
+                },
+                {
+                  "id": 8,
+                  "Otazka": "Ako dlho bude môjmu telu trvať kým nahradí krv, ktorú som daroval?",
+                  "Odpoved": "Objem tekutín sa vyrovná behom pár hodín po darovaní. Počet stratených červených krviniek si vaše telo nahradí počas niekoľkých nasledujúcich dní až týždňa."
+                },
+                {
+                  "id": 9,
+                  "Otazka": "Ako často môžem ísť darovať krv?",
+                  "Odpoved": "Krv môžu darovať muži štyrikrát do roka ( každé tri mesiace), ženy trikrát do roka (každé štyri mesiace). Je to čas, ktorý dovolí, aby si vaše telo úplne doplnilo počet červených krviniek a zásob železa po predchádzajúcom odbere. Krvné doštičky a plazma (ak sa odoberajú pomocou aferetického prístroja - separátora) sa môžu darovať častejšie, a to raz za dva týždne . Je to tým, že telo si nahradí stratu doštičiek a plazmy oveľa rýchlejšie ako stratu červených krviniek a železa. Doštičky sa vrátia na normálnu hladinu už po 72 hodinách po darovaní."
+                },
+                {
+                  "id": 10,
+                  "Otazka": "Má moje telo dostatok krvi na darovanie?",
+                  "Odpoved": "Áno. Pokiaľ vážite viac ako 50 kg, vaše telo obsahuje 4,5 až 6 litrov krvi (objem závisí od vašej váhy a výšky) "
+                },
+                {
+                  "id": 11,
+                  "Otazka": "Ako môžem zistiť hladinu môjho železa? ",
+                  "Odpoved": "Vyšetriť Vám ho môže váš lekár. Darcom sa kontroluje pred odberom hladina hemoglobínu (červeného krvného farbiva obsahujúceho železo). Toto opatrenie sa robí pre ochranu darcu, aby aj po darovaní krvi mal darca hladinu hemoglobínu bezpečnú pre dospelého jedinca. Darca môže zvýšiť svoju hladinu železa konzumáciou červeného mäsa, šošovice, tmavozelenej zeleniny, rias, orechov, semien, obilnín alebo užívaním výživových doplnkov obsahujúcich železo. "
+                },
+                {
+                  "id": 12,
+                  "Otazka": "Ako sa budem cítiť po odbere? Mohol by mi odber krvi počas darovania ublížiť?",
+                  "Odpoved": "Väčšina ľudí sa po odbere cíti dobre. Ak by ste predsa len pocítili akýkoľvek príznak diskomfortu, ihneď upovedomte zdravotnícky personál. Vyvarujte sa zdvíhania ťažkých predmetov, a akýmkoľvek namáhavým cvičeniam budúcich 24 hodín po odbere. A potom sa môžete znova vrátiť k vašim bežným aktivitám, tak skoro a na tak dlho, ako sa budete cítiť dobre."
+                },
+                {
+                  "id": 13,
+                  "Otazka": "Mohol by som sa počas darovania krvi nakaziť vírusom HIV?",
+                  "Odpoved": "Nie. Nie je absolútne žiadne riziko, že by ste prišli do styku s akýmkoľvek ochorením, teda ani s vírusom HIV spôsobujúceho AIDS."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "Podsekcia": "O krvných skupinách",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 3,
+                  "Otazka": "S akou frekvenciou sa vyskytujú jednotlivé krvné skupiny?",
+                  "Odpoved": "Približná distribúcia krvných skupín na Slovensku je nasledovná: (výskyt sa môže líšiť v závislosti od špecifických rasových a etnických skupín)\n\n\n**A Rh pozitív       40 %**\n**O Rh pozitív       35 %**\n**A Rh negatív       7 %**\n**B Rh pozitív        7 %**\n**O Rh negatív       6 %**\n**AB Rh pozitív      3 %**\n**B Rh negatív       1.5 %**\n**AB Rh negatív     0.5 %**\n\n"
+                },
+                {
+                  "id": 25,
+                  "Otazka": "Mohla by byť moja krv podaná aj pacientom s inou krvnou skupinou akú mám ja?",
+                  "Odpoved": "Pokiaľ sa krv nerozdelí na červené krvinky a plazmu, nemôže byť podaná pacientovi s inou krvnou skupinou."
+                },
+                {
+                  "id": 26,
+                  "Otazka": "Komu môžu  byť podané moje červené krvinky ak mám krvnú skupinu 0 Rh- ?",
+                  "Odpoved": "Úplne všetkým krvným skupinám, pretože ste univerzálnym darcom červených krviniek. Vy  ale môžete prijať červené krvinky iba od darcu s krvnou skupinou  0Rh-."
+                },
+                {
+                  "id": 28,
+                  "Otazka": "Komu môžu  byť podané moje červené krvinky ak mám 0 Rh+?",
+                  "Odpoved": "Všetkým Rh pozitívnym  krvným skupinám  0+, A+, B+, AB+."
+                },
+                {
+                  "id": 27,
+                  "Otazka": "Komu môžu  byť podané moje červené krvinky ak mám krvnú skupinu A?",
+                  "Odpoved": "Darovať môžete tým, ktorí majú krvnú skupinu A alebo AB. Dostať môžete červené krvinky skupiny  A alebo 0. "
+                },
+                {
+                  "id": 29,
+                  "Otazka": "Komu môžu  byť podané moje červené krvinky ak mám krvnú skupinu B?",
+                  "Odpoved": "Vaše krvinky môžu dostať príjemcovia, ktorí majú krvnú skupinu B alebo AB. Vy môžete dostať červené krvinky od darcu so skupinou B alebo 0.  "
+                },
+                {
+                  "id": 30,
+                  "Otazka": "Komu môžu byť podané moje červené krvinky ak mám krvnú skupinu AB?",
+                  "Odpoved": "V tomto prípade ich  môžete darovať iba  osobám svojej krvnej skupiny, teda AB. Vy ste ale univerzálnym príjemcom, môžete dostať červené  krvinky skupiny AB, A, B aj 0. "
+                },
+                {
+                  "id": 31,
+                  "Otazka": "Existuje umelá náhrada krvi?",
+                  "Odpoved": "Vedcom sa ešte nepodarilo vyvinúť prípravok, ktorý by úspešne vedel nahradiť ľudskú krv. Jediným zdrojom krvi je človek. Toto je hlavný dôvod, prečo sú darcovia krvi takí dôležití pre tých, ktorí ju potrebujú."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "Podsekcia": "Čo sa deje s krvou po odbere?",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 14,
+                  "Otazka": "Ako dlho trvá, kým bude moja krv použitá?",
+                  "Odpoved": "Väčšina krvných odberov je ihneď spracovaná a rozdelená na jednotlivé zložky krvi, ktoré sú pripravené  na použitie v priebehu 24 hodín po odbere."
+                },
+                {
+                  "id": 15,
+                  "Otazka": "Je odobratá krv uskladnená v sklade a pripravená stále na použitie?",
+                  "Odpoved": "Nie. Odobratá krv sa po odbere spracuje, t.j. rozdelí sa na jednotlivé zložky pomocou centrifúgácie. Sú to: červené krvinky, biele krvinky s doštičkami a plazma. Červené krvinky môžu byť skladované pri 2-6 °C maximálne 42 dní. Prenášajú kyslík a sú používané v liečbe anémií. Plazma sa  zmrazí ihneď po separácii na -35° C a používa sa na zvládnutie krvácania (na doplnenie chýbajúcich faktorov zrážania). Môže sa skladovať zamrazená až 3 roky. Doštičky sú dôležité pre kontrolu nad krvácaním a sú obyčajne používané u pacientov s leukémiami a s inými formami nádorových ochorení. Doštičky sa uchovávajú pri teplote 22°-25°C a sú použiteľné maximálne 5 dní. "
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "Podsekcia": "Kritériá vyradenia z darovania krvi",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 16,
+                  "Otazka": "Kto sa označuje termínom vyradený darca?",
+                  "Odpoved": "Ten, kto nie je vhodný – prijateľný na darovanie krvi sa vylúči  z darovania krvi a označuje sa ako vyradený darca. Či bude alebo nebude darca vyradený dočasne alebo natrvalo závisí od mnohých kritérií (napr. darca môže byť vyradený dočasne kvôli anémii, alebo iným okolnostiam, ktoré sú zvyčajne prechodným stavom). Vyradený darca je zaevidovaný do zoznamu vyradených darcov. Pokiaľ by sa takýto darca pokúšal skrátiť si dobu vyradenia, nebude akceptovaný. Ak už neexistuje ďalší dôvod na vylúčenie, môže byť po uplynutí doby vylúčenia darca opäť zaradený do zoznamu darcov krvi."
+                },
+                {
+                  "id": 17,
+                  "Otazka": "Ktoré sú hlavné kritériá pre trvalé vylúčenie z darcovstva krvi?",
+                  "Odpoved": "Vyraďujú sa osoby:\n•\tTí, ktorí niekedy užívali nelegálne drogy podávané intravenózne (do žily) alebo intramuskulárne (do svalu)\n•\tKaždý s pozitívnym testom na HIV (vírus spôsobujúci AIDS), na hepatitídu typu B a C, alebo každý, ktorého sexuálny partner je pozitívny   na jedno z týchto ochorení\n•\tMuži aj ženy, ktorí poskytovali alebo prijímali sexuálne služby za peniaze alebo drogy\n•\tKaždý kto vedie promiskuitný spôsob života s častým striedaním sexuálnych partnerov\n•\tKaždý u koho sa vyskytla v rodine CJD\n•\tKaždý kto bol vystavený rizikovej situácii z hľadiska prenosu CJD a varianty CJD\n•\tKaždý, kto sa zdržiaval 6 mesiacov alebo viac vo Veľkej Británii medzi rokom 1980 až 1996\n•\tKaždý, kto užíva anabolické steroidy neindikované lekárom\n•\tKaždý, kto trpí poruchou zrážania krvi (napr. na hemofíliu) a lieči sa na ňu krvnými prípravkami.\n"
+                },
+                {
+                  "id": 19,
+                  "Otazka": "Nedávno som bol vyradený pre nepresvedčivý test na hepatitídu typu B. Ako si mám vysvetliť moje vyradenie?",
+                  "Odpoved": "Protilátky proti hepatitíde typu B (anti-HBc) sú protilátky, ktoré sa obyčajne tvoria v organizme po prekonaní hepatitídy B a môžu pretrvávať v organizme aj celý život. Ostávajú pozitívne, aj keď sa darca považuje za vyliečeného.  Je zaujímavé, že darca často o tom, že prekonal hepatitídu typu B, ani nevie.  "
+                },
+                {
+                  "id": 18,
+                  "Otazka": "Ak som bol raz vyradený, znamená to, že som už nežiaduci na darovanie krvi?",
+                  "Odpoved": "Ak má vaše vyradenie trvalý charakter, budete o tom informovaní. Inak závisí doba vášho vyradenia od dôvodu vyradenia. Pred každým jedným odberom budete podrobení malému lekárskemu vyšetreniu, a tak sa zistí, či ste vhodným kandidátom na darovanie krvi práve v tento deň."
+                },
+                {
+                  "id": 21,
+                  "Otazka": "Ak mám nádchu alebo chrípku, môžem darovať krv?",
+                  "Odpoved": "Darovať krv môžu  darcovia bez akýchkoľvek symptómov, so všeobecne dobrým zdravotným stavom, takí, ktorí sa cítia dobre. Ak má darca nádchu alebo chrípku, darovanie krvi je možné až dva týždne od úplného vyliečenia a dva týždne po ukončení antibiotickej liečby."
+                },
+                {
+                  "id": 20,
+                  "Otazka": "Môžem darovať krv ak mám vysoký krvný tlak?",
+                  "Odpoved": "Áno, aj v prípade, že beriete lieky. Pokiaľ ste sledovaný lekárom a Váš tlak je pod kontrolou a stabilizovaný, darovať krv môžete. Sekundárne komplikácie hypertenzie (napr. poškodenie obličiek) sú dôvodom na vyradenie."
+                },
+                {
+                  "id": 22,
+                  "Otazka": "Čo ak užijem aspirín, alebo iný liek predpísaný mojím lekárom?",
+                  "Odpoved": "Aspirín a ibuprofen nevadia pri darovaní celej krvi. Aferéza krvných doštičiek zakazuje užitie aspirínu a aspirínových prípravkov  5 dní pred darovaním. Ide o liek, ktorý ovplyvňuje funkcie krvných doštičiek.  Veľa iných liekov je akceptovateľných. Odporúča sa vopred zavolať do Odberného centra a informovať sa u lekára na lieky, ktoré užívate."
+                },
+                {
+                  "id": 23,
+                  "Otazka": "Môžem darovať krv ak mám anémiu?",
+                  "Odpoved": "V prípade anémie krv darovať nesmiete. Predtým ako darujete krv urobia vám test na hemoglobín alebo krvný obraz. Zisťuje sa, či je jeho hladina akceptovateľná pre uskutočnenie odberu. "
+                },
+                {
+                  "id": 24,
+                  "Otazka": "Čo môžem robiť, pokiaľ nie som vhodným darcom?",
+                  "Odpoved": "V prípade nevhodného darcu môže ísť o stav dočasný (z rôznych príčin) a po uplynutí doby potrebnej na vyradenie môžete byť znova zaradený medzi darcov. Odberné centrá stále potrebujú schopných dobrovoľníkov podporujúcich odbery krvi, alebo organizujúcich odbery v teréne, mimo odberového strediska. "
+                },
+                {
+                  "id": 136,
+                  "Otazka": "Kedy môžem darovať krv, keď mám nové tetovanie/piercing/permanentný make-up?",
+                  "Odpoved": "Na našich pracoviskách je možné darovať krv najskôr 4 mesiace po aplikácii tetovania, piercingu, permanentného make-upu alebo akupunktúry."
+                },
+                {
+                  "id": 138,
+                  "Otazka": "Vrátil som sa zo zahraničia, z EURÓPSKEJ krajiny, kedy môžem darovať krv (alebo zložky krvi)?",
+                  "Odpoved": "Po návrate z európskych krajín je možné darovať krv zvyčajne bez obmedzení - pred darovaním krvi skontrolujte aktuálne usmernenia pre darcov krvi (priebežne aktualizované):\n\n- [Usmernenie pre darcov krvi v súvislosti s pobytom v oblastiach s výskytom infekčných ochorení prenášaných komármi](https://www.ntssr.sk/web/usmernenie_detail?id=4)\n- [Usmernenie pre darcov krvi v súvislosti s pandémiou akútnych ochorení dýchacích ciest a zápalov pľúc COVID-19 spôsobených novým koronavírusom SARS CoV2](https://www.ntssr.sk/web/usmernenie_detail?id=10)\n"
+                },
+                {
+                  "id": 140,
+                  "Otazka": "Vrátil som sa zo zahraničia, z MIMOEURÓPSKEJ krajiny, kedy môžem darovať krv (alebo zložky krvi)?",
+                  "Odpoved": "Po zahraničných cestách mimo Európu sa dĺžka vyradenia z darcovstva krvi líši v závislosti od navštívených oblastí, minimálne však 1 mesiac. O dĺžke vyradenia z darcovstva krvi odporúčame informovať sa ešte pred planovaným odberom telefonicky na niektorom z našich [odberných centier](https://www.ntssr.sk/web/odberove_centra), alebo prostredníctvom kontaktného formulára [Napíšte nám](https://www.ntssr.sk/web/napiste_nam) (zvoľte medicínsku oblasť záujmu).\n\nOrientačná dĺžka dočasného vylúčenia z darcovstva krvi po návrate z vybraných mimoeurópskych krajín:\n- **Austrália:** 1 mesiac\n- **Čína:** 1 mesiac\n- **Egypt:** 1 mesiac\n- **Izrael:** 1 mesiac\n- **Južná Afrika:** 6 mesiacov\n- **Kanada:** 1 mesiac\n- **Kapverdy:** 1 mesiac\n- **Keňa:** 6 mesiacov\n- **Kuba:** 1 mesiac\n- **Maldivy:** 1 mesiac\n- **Maroko:** 1 mesiac\n- **Mexiko:** 1-6 mesiacov, v závislosti od navštívených oblastí\n- **Spojené Arabské Emiráty:** 1 mesiac\n- **Spojené Štáty Americké:** 1 mesiac\n- **Thajsko:** 1-6 mesiacov, v závislosti od navštívených oblastí\n- **Tunisko:** 1 mesiac\n- **Turecko:** 0-1 mesiac, v závislosti od navštívených oblastí - viď [Usmernenie pre darcov krvi v súvislosti s pobytom v oblastiach s výskytom infekčných ochorení prenášaných komármi](https://www.ntssr.sk/web/usmernenie_detail?id=4)\n- **Vietnam:** 1-6 mesiacov, v závislosti od navštívených oblastí\n"
+                }
+              ]
+            },
+            {
+              "id": 29,
+              "Podsekcia": "Môžem darovať krv, ak...?",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 151,
+                  "Otazka": "Ak mám nádchu alebo chrípku, môžem darovať krv?",
+                  "Odpoved": "Darovať krv môžu  darcovia bez akýchkoľvek symptómov, so všeobecne dobrým zdravotným stavom, takí, ktorí sa cítia dobre. Ak má darca nádchu alebo chrípku, darovanie krvi je možné až dva týždne od úplného vyliečenia a dva týždne po ukončení antibiotickej liečby."
+                },
+                {
+                  "id": 152,
+                  "Otazka": "Môžem darovať krv ak mám vysoký krvný tlak?",
+                  "Odpoved": "Áno, aj v prípade, že beriete lieky. Pokiaľ ste sledovaný lekárom a Váš tlak je pod kontrolou a stabilizovaný, darovať krv môžete. Sekundárne komplikácie hypertenzie (napr. poškodenie obličiek) sú dôvodom na vyradenie."
+                },
+                {
+                  "id": 153,
+                  "Otazka": "Môžem darovať krv ak mám anémiu (chudokrvnosť)?",
+                  "Odpoved": "V prípade anémie krv darovať nesmiete. Predtým ako darujete krv urobia vám test na hemoglobín alebo krvný obraz. Zisťuje sa, či je jeho hladina akceptovateľná pre uskutočnenie odberu."
+                },
+                {
+                  "id": 154,
+                  "Otazka": "Kedy môžem darovať krv, keď mám nové tetovanie/piercing/permanentný make-up?",
+                  "Odpoved": "Na našich pracoviskách je možné darovať krv najskôr 4 mesiace po aplikácii tetovania, piercingu, permanentného make-upu alebo akupunktúry."
+                },
+                {
+                  "id": 155,
+                  "Otazka": "Vrátil som sa zo zahraničia, z EURÓPSKEJ krajiny, kedy môžem darovať krv (alebo zložky krvi)?",
+                  "Odpoved": "Po návrate z európskych krajín je možné darovať krv zvyčajne bez obmedzení - pred darovaním krvi skontrolujte aktuálne usmernenia pre darcov krvi (priebežne aktualizované):\n\n- [Usmernenie pre darcov krvi v súvislosti s pobytom v oblastiach s výskytom infekčných ochorení prenášaných komármi](https://www.ntssr.sk/web/usmernenie_detail?id=4)\n- [Usmernenie pre darcov krvi v súvislosti s pandémiou akútnych ochorení dýchacích ciest a zápalov pľúc COVID-19 spôsobených novým koronavírusom SARS CoV2](https://www.ntssr.sk/web/usmernenie_detail?id=10)"
+                },
+                {
+                  "id": 161,
+                  "Otazka": "Vrátil som sa zo zahraničia, z MIMOEURÓPSKEJ krajiny, kedy môžem darovať krv (alebo zložky krvi)?",
+                  "Odpoved": "Po zahraničných cestách mimo Európu sa dĺžka vyradenia z darcovstva krvi líši v závislosti od navštívených oblastí, minimálne však 1 mesiac. O dĺžke vyradenia z darcovstva krvi odporúčame informovať sa ešte pred planovaným odberom telefonicky na niektorom z našich [odberných centier](https://www.ntssr.sk/web/odberove_centra), alebo prostredníctvom kontaktného formulára [Napíšte nám](https://www.ntssr.sk/web/napiste_nam) (zvoľte medicínsku oblasť záujmu).\n\nOrientačná dĺžka dočasného vylúčenia z darcovstva krvi po návrate z vybraných mimoeurópskych krajín:\n- **Austrália:** 1 mesiac\n- **Čína:** 1 mesiac\n- **Egypt:** 1 mesiac\n- **Izrael:** 1 mesiac\n- **Južná Afrika:** 6 mesiacov\n- **Kanada:** 1 mesiac\n- **Kapverdy:** 1 mesiac"
+                },
+                {
+                  "id": 156,
+                  "Otazka": "Kedy je možné po operácii darovať krv?",
+                  "Odpoved": "V rámci pracovísk NTS SR môžete darovať najskôr 4 mesiace po operácii, za predpokladu , že rana je zhojená a nemáte žiadne pooperačné ťažkosti. Lekár môže po rozhovore s darcom a získaní podrobných informácií o type operácie, priebehu a pridruženej liečbe  dobu vyradenie predĺžiť."
+                },
+                {
+                  "id": 157,
+                  "Otazka": "Kedy môžem po endoskopii (gastroskopia, kolonoskopia, rektoskopia, bronchoskopia) darovať krv? ",
+                  "Odpoved": "V rámci pracovísk NTS SR môžete darovať najskôr 4 mesiace po endoskopickom zákroku. V prípade odberu vzorky na histologické vyšetrenie  je potrebné doniesť výsledok k nahliadnutiu."
+                },
+                {
+                  "id": 184,
+                  "Otazka": "Môžem darovať krv počas menštruácie?",
+                  "Odpoved": "Počas menštruácie dochádza k poklesu hladiny hemoglobínu z dôvodu krvácania, preto vhodné je prísť darovať krv uprostred cyklu, približne 1 týždeň po menštruácii, kedy sa predpokladá doplnenie strát krvi."
+                },
+                {
+                  "id": 160,
+                  "Otazka": "Kedy môžem darovať krv po pôrode/potrate? ",
+                  "Odpoved": "Najskôr je možné darovanie 6 mesiacov po ukončení tehotenstva."
+                },
+                {
+                  "id": 158,
+                  "Otazka": "Môžem darovať krv počas dojčenia? ",
+                  "Odpoved": "Počas dojčenia nie je vhodné vzhľadom na zvýšenú spotrebu železa darovať krv. Je potrebné počkať aspoň 6 mesiacov od skončenia dojčenia."
+                },
+                {
+                  "id": 159,
+                  "Otazka": "Môžem darovať krv po prekonaní onkologického ochorenia? ",
+                  "Odpoved": "Keďže ide o závažné ochorenia, darovanie krvi nie je možné s výnimkou karcinóm in situ krčka maternice a bazaliómu."
+                },
+                {
+                  "id": 162,
+                  "Otazka": "Kedy najskôr môžem darovať krv po malom chirurgickom zákroku napr. odstránenie znamienka? ",
+                  "Odpoved": "Krv môžete darovať najskôr 1 týždeň po odstránení stehov, v prípade odberu vzorky na histologické vyšetrenie je potrebné počkať na jeho výsledok. "
+                },
+                {
+                  "id": 163,
+                  "Otazka": "Môžem darovať krv pri zníženej funkcii štítnej žľazy? ",
+                  "Odpoved": "Môžem darovať krv pri zníženej funkcii štítnej žľazy? \nÁno, ak ste aspoň 3 mesiace na liečbe a po kontrole endokrinológom už nie je potrebná úprava dávky lieku."
+                },
+                {
+                  "id": 165,
+                  "Otazka": " Môžem darovať ak mám ulceróznu kolitídu alebo Crohnovu chorobu? ",
+                  "Odpoved": "Aj napriek tomu, že sa cítite dobre a ste bez liečby, pri týchto diagnózach darovanie krvi nie je možné, pretože sa jedná o autoimunitné zápalové ochorenie, ktoré je sprevádzané obdobiami kľudu a vzplanutia."
+                },
+                {
+                  "id": 164,
+                  "Otazka": "Kedy môžem darovať krv po očkovaní proti tetanu, chrípke, HPV? ",
+                  "Odpoved": "Odporúčame počkať aspoň 2 dni, pokiaľ sa počas nich neobjavia nežiaduce reakcie ako teplota, alergická reakcia, lokálne zdurenie a pod., tak môžete prísť darovať."
+                },
+                {
+                  "id": 183,
+                  "Otazka": "Môžem darovať krv, ak sa mi na pere urobil herpes?",
+                  "Odpoved": "Nie, s darovaním krvi je potrebné počkať aspoň 2 týždne po úplnom zahojení (nesmú byť prítomné chrasty). "
+                }
+              ]
+            }
+          ],
+          "localizations": {
+            "data": [
+              {
+                "id": 9,
+                "attributes": {
+                  "Sekcia": "ABOUT BLOOD DONATION",
+                  "createdAt": "2023-04-21T10:53:38.917Z",
+                  "updatedAt": "2024-09-27T13:04:06.305Z",
+                  "locale": "en",
+                  "publishedAt": "2023-04-21T10:53:38.917Z",
+                  "SekciaID": "o_darovani_krvi"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 6,
+        "attributes": {
+          "Sekcia": "OCEŇOVANIE DARCOV, PLAKETY",
+          "createdAt": "2022-10-15T15:49:28.920Z",
+          "updatedAt": "2024-01-25T11:53:54.678Z",
+          "locale": "sk",
+          "publishedAt": "2022-10-15T15:49:28.920Z",
+          "SekciaID": null,
+          "Podsekcia_s_otazkami_a_odpovedami": [
+            {
+              "id": 15,
+              "Podsekcia": "Oceňovanie darcov krvi",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 52,
+                  "Otazka": "Mám dosť odberov na Jánskeho plaketu, ako mi bude udelená?",
+                  "Odpoved": "Plakety MUDr. Jana Jánskeho a medailu prof. MUDr. Jána Kňazovického za darcovstvo krvi udeľuje **Slovenský Červený kríž** (SČK). Po dosiahnutí počtu odberov potrebných pre získanie náležitej Jánskeho plakety (bronzová: 10, strieborná: 20, zlatá: ženy 30, muži 40, diamantová: ženy 60, muži 80) alebo Kňazovického medaily (ženy 80 odberov, muži 100 odberov) si vyplňte tlačivo \"[Návrh na udelenie ocenenia](https://redcross.sk/daruj-krv/wp-content/uploads/sites/39/2021/05/BDK-03-v02-2021-US-V-Navrh-na-udelenie-ocenenia_A4.pdf)\", nechajte si potvrdiť počet odberov evidenčným personálom na pracovisku. Tlačivo môžete vhodiť do schránky SČK na odberných centrách NTS SR, prípadne zaslať poštou či sken emailom na príslušný Územný spolok SČK. Za účelom odovzdania ocenenia Vás bude kontaktovať SČK. \n\nPre viac informácií navštívte [web Slovenského Červeného kríža](https://redcross.sk/daruj-krv/ocenovanie-darcov-krvi/).\n"
+                },
+                {
+                  "id": 55,
+                  "Otazka": "Ako sa počíta darovanie plazmy?",
+                  "Odpoved": "Odber krvnej plazmy sa počíta rovnako ako odber celej krvi, t.j. **1 odber**."
+                },
+                {
+                  "id": 56,
+                  "Otazka": "Ako sa počíta darovanie krvných doštičiek?",
+                  "Odpoved": "Darovanie krvných doštičiek sa počíta za **2 odbery**."
+                },
+                {
+                  "id": 68,
+                  "Otazka": "Žiadal som o ocenenie (plaketu), ešte stále mi nebola doručená, kde môže byť problém?",
+                  "Odpoved": "Oceňovanie darcov krvi je v gescii Slovenského Červeného kríža (SČK), nie Národnej transfúznej služby SR (NTS SR). Skúste sa informovať u príslušného územného spolku SČK. \n\nNTS SR darcovi krvi na požiadanie potvrdí počet evidovaných odberov na vyplnenom návrhu na udelenie ocenenia (formulár SČK) – tlačivo darca následne môže vhodiť do schránky SČK, ktorá sa nachádza na každom pracovisku NTS SR, alebo ho môže zaslať emailom (sken) či poštou na príslušný územný spolok SČK, ktorý darcu následne kontaktuje za účelom odovzdania/zaslania ocenenia.\nAk od zaslania žiadosti ubehla dlhšia doba, kontaktujte koordinátora SČK pre darcovstvo krvi a informujte sa o stave Vašej žiadosti na príslušnom územnom spolku SČK.\n\nPre viac informácií o oceňovaní bezpríspevkových darcov krvi a postupe, ako získať ocenenie, navštívte [web SČK](https://redcross.sk/daruj-krv/ocenovanie-darcov-krvi/)."
+                }
+              ]
+            }
+          ],
+          "localizations": {
+            "data": [
+              {
+                "id": 8,
+                "attributes": {
+                  "Sekcia": "BLOOD DONOR RECOGNITION",
+                  "createdAt": "2023-04-21T10:43:20.546Z",
+                  "updatedAt": "2023-04-21T10:51:13.408Z",
+                  "locale": "en",
+                  "publishedAt": "2023-04-21T10:43:20.546Z",
+                  "SekciaID": null
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "meta": {
+      "pagination": {
+        "page": 1,
+        "pageSize": 25,
+        "pageCount": 1,
+        "total": 4
+      }
+    }
+  }

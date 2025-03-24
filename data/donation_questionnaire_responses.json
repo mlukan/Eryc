@@ -1,0 +1,692 @@
+{
+  "utter_ask_slot_q1": [
+    {
+      "text": "Have you previously donated blood, plasma, or blood cells?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q1=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q1=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q2": [
+    {
+      "text": "Have you ever been permanently excluded from blood donation?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q2=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q2=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q3": [
+    {
+      "text": "Do you feel healthy?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q3=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q3=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q4": [
+    {
+      "text": "Do you weigh more than 50 kg?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q4=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q4=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q5": [
+    {
+      "text": "Have you been treated by a dentist or dental hygienist in the past 72 hours?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q5=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q5=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q6": [
+    {
+      "text": "Have you taken any medication in the last month? If so, which ones?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q6=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q6=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q7": [
+    {
+      "text": "In the past month, have you had a fever over 38°C, herpes, diarrhea, a tick bite, or an animal bite?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q7=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q7=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q8": [
+    {
+      "text": "Have you been vaccinated in the past month?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q8=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q8=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q9_1": [
+    {
+      "text": "Have you ever had or do you currently have any infectious diseases (e.g., tuberculosis, mononucleosis, Lyme disease, etc.)?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q9_1=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q9_1=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q9_2": [
+    {
+      "text": "Have you ever had or do you currently have any tropical diseases (e.g., malaria, Chagas disease, leishmaniasis, etc.)?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q9_2=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q9_2=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q9_3": [
+    {
+      "text": "Have you ever had or do you currently have rheumatologic disease, rheumatic fever, or autoimmune disease?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q9_3=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q9_3=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q9_4": [
+    {
+      "text": "Have you ever had or do you currently have heart disease, high or low blood pressure?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q9_4=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q9_4=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q9_5": [
+    {
+      "text": "Have you ever had or do you currently have chronic lung or bronchial disease, asthma, allergy, hay fever?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q9_5=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q9_5=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q9_6": [
+    {
+      "text": "Have you ever had or do you currently have kidney disease?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q9_6=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q9_6=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q9_7": [
+    {
+      "text": "Have you ever had or do you currently have blood disorders or bleeding tendencies?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q9_7=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q9_7=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q9_8": [
+    {
+      "text": "Have you ever had or do you currently have neurological disorders, epilepsy?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q9_8=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q9_8=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q9_9": [
+    {
+      "text": "Have you ever had or do you currently have metabolic disorder (diabetes), endocrine disorder (e.g., thyroid disease)?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q9_9=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q9_9=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q9_10": [
+    {
+      "text": "Have you ever had or do you currently have skin diseases (eczema, psoriasis)?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q9_10=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q9_10=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q9_11": [
+    {
+      "text": "Have you ever had or do you currently have digestive system disorders, liver or pancreas diseases?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q9_11=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q9_11=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q9_12": [
+    {
+      "text": "Have you ever had or do you currently have cancer?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q9_12=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q9_12=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q9_13": [
+    {
+      "text": "Have you ever had or do you currently have sexually transmitted disease?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q9_13=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q9_13=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q10": [
+    {
+      "text": "In the past 12 months, have you experienced unexplained weight loss, fever, sweating, psychological changes, or swollen lymph nodes?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q10=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q10=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q11": [
+    {
+      "text": "In the last 3 months, have you been treated for acne with isotretinoin, prostate issues with finasteride or dutasteride, or hair loss with Propecia®?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q11=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q11=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q12": [
+    {
+      "text": "In the last three years, have you been treated with acitretin (Neotigason®) or etretinate (Tegison®)?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q12=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q12=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q13_1": [
+    {
+      "text": "In the last 6 months, have you had surgery, medical examination or treatment, endoscopy, or vascular catheterization?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q13_1=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q13_1=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q13_2": [
+    {
+      "text": "In the last 6 months, have you had a tattoo, piercing, earring application, acupuncture, or permanent makeup?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q13_2=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q13_2=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q13_3": [
+    {
+      "text": "In the last 6 months, have you had an injury with exposure to another's blood or a used injection needle?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q13_3=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q13_3=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q14": [
+    {
+      "text": "Have you ever received a blood transfusion? If yes, when and where?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q14=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q14=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q15": [
+    {
+      "text": "Have you ever had a transplant of human or animal tissue?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q15=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q15=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q16_1": [
+    {
+      "text": "Have you ever had brain or spinal cord surgery?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q16_1=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q16_1=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q16_2": [
+    {
+      "text": "Has anyone in your family had Creutzfeldt-Jakob disease or other prion diseases?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q16_2=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q16_2=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q16_3": [
+    {
+      "text": "Have you been treated with human pituitary-derived products (e.g., growth hormone)?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q16_3=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q16_3=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q17": [
+    {
+      "text": "Did you stay in the UK/Ireland for a total of 6 months or more in the past?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q17=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q17=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q18": [
+    {
+      "text": "Have you traveled outside Slovakia in the past 6 months?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q18=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q18=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q19_1": [
+    {
+      "text": "Were you born or have you lived for more than 6 months outside Europe?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q19_1=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q19_1=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q19_2": [
+    {
+      "text": "If yes, where?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q19_2=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q19_2=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q19_3": [
+    {
+      "text": "Since when have you lived in Europe?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q19_3=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q19_3=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q20": [
+    {
+      "text": "In the past 6 months, have you been in contact with someone who had hepatitis or another infectious disease?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q20=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q20=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q21": [
+    {
+      "text": "In the past 3 months, have you had sexual contact with a new partner?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q21=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q21=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q22_1": [
+    {
+      "text": "Have you or your sexual partner ever tested positive for HIV, syphilis, or hepatitis?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q22_1=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q22_1=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q22_2": [
+    {
+      "text": "Have you or your sexual partner ever used drugs or anabolic steroids?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q22_2=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q22_2=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q22_3": [
+    {
+      "text": "Have you or your sexual partner ever exchanged sexual services for money or drugs?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q22_3=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q22_3=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q23": [
+    {
+      "text": "Do you have a high-risk occupation or hobby? (e.g., professional driver, diver, working at heights)",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q23=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q23=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q24": [
+    {
+      "text": "In the past 12 months, have you (as a man) had sexual contact with another man?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q24=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q24=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q25": [
+    {
+      "text": "In the past 6 months, have you (as a woman) been pregnant or breastfeeding?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q25=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q25=no)"
+        }
+      ]
+    }
+  ],
+  "utter_ask_slot_q26": [
+    {
+      "text": "Were you treated with hormone injections for infertility before 1986?",
+      "buttons": [
+        {
+          "title": "Yes",
+          "payload": "/SetSlots(slot_q26=yes)"
+        },
+        {
+          "title": "No",
+          "payload": "/SetSlots(slot_q26=no)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1090 @@
+version: "3.1"
+actions:
+- action_confirm_declaration
+slots:
+  slot_q1:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q10:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q11:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q12:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q13:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q13_1:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q13_2:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q13_3:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q14:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q15:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q16:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q16_1:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q16_2:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q16_3:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q17:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q18:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q19:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q19_1:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q19_2:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q19_3:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q2:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q20:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q21:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q22:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q22_1:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q22_2:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q22_3:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q23:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q24:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q25:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q26:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q3:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q4:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q5:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q6:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q7:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q8:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q9:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q9_1:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q9_10:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q9_11:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q9_12:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q9_13:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q9_2:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q9_3:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q9_4:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q9_5:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q9_6:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q9_7:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q9_8:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_q9_9:
+    type: text
+    mappings:
+    - type: from_llm
+  slot_declaration:
+    type: text
+    mappings:
+    - type: from_llm
+
+responses:
+  utter_ask_slot_q1:
+  - text: Have you previously donated blood, plasma, or blood cells?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q1=yes)
+    - title: No
+      payload: /SetSlots(slot_q1=no)
+  - text: Darovali ste v minulosti krv, plazmu alebo krvné bunky?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q1=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q1=no)
+  utter_ask_slot_q2:
+  - text: Have you ever been permanently excluded from blood donation?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q2=yes)
+    - title: No
+      payload: /SetSlots(slot_q2=no)
+  - text: Boli ste niekedy v minulosti vyradeny z darovania krvi?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q2=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q2=no)
+  utter_ask_slot_q3:
+  - text: Do you feel healthy?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q3=yes)
+    - title: No
+      payload: /SetSlots(slot_q3=no)
+  - text: Cítite sa zdravý?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q3=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q3=no)
+  utter_ask_slot_q4:
+  - text: Do you weigh more than 50 kg?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q4=yes)
+    - title: No
+      payload: /SetSlots(slot_q4=no)
+  - text: Vážite viac ako 50 kg?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q4=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q4=no)
+  utter_ask_slot_q5:
+  - text: Have you been treated by a dentist or dental hygienist in the past 72 hours?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q5=yes)
+    - title: No
+      payload: /SetSlots(slot_q5=no)
+  - text: Boli ste posledných 72 hodín ošetrený zubným lekárom alebo zubným hygienikom?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q5=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q5=no)
+  utter_ask_slot_q6:
+  - text: Have you taken any medication in the last month? If so, which ones?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q6=yes)
+    - title: No
+      payload: /SetSlots(slot_q6=no)
+  - text: Užili ste posledný mesiac nejaké lieky? Aké?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q6=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q6=no)
+  utter_ask_slot_q7:
+  - text: In the past month, have you had a fever over 38°C, herpes, diarrhea, a tick
+      bite, or an animal bite?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q7=yes)
+    - title: No
+      payload: /SetSlots(slot_q7=no)
+  - text: Mali ste posledný mesiac teplotu nad 38°C, herpes, hnačky, prisatého kliešťa,
+      uhryznutie zvieraťom?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q7=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q7=no)
+  utter_ask_slot_q8:
+  - text: Have you been vaccinated in the past month?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q8=yes)
+    - title: No
+      payload: /SetSlots(slot_q8=no)
+  - text: Boli ste posledný mesiac očkovaný?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q8=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q8=no)
+  utter_ask_slot_q9_1:
+  - text: Have you ever had or do you currently have any infectious diseases (e.g.,
+      tuberculosis, mononucleosis, Lyme disease, etc.)?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q9_1=yes)
+    - title: No
+      payload: /SetSlots(slot_q9_1=no)
+  - text: 'Mali ste v minulosti alebo máte infekčné ochorenie ako napr.: tuberkulózu,
+      infekčnú mononukleózu, boreliózu, toxoplazmózu, brucelózu, tularémiu, listeriózu,
+      Q-horúčku, babeziózu?'
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q9_1=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q9_1=no)
+  utter_ask_slot_q9_2:
+  - text: Have you ever had or do you currently have any tropical diseases (e.g.,
+      malaria, Chagas disease, leishmaniasis, etc.)?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q9_2=yes)
+    - title: No
+      payload: /SetSlots(slot_q9_2=no)
+  - text: 'Mali ste v minulosti alebo máte tropické ochorenie: maláriu, ochorenie
+      Chagas, leishmaniózu?'
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q9_2=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q9_2=no)
+  utter_ask_slot_q9_3:
+  - text: Have you ever had or do you currently have rheumatologic disease, rheumatic
+      fever, or autoimmune disease?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q9_3=yes)
+    - title: No
+      payload: /SetSlots(slot_q9_3=no)
+  - text: Mali ste v minulosti alebo máte reumatologické ochorenie, reumatickú horúčku
+      alebo autoimunitné ochorenie?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q9_3=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q9_3=no)
+  utter_ask_slot_q9_4:
+  - text: Have you ever had or do you currently have heart disease, high or low blood
+      pressure?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q9_4=yes)
+    - title: No
+      payload: /SetSlots(slot_q9_4=no)
+  - text: Mali ste v minulosti alebo máte srdcové ochorenie, vysoký alebo nízky krvný
+      tlak?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q9_4=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q9_4=no)
+  utter_ask_slot_q9_5:
+  - text: Have you ever had or do you currently have chronic lung or bronchial disease,
+      asthma, allergy, hay fever?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q9_5=yes)
+    - title: No
+      payload: /SetSlots(slot_q9_5=no)
+  - text: Mali ste v minulosti alebo máte chronické ochorenie pľúc alebo priedušiek,
+      astmu, alergiu, sennú nádchu?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q9_5=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q9_5=no)
+  utter_ask_slot_q9_6:
+  - text: Have you ever had or do you currently have kidney disease?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q9_6=yes)
+    - title: No
+      payload: /SetSlots(slot_q9_6=no)
+  - text: Mali ste v minulosti alebo máte ochorenie obličiek?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q9_6=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q9_6=no)
+  utter_ask_slot_q9_7:
+  - text: Have you ever had or do you currently have blood disorders or bleeding tendencies?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q9_7=yes)
+    - title: No
+      payload: /SetSlots(slot_q9_7=no)
+  - text: Mali ste v minulosti alebo máte krvné ochorenie, krvácavé prejavy?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q9_7=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q9_7=no)
+  utter_ask_slot_q9_8:
+  - text: Have you ever had or do you currently have neurological disorders, epilepsy?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q9_8=yes)
+    - title: No
+      payload: /SetSlots(slot_q9_8=no)
+  - text: Mali ste v minulosti alebo máte ochorenie nervového systému, epilepsiu?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q9_8=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q9_8=no)
+  utter_ask_slot_q9_9:
+  - text: Have you ever had or do you currently have metabolic disorder (diabetes),
+      endocrine disorder (e.g., thyroid disease)?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q9_9=yes)
+    - title: No
+      payload: /SetSlots(slot_q9_9=no)
+  - text: Mali ste v minulosti alebo máte ochorenie látkovej výmeny (cukrovku), endokrinologické
+      ochorenie (napr. štítnej žľazy)?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q9_9=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q9_9=no)
+  utter_ask_slot_q9_10:
+  - text: Have you ever had or do you currently have skin diseases (eczema, psoriasis)?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q9_10=yes)
+    - title: No
+      payload: /SetSlots(slot_q9_10=no)
+  - text: Mali ste v minulosti alebo máte kožné ochorenia (ekzém, lupienka)?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q9_10=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q9_10=no)
+  utter_ask_slot_q9_11:
+  - text: Have you ever had or do you currently have digestive system disorders, liver
+      or pancreas diseases?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q9_11=yes)
+    - title: No
+      payload: /SetSlots(slot_q9_11=no)
+  - text: Mali ste v minulosti alebo máte ochorenie tráviaceho systému, choroby pečene
+      a pankreasu?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q9_11=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q9_11=no)
+  utter_ask_slot_q9_12:
+  - text: Have you ever had or do you currently have cancer?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q9_12=yes)
+    - title: No
+      payload: /SetSlots(slot_q9_12=no)
+  - text: Mali ste v minulosti alebo máte nádorové ochorenie?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q9_12=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q9_12=no)
+  utter_ask_slot_q9_13:
+  - text: Have you ever had or do you currently have sexually transmitted disease?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q9_13=yes)
+    - title: No
+      payload: /SetSlots(slot_q9_13=no)
+  - text: Mali ste v minulosti alebo máte sexuálne prenosné ochorenie?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q9_13=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q9_13=no)
+  utter_ask_slot_q10:
+  - text: In the past 12 months, have you experienced unexplained weight loss, fever,
+      sweating, psychological changes, or swollen lymph nodes?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q10=yes)
+    - title: No
+      payload: /SetSlots(slot_q10=no)
+  - text: Zaznamenali ste za posledných 12 mesiacov nevysvetliteľnú stratu váhy, teplotu,
+      potenie, psychické zmeny, zväčšenie lymfatických uzlín?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q10=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q10=no)
+  utter_ask_slot_q11:
+  - text: In the last 3 months, have you been treated for acne with isotretinoin,
+      prostate issues with finasteride or dutasteride, or hair loss with Propecia®?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q11=yes)
+    - title: No
+      payload: /SetSlots(slot_q11=no)
+  - text: Boli ste liečený posledné 3 mesiace na akné isotretinoinom, na prostatu
+      finasteridom alebo dutasteridom, na plešatosť?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q11=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q11=no)
+  utter_ask_slot_q12:
+  - text: In the last three years, have you been treated with acitretin (Neotigason®)
+      or etretinate (Tegison®)?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q12=yes)
+    - title: No
+      payload: /SetSlots(slot_q12=no)
+  - text: Boli ste liečený posledné 3 roky acitretínom alebo etretinátom?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q12=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q12=no)
+  utter_ask_slot_q13_1:
+  - text: In the last 6 months, have you had surgery, medical examination or treatment,
+      endoscopy, or vascular catheterization?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q13_1=yes)
+    - title: No
+      payload: /SetSlots(slot_q13_1=no)
+  - text: Mali ste posledných 6 mesiacov operáciu, lekárske vyšetrenie alebo ošetrenie,
+      endoskopiu, katetrizáciu ciev?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q13_1=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q13_1=no)
+  utter_ask_slot_q13_2:
+  - text: In the last 6 months, have you had a tattoo, piercing, earring application,
+      acupuncture, or permanent makeup?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q13_2=yes)
+    - title: No
+      payload: /SetSlots(slot_q13_2=no)
+  - text: Mali ste posledných 6 mesiacov tetovanie, piercing, aplikáciu náušníc, akupunktúru,
+      permanentný make-up?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q13_2=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q13_2=no)
+  utter_ask_slot_q13_3:
+  - text: In the last 6 months, have you had an injury with exposure to another's
+      blood or a used injection needle?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q13_3=yes)
+    - title: No
+      payload: /SetSlots(slot_q13_3=no)
+  - text: Mali ste posledných 6 mesiacov poranenie, pri ktorom sa rana alebo sliznica
+      dostala do kontaktu s cudzou krvou alebo náhodné poranenie použitou injekčnou
+      ihlou?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q13_3=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q13_3=no)
+  utter_ask_slot_q14:
+  - text: Have you ever received a blood transfusion? If yes, when and where?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q14=yes)
+    - title: No
+      payload: /SetSlots(slot_q14=no)
+  - text: Dostali ste niekedy transfúziu krvi? Ak áno, kedy a kde?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q14=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q14=no)
+  utter_ask_slot_q15:
+  - text: Have you ever had a transplant of human or animal tissue?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q15=yes)
+    - title: No
+      payload: /SetSlots(slot_q15=no)
+  - text: Transplantovali vám niekedy tkanivo ľudského alebo iného živočíšneho pôvodu?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q15=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q15=no)
+  utter_ask_slot_q16_1:
+  - text: Have you ever had brain or spinal cord surgery?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q16_1=yes)
+    - title: No
+      payload: /SetSlots(slot_q16_1=no)
+  - text: Absolvovali ste niekedy operáciu mozgu alebo miechy?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q16_1=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q16_1=no)
+  utter_ask_slot_q16_2:
+  - text: Has anyone in your family had Creutzfeldt-Jakob disease or other prion diseases?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q16_2=yes)
+    - title: No
+      payload: /SetSlots(slot_q16_2=no)
+  - text: Vyskytla sa vo vašej rodine Creutzfeldt-Jakobova choroba alebo iná prenosná
+      spongiformná encefalopatia?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q16_2=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q16_2=no)
+  utter_ask_slot_q16_3:
+  - text: Have you been treated with human pituitary-derived products (e.g., growth
+      hormone)?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q16_3=yes)
+    - title: No
+      payload: /SetSlots(slot_q16_3=no)
+  - text: Boli ste liečený prípravkami z ľudskej hypofýzy (rastový hormón)?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q16_3=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q16_3=no)
+  utter_ask_slot_q17:
+  - text: Did you stay in the UK/Ireland for a total of 6 months or more in the past?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q17=yes)
+    - title: No
+      payload: /SetSlots(slot_q17=no)
+  - text: Zdržiavali ste sa spolu 6 mesiacov alebo viac vo Veľkej Británii alebo Írsku?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q17=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q17=no)
+  utter_ask_slot_q18:
+  - text: Have you traveled outside Slovakia in the past 6 months?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q18=yes)
+    - title: No
+      payload: /SetSlots(slot_q18=no)
+  - text: Boli ste v priebehu posledných 6 mesiacov mimo Slovenskej republiky?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q18=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q18=no)
+  utter_ask_slot_q19_1:
+  - text: Were you born or have you lived for more than 6 months outside Europe?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q19_1=yes)
+    - title: No
+      payload: /SetSlots(slot_q19_1=no)
+  - text: Narodili ste sa alebo ste žili viac ako 6 mesiacov mimo Európy?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q19_1=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q19_1=no)
+  utter_ask_slot_q19_2:
+  - text: If yes, where?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q19_2=yes)
+    - title: No
+      payload: /SetSlots(slot_q19_2=no)
+  - text: Ak áno, kde?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q19_2=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q19_2=no)
+  utter_ask_slot_q19_3:
+  - text: Since when have you lived in Europe?
+  - text: Od kedy žijete v Európe?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+  utter_ask_slot_q20:
+  - text: In the past 6 months, have you been in contact with someone who had hepatitis
+      or another infectious disease?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q20=yes)
+    - title: No
+      payload: /SetSlots(slot_q20=no)
+  - text: Boli ste posledných 6 mesiacov v kontakte s osobou, ktorá mala v tom čase
+      infekčnú žltačku alebo iné infekčné ochorenie?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q20=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q20=no)
+  utter_ask_slot_q21:
+  - text: In the past 3 months, have you had sexual contact with a new partner?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q21=yes)
+    - title: No
+      payload: /SetSlots(slot_q21=no)
+  - text: Mali ste v priebehu posledných 3 mesiacov pohlavný styk s novým sexuálnym
+      partnerom?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q21=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q21=no)
+  utter_ask_slot_q22_1:
+  - text: Have you or your sexual partner ever tested positive for HIV, syphilis,
+      or hepatitis?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q22_1=yes)
+    - title: No
+      payload: /SetSlots(slot_q22_1=no)
+  - text: Boli ste vy alebo váš sexuálny partner pozitívne testovaný na HIV, syfilis
+      alebo infekčnú žltačku?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q22_1=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q22_1=no)
+  utter_ask_slot_q22_2:
+  - text: Have you or your sexual partner ever used drugs or anabolic steroids?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q22_2=yes)
+    - title: No
+      payload: /SetSlots(slot_q22_2=no)
+  - text: Boli ste vy alebo váš sexuálny partner užívateľom drog alebo anabolických
+      steroidov?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q22_2=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q22_2=no)
+  utter_ask_slot_q22_3:
+  - text: Have you or your sexual partner ever exchanged sexual services for money
+      or drugs?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q22_3=yes)
+    - title: No
+      payload: /SetSlots(slot_q22_3=no)
+  - text: Boli ste vy alebo váš sexuálny partner poskytovateľom alebo príjemcom sexuálnych
+      služieb za peniaze alebo drogy?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q22_3=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q22_3=no)
+  utter_ask_slot_q23:
+  - text: Do you have a high-risk occupation or hobby? (e.g., professional driver,
+      diver, working at heights)
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q23=yes)
+    - title: No
+      payload: /SetSlots(slot_q23=no)
+  - text: Máte rizikové zamestnanie alebo koníčky? (napr. profesionálny vodič, potápač,
+      práca vo výške)
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q23=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q23=no)
+  utter_ask_slot_q24:
+  - text: In the past 12 months, have you (as a man) had sexual contact with another
+      man?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q24=yes)
+    - title: No
+      payload: /SetSlots(slot_q24=no)
+  - text: Mali ste v posledných 12 mesiacoch (ako muž) sexuálny kontakt s mužom?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q24=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q24=no)
+  utter_ask_slot_q25:
+  - text: In the past 6 months, have you (as a woman) been pregnant or breastfeeding?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q25=yes)
+    - title: No
+      payload: /SetSlots(slot_q25=no)
+  - text: Boli ste v posledných 6 mesiacoch (ako žena) tehotná alebo ste dojčili?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q25=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q25=no)
+  utter_ask_slot_q26:
+  - text: Were you treated with hormone injections for infertility before 1986?
+    buttons:
+    - title: Yes
+      payload: /SetSlots(slot_q26=yes)
+    - title: No
+      payload: /SetSlots(slot_q26=no)
+  - text: Boli ste liečená pred rokom 1986 hormonálnymi injekciami na neplodnosť?
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    buttons:
+    - title: Áno
+      payload: /SetSlots(slot_q26=yes)
+    - title: Nie
+      payload: /SetSlots(slot_q26=no)
+  utter_ask_slot_declaration:
+  - text: "### Declaration:\n
+          I declare that I have understood the above questions and answered all questions truthfully. \n 
+          I acknowledge that if I intentionally withhold any information, I may cause harm or death to another person and may be prosecuted under the Criminal Code of the Slovak Republic. \n
+          I am aware of the possibility of self-exclusion and will use it if necessary. I consider myself a suitable donor whose blood will not endanger the recipient’s health. If I develop symptoms of an infectious disease after donation, I will inform the transfusion center immediately. \n
+          I declare that I am donating blood (plasma, blood cells) voluntarily and free of charge, and I agree to its use for medical purposes. I declare that I have been clearly informed about the purpose, nature, and risks of the examinations I must undergo as a blood donor and agree to their performance. \n
+          ### Basic Information on Personal Data Protection: \n
+          The personal data provided in this questionnaire is processed in information systems operated by the National Transfusion Service of the Slovak Republic (NTS SR), with headquarters at Dúbravská cesta 3/L, 831 01 Bratislava, Slovakia, ID: 30 853 915 (NTS SR), for the purposes of: \n
+          (a) ensuring the quality, safety, and production of transfusion medicines,  \n
+          (b) ensuring the quality and safety of blood and blood components, and \n
+          (c) managing the records of blood donors and blood components. \n
+          By signing this questionnaire, you confirm that when submitting the form to the appropriate NTS SR staff, you have been provided with basic information about the protection of your personal data in NTS SR information systems. You were also given the opportunity to familiarize yourself with the extended information on personal data protection in the form of: \n
+          (a) written information displayed on the information board at the NTS SR facility (if the form was submitted at an NTS SR center), or \n 
+          (b) a printed copy available from mobile donation unit staff (if the form was submitted during a mobile blood collection event). \n
+          You have the right to access your personal data, correct it, and request processing restrictions, as detailed in the extended data protection notice. \n
+          More information on data processing in NTS SR systems is available on the NTS SR website at: \n
+          [www.ntssr.sk/zasadyochranvudajov](www.ntssr.sk/zasadyochranvudajov). \n 
+          If you have any questions or uncertainties about the protection of your personal data, you can contact NTS SR via email at: **osobne.udaje@ntssr.sk**. \n"
+    buttons:
+    - title: I agree
+      payload: /SetSlots(slot_declaration=yes)
+    - title: I do not agree
+      payload: /SetSlots(slot_declaration=no)
+  - text: "### Vyhlásenie:\n\nVyhlasujem, že som porozumel(a) horeuvedeným otázkam a odpovedal(a) som na všetky otázky pravdivo.\nSom si vedomý(á), že v prípade úmyselného zatajenia akýchkoľvek údajov môžem spôsobiť inému poškodenie zdravia alebo smrť a môžem byť stíhaný(á) podľa Trestného zákona SR.\nSom oboznámený(á) s možnosťou samovylúčenia a v prípade potreby ju využijem. Považujem sa za vhodného darcu, ktorého krv neohrozí zdravie príjemcu. Ak sa po odbere u mňa objavia známky alebo príznaky infekčného ochorenia, budem o tejto skutočnosti bezodkladne informovať transfúzne pracovisko.\nVyhlasujem, že darujem krv (plazmu, krvné bunky) dobrovoľne a bezplatne a súhlasím s jej využitím pre zdravotnícke účely.\nVyhlasujem, že som bol(a) zrozumiteľne poučený(á) o účele, povahe a rizikách vyšetrení, ktoré mám ako darca krvi alebo zložiek krvi absolvovať a súhlasím s ich vykonaním.\n
+          ### Základná informácia o ochrane osobných údajov:\n
+          Vaše osobné údaje uvedené v tomto dotazníku sú spracúvané v informačných systémoch, ktorých prevádzkovateľom je Národná transfúzna služba SR (NTS SR), so sídlom Dúbravská cesta 3/L, 831 01 Bratislava, IČO: 30 853 915, a to:\n
+          (a) na účel zabezpečenia kvality, bezpečnosti a činnosti transfúznych liekov,\n
+          (b) na účel zabezpečenia kvality a bezpečnosti krvi a zložiek krvi,\n
+          (c) na účel spravovania evidencie darcov krvi a zložiek krvi.\n
+          Podpisom tohto dotazníka potvrdzujete, že pri odovzdaní dotazníka príslušnému zamestnancovi NTS SR Vám bola poskytnutá základná informácia o ochrane Vašich osobných údajov v informačných systémoch NTS SR.\n
+          Bola Vám zároveň poskytnutá možnosť oboznámiť sa s rozšírenou informáciou o ochrane osobných údajov formou:\n
+          (a) písomnej informácie na informačnej tabuli v priestoroch NTS SR (ak bol dotazník odovzdaný na pracovisku), alebo\n
+          (b) vytlačenej kópie dostupnej u pracovníkov mobilnej odberovej jednotky (ak bol dotazník odovzdaný počas mobilného odberu).\n
+          Máte právo na prístup k Vašim osobným údajom, ich opravu a právo na obmedzenie spracúvania, ako je uvedené v rozšírenej informácii o ochrane údajov.\nViac informácií nájdete na stránke: [www.ntssr.sk/zasadyochranvudajov](www.ntssr.sk/zasadyochranvudajov)\n
+          Otázky o ochrane údajov môžete adresovať na: **osobne.udaje@ntssr.sk**\n"
+    buttons:
+      - title: Súhlasím
+        payload: /SetSlots(slot_declaration=yes)
+      - title: Nesúhlasím
+        payload: /SetSlots(slot_declaration=no)
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+
+  utter_confirmed_declaration:
+  - text: "Thank you for accepting the declaration. The questionnaire is now complete. It will be valid for 24 hours.\n
+          If you do not show up for the scheduled blood donation, you'll be asked to fill out the questionnaire again with up to date information."
+  - text: "Ďakujeme za prijatie vyhlásenia. Dotazník je teraz kompletný. Platnosť dotazníka je 24 hodín.\n
+          Ak sa nedostavíte na plánovaný odbor krvi, budete požiadaný(á) o vyplnenie dotazníka s aktuálnymi informáciami."
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+
+  utter_reject_declaration:
+  - text: "You have not accepted the declaration. The questionnaire is not complete. Before the blood donation, you'll be asked to fill out the same questionnaire again."
+  - text: "Vyhlásenie ste neprijali. Dotazník nie je kompletný. Pred odborom krvi budete požiadaný(á) o vyplnenie rovnakého dotazníka znova." 
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk

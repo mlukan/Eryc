@@ -1,0 +1,406 @@
+version: "3.1"
+
+slots:
+  recipient:
+    type: text
+    mappings:
+      - type: from_llm
+  amount:
+    type: float
+    mappings:
+      - type: from_llm
+
+  slot_lang:
+    type: text
+    mappings:
+    - type: custom
+      action: action_initiate
+
+  slot_location:
+    type: text
+    mappings:
+    - type: from_llm
+  
+  
+  slot_last_location:
+    type: text
+    mappings:
+    - type: custom
+      action: action_ask_slot_location
+  
+  slot_location_choice:
+    type: bool
+    mappings:
+    - type: custom
+      action: action_ask_slot_location_choice
+
+  slot_lookup_date:
+    type: text
+    mappings:
+    - type: from_llm
+
+  slot_booking_time:
+    type: float
+    mappings:
+    - type: from_llm
+  
+  slot_access_code:
+    type: float
+    mappings:
+    - type: from_llm
+
+  slot_access_code_valid:
+    type: bool
+    mappings:
+    - type: custom
+      action: action_validate_access_code
+  
+  slot_user_email:
+    type: text
+    mappings:
+    - type: from_llm
+
+  slot_email_valid:
+    type: bool
+    mappings:
+    - type: custom
+      action: action_validate_email
+  
+  slot_location_status:
+    type: text
+    mappings:
+    - type: custom
+      action: action_check_location
+
+
+  slot_user_name_and_surname:
+    type: text
+    mappings:
+    - type: from_llm
+
+  slot_user_phone:  
+    type: text
+    mappings:
+    - type: from_llm
+  
+  slot_user_address:
+    type: text
+    mappings:
+    - type: from_llm
+
+  slot_user_dob:
+    type: text
+    mappings:
+    - type: from_llm
+  
+  slot_user_gender:
+    type: text
+    mappings:
+    - type: from_llm
+
+  slot_wants_to_register:
+    type: bool
+    mappings:
+    - type: from_llm
+  
+  slot_elligible_for_donation:
+    type: bool
+    mappings:
+    - type: custom
+      action: action_validate_elligibility
+
+  slot_last_donation_timestamp:
+    type: text
+    mappings:
+    - type: custom
+      action: action_ask_slot_location
+  
+  slot_last_donation_success:
+    type: bool
+    mappings:
+    - type: custom
+      action: action_ask_slot_location
+  
+  slot_future_booking:
+    type: any
+    mappings:
+    - type: custom
+      action: action_find_last_booking
+  
+  slot_rebook:
+    type: bool
+    mappings:
+    - type: from_llm
+
+  slot_feedback:
+    type: text
+    mappings:
+    - type: from_llm
+    initial_value: pending
+ 
+  slot_squat:
+    type: text
+    mappings:
+    - type: from_llm
+
+  slot_start_questionnaire:
+    type: bool
+    mappings:
+    - type: from_llm
+  
+  slot_auth_agree:
+    type: bool
+    mappings:
+    - type: from_llm
+
+responses:
+
+  utter_session_start:
+    - text: "Hello! I am B., the blood donation bot. I am eager to help you book your blood donation with the NTS, or just answer any questions you might have related to blood donation. How can I help you today?\n
+             Ahoj! Som B., blot donation bot. Rád pomôžem  s rezerváciou darovania krvi v odberných centrách NTS, alebo zodpoviem  na akékoľvek otázky ohľadom darovania krvi. Ako Vám môžem pomôcť dnes?"
+
+
+  utter_lookup_slot_booking_time:
+    - text: "Please select one of the free booking slots."
+    - text: "Prosím vyberte jeden z voľných termínov."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_ask_slot_lookup_date:
+    - text: "When would you like to donate blood in {slot_location}? Today, tomorrow, this week, next week or some other day (MM-DD)?"
+    - text: "Kedy by ste chceli darovať krv v odbernom mieste {slot_location}? Dnes, zajtra, tento týždeň, budúci týždeň alebo v iný deň (DD.MM.)?"
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_message_must_register:
+    - text: "You cannot proceed without registration. Please use the website or mobile app for user registration."
+    - text: "Nemôžete pokračovať bez registrácie. Pre registráciu použite webovú stránku alebo mobilnú aplikáciu."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+  
+  utter_lookup_access_code:
+    - text: "We have sent the access code to the specified e-mail address."
+    - text: "Prístupový kód sme poslali na zadanú e-mailovú adresu."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_ask_slot_access_code:
+    - text: "Please enter the access code."
+    - text: "Prosím zadajte prístupový kód."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_ask_slot_auth_agree:
+    - text: "In order to continue, I have to verify your identity. Otherwise  I can only answer general questions regarding blood donation. Do you want to continue?"
+    - text: "Pre pokračovanie musím overiť vašu identitu. Inak môžem zodpovedať len všeobecné otázky týkajúce sa darovania krvi. Chcete pokračovať?"
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+      
+  utter_ask_slot_user_email:
+    - text: "Please enter your e-mail address."
+    - text: "Prosím zadajte svoju e-mailovú adresu."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+  
+  utter_can_do_something_else:
+  - condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+    text: Ako vám ešte môžem pomôcť?
+  - text: What else I can help you with?
+
+  utter_could_not_authenticate:
+    - text: "We could not authenticate you. Please book your appointment wia mobile app or website."
+    - text: "Nepodarilo sa nám vás autentifikovať. Objednajte sa na termín cez mobilnú aplikáciu alebo webovú stránku."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_ask_slot_user_name_and_surname:
+    - text: "Please enter your name and surname."
+    - text: "Prosím zadajte svoje meno a priezvisko."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+  
+  utter_ask_slot_user_phone:
+    - text: "Please enter your phone number."
+    - text: "Prosím zadajte svoje telefónne číslo."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+  
+  utter_ask_slot_user_address:
+    - text: "Please enter your address."
+    - text: "Prosím zadajte svoju adresu."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+  
+  utter_ask_slot_wants_to_register:
+    - text: "Would you like to register?"
+    - text: "Chcete sa zaregistrovať?"
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_ask_slot_user_dob:
+    - text: "Please enter your date of birth."
+    - text: "Prosím zadajte svoj dátum narodenia."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+  
+  utter_ask_slot_user_gender:
+    - text: "Please enter your gender as M or F."
+    - text: "Prosím zadajte svoje pohlavie ako M alebo F."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+  
+  utter_invalid_email:
+    - text: "The e-mail address {slot_user_email} is not in our database."
+    - text: "E-mailovú adresu  {slot_user_email} nemáme v našej databáze."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+  
+  utter_incorrect_access_code:
+    - text: "The access code is incorrect."
+    - text: "Prístupový kód je nesprávny."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+  
+  utter_ask_rebook:
+    - text: "Would you like to change your booking?"
+    - text: "Chceli by ste zmeniť váš termín?"
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_no_booking:
+    - text: "You do not have any future bookings."
+    - text: "Nemáte žiadne budúce rezervované termíny."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_corrected_previous_input:
+    - text: "..."
+
+  utter_ask_feedback:
+    - text: "Was the answer helpful?"
+      buttons:
+      - title: "Yes"
+        payload: "/SetSlots(slot_feedback=positive)"
+      - title: "No"
+        payload: "/SetSlots(slot_feedback=negative)"
+    - text: "Bola odpoveď užitočná?"
+      buttons:
+      - title: "Áno"
+        payload: "/SetSlots(slot_feedback=positive)"
+      - title: "Nie"
+        payload: "/SetSlots(slot_feedback=negative)"
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+  utter_free_chitchat_response:
+    - text: "placeholder"
+      metadata:
+        rephrase: True
+        rephrase_prompt: |
+          The following is a conversation with an AI assistant built with Rasa.
+          The assistant is helpful, creative, clever, and very friendly.
+          The user is making small talk, and the assistant should respond, keeping things light.
+          Context / previous conversation with the user:
+          {{history}}
+          {{current_input}}
+          Suggested AI Response:
+
+  utter_disclaimer:
+    - text: "**Dear Donor,**\n 
+            Thank you in advance for your willingness to donate blood, plasma, or blood cells \n  
+            Before the donation, we will examine your blood count, blood pressure, body temperature (if necessary), and you will undergo a medical examination.\n
+            In the collected blood, we will test for:\n 
+            - Blood group  \n
+            - Antibodies against the hepatitis B virus (anti-HBc), its surface antigen (HBsAg), and HBV DNA  \n
+            - Antibodies against the hepatitis C virus (anti-HCV) and HCV RNA  \n
+            - Antibodies against the AIDS virus (anti-HIV), HIV p24 antigen, and HIV RNA  \n
+            - Syphilis tests  \n
+            We will inform you of the results of these tests only if they affect your eligibility to donate blood or if additional tests are needed.  \n
+            These tests are intended to prevent the transmission of infectious diseases through donated blood. In some cases, especially with recent infections, test results may be negative even though the infection could still be transmitted to a blood transfusion recipient. Therefore, it is essential that you answer each of the following questions truthfully. If you have any doubts, you can consult a doctor from our department.  \n
+            If you withhold any information, you may put blood transfusion recipients at risk of infection. These tests are not intended to verify your health status; for this purpose, please consult public health authorities.  \n
+            We kindly ask you to complete the questionnaire truthfully. This questionnaire is part of the mandatory examination before blood and blood component donation, in accordance with the decree of the Ministry of Health of the Slovak Republic No. 158/2015 Coll. on the requirements for the correct practice of transfusion medicine.  \n
+            **Please push the corresponding button**"
+    - text: "**Vážený darca,**\n
+            Vopred ďakujeme za ochotu darovať krv, plazmu alebo krvné bunky\n
+            Pred darovaním Vám vyšetríme krvný obraz, krvný tlak, telesnú teplotu (ak je to potrebné) a podrobíme Vás lekárskej prehliadke.\n
+            V odobratej krvi budeme testovať:\n
+            - Krvnú skupinu\n
+            - Protilátky proti vírusu hepatitídy B (anti-HBc), jeho povrchový antigén (HBsAg) a HBV DNA\n
+            - Protilátky proti vírusu hepatitídy C (anti-HCV) a HCV RNA\n
+            - Protilátky proti vírusu AIDS (anti-HIV), antigén HIV p24 a HIV RNA\n
+            - Testy na syfilis\n
+            Výsledky týchto testov Vám oznámime len v prípade, že ovplyvnia Vašu spôsobilosť darovať krv alebo ak budú potrebné ďalšie testy.\n
+            Tieto testy majú za cieľ predchádzať prenosu infekčných ochorení prostredníctvom darovanej krvi. V niektorých prípadoch, najmä pri nedávnych infekciách, môžu byť výsledky testov negatívne, aj keď by infekcia mohla byť stále prenášaná príjemcom krvnej transfúzie. Preto je nevyhnutné, aby ste na každú z nasledujúcich otázok odpovedali pravdivo. Ak máte akékoľvek pochybnosti, môžete sa poradiť s lekárom z našej ambulancie.\n
+            Ak zamlčíte akékoľvek informácie, môžete ohroziť príjemcov krvnej transfúzie infekciou. Tieto testy nie sú určené na overenie Vášho zdravotného stavu; na tento účel sa obráťte na úrady verejného zdravotnictva.\n
+            Pekne Vás prosíme, aby ste vyplnili dotazník pravdivo. Tento dotazník je súčasťou povinnej prehliadky pred darovaním krvi a krvných zložiek v zmysle vyhlášky  Ministerstva zdravotníctva Slovenskej republiky č. 158/2015 Zb. o požiadavkách na správne vykonávanie transfuznej medicíny.\n
+            **Prosím stlačte príslušné tlačidlo**"
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_ask_start_questionnaire:
+    - text: "Would you like to start the questionnaire?"
+    - text: "Chceli by ste začať s dotazníkom?"
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+actions:
+  - action_session_start
+  - action_search_faiss
+  - action_book_slot
+  - action_cancel_booking
+  - action_find_last_booking
+  - action_generate_ics
+  - action_initiate
+  - action_validate_email
+  - action_check_location
+  - action_validate_access_code
+  - action_ask_slot_location_choice
+  - action_ask_slot_booking_time
+  - action_validate_elligibility
+  - action_register_user
+  - action_send_access_code
+  - action_ask_slot_location
+  - action_collect_feedback

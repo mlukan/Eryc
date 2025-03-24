@@ -1,0 +1,244 @@
+### **Translation to English:**
+
+**Name and Surname:**  
+**Weight:**  
+**Height:**  
+**Personal Identification Number:**  
+**Phone Number:**  
+**E-mail:**  
+**Home Address:**  
+**Male:** ☐  
+**Female:** ☐  
+
+---
+
+**Dear Donor,**  
+
+Thank you in advance for your willingness to donate blood, plasma, or blood cells.  
+
+Before the donation, we will examine your blood count, blood pressure, body temperature (if necessary), and you will undergo a medical examination.  
+
+In the collected blood, we will test for:  
+- Blood group  
+- Antibodies against the hepatitis B virus (anti-HBc), its surface antigen (HBsAg), and HBV DNA  
+- Antibodies against the hepatitis C virus (anti-HCV) and HCV RNA  
+- Antibodies against the AIDS virus (anti-HIV), HIV p24 antigen, and HIV RNA  
+- Syphilis tests  
+
+We will inform you of the results of these tests only if they affect your eligibility to donate blood or if additional tests are needed.  
+
+These tests are intended to prevent the transmission of infectious diseases through donated blood. In some cases, especially with recent infections, test results may be negative even though the infection could still be transmitted to a blood transfusion recipient. Therefore, it is essential that you answer each of the following questions truthfully. If you have any doubts, you can consult a doctor from our department.  
+
+If you withhold any information, you may put blood transfusion recipients at risk of infection. These tests are not intended to verify your health status; for this purpose, please consult public health authorities.  
+
+We kindly ask you to complete the questionnaire truthfully. This questionnaire is part of the mandatory examination before blood and blood component donation, in accordance with the decree of the Ministry of Health of the Slovak Republic No. 158/2015 Coll. on the requirements for the correct practice of transfusion medicine.  
+
+**Please circle the correct answers!**  
+
+---
+
+### **1. Have you previously donated blood, plasma, or blood cells?**  
+☐ Yes  
+☐ No  
+
+### **2. Have you ever been permanently excluded from blood donation?**  
+☐ Yes  
+☐ No  
+
+---
+
+### **Health Questions (Medical History):**  
+
+### **3. Do you feel healthy?**  
+☐ Yes  
+☐ No  
+
+### **4. Do you weigh more than 50 kg (110 lbs)?**  
+☐ Yes  
+☐ No  
+
+### **5. Have you been treated by a dentist or dental hygienist in the past 72 hours?**  
+☐ Yes  
+☐ No  
+
+### **6. Have you taken any medication in the last month? If so, which ones?**  
+☐ Yes  
+☐ No  
+
+### **7. In the past month, have you had a fever over 38°C, herpes, diarrhea, a tick bite, or an animal bite?**  
+☐ Yes  
+☐ No  
+
+### **8. Have you been vaccinated in the past month?**  
+☐ Yes  
+☐ No  
+
+### **9. Have you ever had or do you currently have any of the following illnesses?**  
+
+- **Infectious diseases** (e.g., tuberculosis, infectious mononucleosis, Lyme disease, toxoplasmosis, brucellosis, tularemia, listeriosis, Q fever, babesiosis, etc.)  
+  ☐ Yes  
+  ☐ No  
+
+- **Tropical diseases** (e.g., malaria, Chagas disease (trypanosomiasis), leishmaniasis, etc.)  
+  ☐ Yes  
+  ☐ No  
+
+- **Rheumatologic disease, rheumatic fever, or autoimmune disease?**  
+  ☐ Yes  
+  ☐ No  
+
+- **Heart disease, high or low blood pressure?**  
+  ☐ Yes  
+  ☐ No  
+
+- **Chronic lung or bronchial disease, asthma, allergy, hay fever?**  
+  ☐ Yes  
+  ☐ No  
+
+- **Kidney disease?**  
+  ☐ Yes  
+  ☐ No  
+
+- **Blood disorders or bleeding tendencies?**  
+  ☐ Yes  
+  ☐ No  
+
+- **Neurological disorders, epilepsy?**  
+  ☐ Yes  
+  ☐ No  
+
+- **Metabolic disorder (diabetes), endocrine disorder (e.g., thyroid disease)?**  
+  ☐ Yes  
+  ☐ No  
+
+- **Skin diseases (eczema, psoriasis)?**  
+  ☐ Yes  
+  ☐ No  
+
+- **Digestive system disorders, liver or pancreas diseases?**  
+  ☐ Yes  
+  ☐ No  
+
+- **Cancer?**  
+  ☐ Yes  
+  ☐ No  
+
+- **Sexually transmitted disease?**  
+  ☐ Yes  
+  ☐ No  
+
+---
+
+### **10. In the past 12 months, have you experienced unexplained weight loss, fever, sweating, psychological changes, or swollen lymph nodes?**  
+☐ Yes  
+☐ No  
+
+### **11. In the last three months, have you been treated for acne with isotretinoin (Roaccutane®, Accutane®), prostate issues with finasteride or dutasteride (Proscar®, Avodart®), or hair loss with Propecia®?**  
+☐ Yes  
+☐ No  
+
+### **12. In the last three years, have you been treated with acitretin (Neotigason®) or etretinate (Tegison®)?**  
+☐ Yes  
+☐ No  
+
+Here is the English translation of your text:
+
+---
+
+### Questions about Risk Factors:
+
+13. In the last 6 months, have you had:
+- Surgery, a medical examination or treatment, an endoscopy, or vascular catheterization?  
+  **Yes / No**  
+- A tattoo, piercing, earring application, acupuncture, or permanent makeup?  
+  **Yes / No**  
+- An injury where a wound or mucous membrane came into contact with someone else’s blood, or an accidental injury with a used injection needle?  
+  **Yes / No**  
+
+14. Have you ever received a blood transfusion? If yes, when?  
+   **……** Where? **……**  
+
+15. Have you ever had a transplant of human or animal tissue?  
+  **Yes / No**  
+
+16. Have you ever had brain or spinal cord surgery?  
+  **Yes / No**  
+
+- Has anyone in your family had Creutzfeldt-Jakob disease or any other transmissible spongiform encephalopathy?  
+  **Yes / No**  
+- Have you been treated with human pituitary-derived products (growth hormone)?  
+  **Yes / No**  
+
+17. Did you stay in the UK/Ireland for a total of 6 months or more in the past?  
+  **Yes / No**  
+
+18. Have you traveled outside Slovakia in the past 6 months?  
+  **Yes / No**  
+
+19. Were you born or have you lived for more than 6 months outside Europe?  
+  **Yes / No**  
+   - If yes, where? **……**  
+   - Since when have you lived in Europe? **……**  
+
+20. In the past 6 months, have you been in contact with a person who had hepatitis or another infectious disease at that time?  
+  **Yes / No**  
+
+21. In the past 3 months, have you had sexual contact with a new partner?  
+  **Yes / No**  
+
+22. Have you or your sexual partner, either currently or in the past, been in any of the following situations:  
+  - Tested positive for HIV, syphilis, or hepatitis?  
+  **Yes / No**  
+  - A user of drugs or anabolic steroids?  
+  **Yes / No**  
+  - A provider or recipient of sexual services for money or drugs?  
+  **Yes / No**  
+
+23. Do you have a high-risk occupation or hobby? (e.g., professional driver, diver, working at heights)  
+  **Yes / No**  
+
+### For Men:
+24. In the past 12 months, have you had sexual contact with a man?  
+  **Yes / No**  
+
+### For Women:
+25. In the past 6 months, have you been pregnant or breastfeeding?  
+  **Yes / No**  
+
+26. Were you treated with hormone injections for infertility before 1986?  
+  **Yes / No**  
+
+---
+
+### Declaration:
+
+I declare that I have understood the above questions and answered all questions truthfully.  
+
+I acknowledge that if I intentionally withhold any information, I may cause harm or death to another person and may be prosecuted under the Criminal Code of the Slovak Republic.  
+
+I am aware of the possibility of self-exclusion and will use it if necessary. I consider myself a suitable donor whose blood will not endanger the recipient’s health. If I develop symptoms of an infectious disease after donation, I will inform the transfusion center immediately.  
+
+I declare that I am donating blood (plasma, blood cells) voluntarily and free of charge, and I agree to its use for medical purposes. I declare that I have been clearly informed about the purpose, nature, and risks of the examinations I must undergo as a blood donor and agree to their performance.  
+
+---
+
+### Basic Information on Personal Data Protection:
+
+The personal data provided in this questionnaire is processed in information systems operated by the National Transfusion Service of the Slovak Republic (NTS SR), with headquarters at Dúbravská cesta 3/L, 831 01 Bratislava, Slovakia, ID: 30 853 915 ("NTS SR"), for the purposes of:  
+(a) ensuring the quality, safety, and production of transfusion medicines,  
+(b) ensuring the quality and safety of blood and blood components, and  
+(c) managing the records of blood donors and blood components.  
+
+By signing this questionnaire, you confirm that when submitting the form to the appropriate NTS SR staff, you have been provided with basic information about the protection of your personal data in NTS SR information systems. You were also given the opportunity to familiarize yourself with the extended information on personal data protection in the form of:  
+(a) written information displayed on the information board at the NTS SR facility (if the form was submitted at an NTS SR center), or  
+(b) a printed copy available from mobile donation unit staff (if the form was submitted during a mobile blood collection event).  
+
+You have the right to access your personal data, correct it, and request processing restrictions, as detailed in the extended data protection notice.  
+
+More information on data processing in NTS SR systems is available on the NTS SR website at:  
+[www.ntssr.sk/zasadyochranvudajov](www.ntssr.sk/zasadyochranvudajov).  
+
+If you have any questions or uncertainties about the protection of your personal data, you can contact NTS SR via email at: **osobne.udaje@ntssr.sk**.  
+
+---
+

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   sodipodi:docname="bdot.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="8.3856039"
+     inkscape:cx="218.64853"
+     inkscape:cy="818.60533"
+     inkscape:window-width="1464"
+     inkscape:window-height="916"
+     inkscape:window-x="1275"
+     inkscape:window-y="1118"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="205.59044"
+       y="773.70695"
+       width="27.666463"
+       height="21.942367"
+       id="rect2" />
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#660a0a;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#910404;stop-opacity:0;"
+         offset="0.77380949"
+         id="stop2" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="radialGradient2-0"
+       cx="89.869095"
+       cy="212.91986"
+       fx="89.869095"
+       fy="212.91986"
+       r="7.2631445"
+       gradientTransform="matrix(0.19084261,0,0,0.18853639,-81.679312,-258.8615)"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="pad" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#ff0000;stroke:url(#radialGradient2-0);stroke-width:1.15374;stroke-dasharray:none;stroke-opacity:1"
+       id="path1-5"
+       cx="-64.528465"
+       cy="-218.71841"
+       rx="1.2580621"
+       ry="1.2492476"
+       inkscape:transform-center-x="0.23297407"
+       inkscape:transform-center-y="-0.26769063"
+       transform="scale(-1)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.1111px;font-family:'.SF NS Rounded';-inkscape-font-specification:'.SF NS Rounded Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#2b1111;fill-opacity:1;stroke:none;stroke-width:0.544999;stroke-dasharray:none;stroke-opacity:1"
+       x="55.307648"
+       y="219.84494"
+       id="text3-4"><tspan
+         sodipodi:role="line"
+         id="tspan3-9"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.1111px;font-family:'.SF NS Rounded';-inkscape-font-specification:'.SF NS Rounded Bold';stroke-width:0.545;fill:#2b1111;fill-opacity:1;stroke:none"
+         x="55.307648"
+         y="219.84494">b</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,394 @@
+flows:
+  pattern_chitchat:
+    description: Conversation repair flow for off-topic interactions that won't disrupt the main conversation. should not respond to greetings or anything else for which there is a flow defined
+    name: pattern chitchat
+    steps:
+      - action: action_initiate
+      - action: utter_free_chitchat_response
+  pattern_search:
+    description: Flow for handling knowledge-based questions
+    name: pattern search
+    steps:
+      - action: action_initiate
+      - action: action_search_faiss
+  
+  
+
+  pattern_cancel_flow:
+    description: Conversation repair flow that starts when a flow is cancelled
+    name: pattern_cancel_flow
+    steps:
+      - action: action_cancel_flow
+
+  pattern_cannot_handle:
+    description: |
+      Conversation repair flow for addressing failed command generation scenarios
+    name: pattern cannot handle
+    steps:
+      - noop: true
+        next:
+          # chitchat fallback
+          - if: "'{{context.reason}}' = 'cannot_handle_chitchat'"
+            then:
+              - action: utter_cannot_handle
+                next: "END"
+          # fallback for things that are not supported
+          - if: "'{{context.reason}}' = 'cannot_handle_not_supported'"
+            then:
+              - action: utter_cannot_handle
+                next: END
+          # default
+          - else:
+              - action: utter_ask_rephrase
+                next: END
+
+  pattern_clarification:
+    description: Conversation repair flow for handling ambiguous requests that could match multiple flows
+    name: pattern clarification
+    steps:
+      - action: action_clarify_flows
+      - action: utter_clarification_options_rasa
+
+  pattern_code_change:
+    description: Conversation repair flow for cleaning the stack after an assistant update
+    name: pattern code change
+    steps:
+      - action: action_clean_stack
+
+  pattern_collect_information:
+    description: Flow for collecting information from users
+    name: pattern collect information
+    steps:
+      - id: start
+        action: action_run_slot_rejections
+      - action: validate_{{context.collect}}
+        next:
+          - if: "slots.{{context.collect}} is not null"
+            then: END
+          - else: ask_collect
+      - id: ask_collect
+        action: "{{context.utter}}"
+      - action: "{{context.collect_action}}"
+      - action: action_listen
+        next: start
+
+  pattern_completed:
+    description: Flow that asks if the user needs more help after completing their initiated use cases
+    name: pattern completed
+    steps:
+      - action: utter_can_do_something_else
+
+  pattern_continue_interrupted:
+    description: Conversation repair flow for managing when users switch between different flows
+    name: pattern continue interrupted
+    steps:
+      - action: utter_flow_continue_interrupted
+
+  pattern_correction:
+    description: Conversation repair flow for managing user input changes or error corrections
+    name: pattern correction
+    steps:
+      - action: action_correct_flow_slot
+        next:
+          - if: not context.is_reset_only
+            then:
+              - action: utter_corrected_previous_input
+                next: END
+          - else: END
+
+  pattern_human_handoff:
+    description: Conversation repair flow for switching users to a human agent if their request can't be handled
+    name: pattern human handoff
+    steps:
+      - action: utter_human_handoff_not_available
+
+  pattern_internal_error:
+    description: Conversation repair flow for informing users about internal errors
+    name: pattern internal error
+    steps:
+      - noop: true
+        next:
+          - if: "'{{context.error_type}}' = 'rasa_internal_error_user_input_too_long'"
+            then:
+              - action: utter_user_input_too_long_error_rasa
+                next: END
+          - if: "'{{context.error_type}}' = 'rasa_internal_error_user_input_empty'"
+            then:
+              - action: utter_user_input_empty_error_rasa
+                next: END
+          - else:
+              - action: utter_internal_error_rasa
+                next: END
+
+  pattern_repeat_bot_messages:
+    description: Voice conversation repair pattern to repeat bot messages
+    name: pattern repeat bot messages
+    steps:
+      - action: action_repeat_bot_messages
+
+  pattern_restart:
+    description: Flow for restarting the conversation
+    name: pattern restart
+    nlu_trigger:
+      - intent: restart
+    steps:
+      - action: action_restart
+
+  pattern_session_start:
+    description: Flow for starting the conversation
+    name: pattern session start
+    nlu_trigger:
+      - intent: session_start
+    steps:
+      - action: action_session_start
+
+  pattern_skip_question:
+    description: Conversation repair flow for managing user intents to skip questions (steps)
+    name: pattern skip question
+    steps:
+      - action: utter_skip_question_answer
+
+  pattern_user_silence:
+    description: Reacting to user silence in voice bots
+    name: pattern react to silence
+    nlu_trigger:
+      - intent: silence_timeout
+    persisted_slots:
+      - consecutive_silence_timeouts
+    steps:
+      - noop: true
+        next:
+          - if: "slots.consecutive_silence_timeouts = 0.0"
+            then:
+              - set_slots:
+                  - consecutive_silence_timeouts: 1.0
+              - action: action_repeat_bot_messages
+                next: END
+          - if: "slots.consecutive_silence_timeouts = 1.0"
+            then:
+              - set_slots:
+                  - consecutive_silence_timeouts: 2.0
+              - action: utter_ask_still_there
+                next: END
+          - if: "slots.consecutive_silence_timeouts > 1.0"
+            then:
+              - action: utter_inform_hangup
+              - action: action_hangup
+                next: END
+          - else: END
+
+
+responses:
+  utter_ask_rephrase:
+    - text: I’m sorry I am unable to understand you, could you please rephrase?
+    - text: Nerozumel som vám, môžete to prosím zopakovať?
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+
+  utter_ask_still_there:
+    - text: "Hello, are you still there?"
+      metadata:
+        rephrase: True
+    - text: "Ešte ste tam?"
+      metadata:
+        rephrase: True
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_boolean_slot_rejection:
+    - text: "Sorry, the value you provided, `{{value}}`, is not valid. Please respond with a valid value."
+      metadata:
+        rephrase: True
+        template: jinja
+    - text: "Prepáčte, ale hodnota, ktorú ste poskytli, `{{value}}`, nie je platná. Prosím, odpovedajte platnou hodnotou."
+      metadata:
+        rephrase: True
+        template: jinja
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_can_do_something_else:
+    - text: "What else can I help you with?"
+      metadata:
+        rephrase: True
+    - text: "Čím vám ešte môžem pomôcť?"
+      metadata:
+        rephrase: True
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_cannot_handle:
+    - text: I'm sorry, I'm not trained to help with that.
+    - text: Prepáčte, ale s týmto Vám neviem pomôcť.
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_categorical_slot_rejection:
+    - text: "Sorry, you responded with an invalid value - `{{value}}`. Please select one of the available options."
+      metadata:
+        rephrase: True
+        template: jinja
+    - text: "Prepáčte, ale odpovedali ste neplatnou hodnotou - `{{value}}`. Prosím, vyberte jednu z dostupných možností."
+      metadata:
+        rephrase: True
+        template: jinja
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_clarification_options_rasa:
+    - text: "I can help, but I need more information. Which of these would you like to do: {{context.clarification_options}}?"
+      metadata:
+        rephrase: True
+        template: jinja
+    - text: "Môžem pomôcť, ale potrebujem viac informácií. Ktorú z týchto možností by ste chceli vykonať: {{context.clarification_options}}?"
+      metadata:
+        rephrase: True
+        template: jinja
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_corrected_previous_input:
+    - text: "Ok, I am updating {{ context.corrected_slots.keys()|join(', ') }} to {{ context.corrected_slots.values()|join(', ') }} respectively."
+      metadata:
+        rephrase: True
+        template: jinja
+
+  utter_float_slot_rejection:
+    - text: "Sorry, it seems the value you provided `{{value}}` is not a valid number. Please provide a valid number in your response."
+      metadata:
+        rephrase: True
+        template: jinja
+    - text: "Prepáčte, ale zadaná hodnota `{{value}}` nie je platné číslo. Prosím, zadajte platné číslo vo vašej odpovedi."
+      metadata:
+        rephrase: True
+        template: jinja
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_flow_continue_interrupted:
+    - text: ""
+      metadata:
+        template: jinja
+    
+
+  utter_free_chitchat_response:
+    - text: "Sorry, I'm not able to answer that right now."
+      metadata:
+        rephrase: True
+        rephrase_prompt: |
+          You are an incredibly friendly assistant. Generate a short
+          response to the user's comment in simple english.
+
+          User: {{current_input}}
+          Response:
+    - text: "Prepáčte, ale vám teraz neviem odpovedať."
+      metadata:
+        rephrase: True
+        rephrase_prompt: |
+          Ste neuveriteľne priateľský asistent. Vygenerujte krátku odpoveď na komentár používateľa jednoduchým anglickým jazykom.
+
+          Používateľ: {{current_input}}
+          Odpoveď:
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_human_handoff_not_available:
+    - text: I understand you want to be connected to a human agent, but that's something I cannot help you with at the moment. Is there something else I can help you with?
+      metadata:
+        rephrase: True
+    - text: Chápem, že sa chcete spojiť s ľudským agentom, ale to je niečo, čo vám momentálne nemôžem pomôcť. Môžem vám s niečím iným pomôcť?
+      metadata:
+        rephrase: True
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_inform_code_change:
+    - text: There has been an update to my code. I need to wrap up our running dialogue and start from scratch.
+      metadata:
+        rephrase: True
+    - text: Došlo k aktualizácii môjho kódu. Musím ukončiť našu bežiacu konverzáciu a začať odznova.
+      metadata:
+        rephrase: True
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_inform_hangup:
+    - text: It seems you are not there anymore. I will hang up shortly.
+      metadata:
+        rephrase: True
+
+  utter_internal_error_rasa:
+    - text: Sorry, I am having trouble with that. Please try again in a few minutes.
+    - text: Prepáčte, ale mám s tým problém. Skúste to znova o pár minút.
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_no_knowledge_base:
+    - text: I am afraid, I don't know the answer. At this point, I don't have access to a knowledge base.
+      metadata:
+        rephrase: True
+
+  utter_skip_question_answer:
+    - text: I'm here to provide you with the best assistance, and in order to do so, I kindly request that we complete this step together. Your input is essential for a seamless experience!
+      metadata:
+        rephrase: True
+
+  utter_user_input_empty_error_rasa:
+    - text: I see an empty message. What can I assist you with?
+    - text: Vidím prázdnu správu. S čím vám môžem pomôcť?
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+  utter_user_input_too_long_error_rasa:
+    - text: I'm sorry, but your message is too long for me to process. Please keep your message concise and within {% if context.info.max_characters %}{{context.info.max_characters}} characters.{% else %}a reasonable length.{% endif %}
+      metadata:
+        template: jinja
+    - text: Prepáčte, ale vaša správa je pre mňa príliš dlhá na spracovanie. Prosím, udržujte vašu správu stručnú a v {% if context.info.max_characters %}{{context.info.max_characters}} znakoch.{% else %}rozumnej dĺžke.{% endif %}
+      metadata:
+        template: jinja
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
+slots:
+  confirm_correction:
+    type: bool
+    mappings:
+      - type: from_llm
+  silence_timeout:
+    type: float
+    initial_value: 6.0
+    max_value: 1000000
+  consecutive_silence_timeouts:
+    type: float
+    initial_value: 0.0
+    max_value: 1000000
+

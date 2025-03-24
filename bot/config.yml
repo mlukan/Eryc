@@ -1,0 +1,18 @@
+recipe: default.v1
+language: en
+pipeline:
+- name: SingleStepLLMCoGenFaF
+  llm:
+    model_name: gpt-4o
+    engine: gpt-4o
+    api_type: azure
+    request_timeout: 1
+    api_base: https://voicecast-gpt-sweden-central.openai.azure.com
+    api_version: 2024-02-15-preview
+  flow_retrieval:
+    active: false
+
+policies:
+- name: FlowPolicy
+#  - name: EnterpriseSearchPolicy
+assistant_id: 20250316-212815-white-null

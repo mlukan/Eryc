@@ -1,0 +1,23 @@
+{
+  "prompt": null,
+  "prompt_template": null,
+  "user_input": null,
+  "llm": {
+    "model_name": "gpt-4o",
+    "engine": "gpt-4o",
+    "api_type": "azure",
+    "request_timeout": 1,
+    "api_base": "https://voicecast-gpt-sweden-central.openai.azure.com",
+    "api_version": "2024-02-15-preview"
+  },
+  "flow_retrieval": {
+    "embeddings": {
+      "provider": "openai",
+      "model": "text-embedding-ada-002"
+    },
+    "num_flows": 20,
+    "turns_to_embed": 1,
+    "should_embed_slots": true,
+    "active": false
+  }
+}

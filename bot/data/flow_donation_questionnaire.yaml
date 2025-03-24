@@ -1,0 +1,119 @@
+flows:
+  flow_donation_questionnaire:
+    description: Flow to ask all blood donation questionnaire questions. Flow na získanie všetkých otázok z dotazníka pre darovanie krvi.
+    steps:
+    - action: action_initiate
+    - call: flow_authenticate_user
+    - action: utter_disclaimer
+    - collect: slot_q1
+      utter: utter_ask_slot_q1
+    - collect: slot_q2
+      utter: utter_ask_slot_q2
+    - collect: slot_q3
+      utter: utter_ask_slot_q3
+    - collect: slot_q4
+      utter: utter_ask_slot_q4
+    - collect: slot_q5
+      utter: utter_ask_slot_q5
+    - collect: slot_q6
+      utter: utter_ask_slot_q6
+    - collect: slot_q7
+      utter: utter_ask_slot_q7
+    - collect: slot_q8
+      utter: utter_ask_slot_q8
+    - collect: slot_q9_1
+      utter: utter_ask_slot_q9_1
+    - collect: slot_q9_2
+      utter: utter_ask_slot_q9_2
+    - collect: slot_q9_3
+      utter: utter_ask_slot_q9_3
+    - collect: slot_q9_4
+      utter: utter_ask_slot_q9_4
+    - collect: slot_q9_5
+      utter: utter_ask_slot_q9_5
+    - collect: slot_q9_6
+      utter: utter_ask_slot_q9_6
+    - collect: slot_q9_7
+      utter: utter_ask_slot_q9_7
+    - collect: slot_q9_8
+      utter: utter_ask_slot_q9_8
+    - collect: slot_q9_9
+      utter: utter_ask_slot_q9_9
+    - collect: slot_q9_10
+      utter: utter_ask_slot_q9_10
+    - collect: slot_q9_11
+      utter: utter_ask_slot_q9_11
+    - collect: slot_q9_12
+      utter: utter_ask_slot_q9_12
+    - collect: slot_q9_13
+      utter: utter_ask_slot_q9_13
+    - collect: slot_q10
+      utter: utter_ask_slot_q10
+    - collect: slot_q11
+      utter: utter_ask_slot_q11
+    - collect: slot_q12
+      utter: utter_ask_slot_q12
+    - collect: slot_q13_1
+      utter: utter_ask_slot_q13_1
+    - collect: slot_q13_2
+      utter: utter_ask_slot_q13_2
+    - collect: slot_q13_3
+      utter: utter_ask_slot_q13_3
+    - collect: slot_q14
+      utter: utter_ask_slot_q14
+    - collect: slot_q15
+      utter: utter_ask_slot_q15
+    - collect: slot_q16_1
+      utter: utter_ask_slot_q16_1
+    - collect: slot_q16_2
+      utter: utter_ask_slot_q16_2
+    - collect: slot_q16_3
+      utter: utter_ask_slot_q16_3
+    - collect: slot_q17
+      utter: utter_ask_slot_q17
+    - collect: slot_q18
+      utter: utter_ask_slot_q18
+    - collect: slot_q19_1
+      utter: utter_ask_slot_q19_1
+    - collect: slot_q19_2
+      utter: utter_ask_slot_q19_2
+    - collect: slot_q19_3
+      utter: utter_ask_slot_q19_3
+    - collect: slot_q20
+      utter: utter_ask_slot_q20
+    - collect: slot_q21
+      utter: utter_ask_slot_q21
+    - collect: slot_q22_1
+      utter: utter_ask_slot_q22_1
+    - collect: slot_q22_2
+      utter: utter_ask_slot_q22_2
+    - collect: slot_q22_3
+      utter: utter_ask_slot_q22_3
+    - collect: slot_q23
+      utter: utter_ask_slot_q23
+      next: 
+        - if: slots.slot_user_gender = "M"
+          then: step_slot_q24
+        - else: step_slot_q25
+    - collect: slot_q24
+      id: step_slot_q24
+      utter: utter_ask_slot_q24
+      next: step_slot_declaration
+    - collect: slot_q25
+      id: step_slot_q25
+      utter: utter_ask_slot_q25
+    - collect: slot_q26
+      utter: utter_ask_slot_q26
+    - collect: slot_declaration
+      utter: utter_ask_slot_declaration
+      id: step_slot_declaration
+      next: 
+        - if: slots.slot_declaration = "yes"
+          then: step_confirm_declaration
+        - else: step_reject_declaration
+    - action: action_confirm_declaration
+      id: step_confirm_declaration
+      next: END
+    - action: utter_reject_declaration
+      id: step_reject_declaration
+      next: END

@@ -1,0 +1,599 @@
+{
+    "data": [
+      {
+        "id": 9,
+        "attributes": {
+          "Sekcia": "ABOUT BLOOD DONATION",
+          "createdAt": "2023-04-21T10:53:38.917Z",
+          "updatedAt": "2024-09-27T13:04:06.305Z",
+          "locale": "en",
+          "publishedAt": "2023-04-21T10:53:38.917Z",
+          "SekciaID": "o_darovani_krvi",
+          "Podsekcia_s_otazkami_a_odpovedami": [
+            {
+              "id": 20,
+              "Podsekcia": "About blood donation in general",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 76,
+                  "Otazka": "Where can I donate blood?",
+                  "Odpoved": "You can donate blood at every NTS SR blood donation centre during the collection hours and also via the mobile blood-collection unit when our team will directly come to the donors (to companies, schools, and organisations)."
+                },
+                {
+                  "id": 78,
+                  "Otazka": "What are the minimum requirements to be accepted as a blood donor?",
+                  "Odpoved": "You have got to be 18-60 years old, weigh at least 50 kg and you can be a donor until you are 65 years old. You should not suffer from a chronic and infectious disease, nor be on treatment for one."
+                },
+                {
+                  "id": 80,
+                  "Otazka": "Do I need to answer questions about my health condition before every donation?",
+                  "Odpoved": "To keep the possible blood recipient (the patient) out of health risk, the questionnaires must be filled out truthfully and anew before every donation. The laws require that all transfusion facilities be unified in this procedure."
+                },
+                {
+                  "id": 79,
+                  "Otazka": "How much blood is collected?",
+                  "Odpoved": "In total it is approximately 450 ml of blood."
+                },
+                {
+                  "id": 77,
+                  "Otazka": "How long does a regular blood donation take?",
+                  "Odpoved": "The donation itself takes approximately 5-15 minutes. The whole process of blood donation from registration to a donor’s departure home takes approximately an hour."
+                },
+                {
+                  "id": 81,
+                  "Otazka": "How long does a regular donation of plasma and platelets (thrombocytes) take?",
+                  "Odpoved": "Plasma collection using an apheresis device (separator), otherwise known as plasmapheresis, takes approximately 30-40 minutes. Platelet collection using an apheresis device (separator), otherwise known as thrombocytapheresis, takes approximately 60 minutes."
+                },
+                {
+                  "id": 82,
+                  "Otazka": "How long will it take until my body replaces the blood I donated?",
+                  "Odpoved": "The volume of fluids levels off a few hours after donation. Your body will replace the number of lost red blood cells over the next few days to a week."
+                },
+                {
+                  "id": 83,
+                  "Otazka": "How often can I donate blood?",
+                  "Odpoved": "Men can donate blood four times a year (every three months); women can donate three times a year (every four months). This is the time that allows your body to complete the number of red blood cells and iron supplies after the previous donation. Platelets and plasma (if collected by an apheretic device – a separator) can be donated more frequently, which is once every two weeks. It is so, as the body can replace the lost platelets and plasma way more quickly than the loss of red blood cells and iron. Platelets are renewed to the usual level as soon as 72 hours after a donation."
+                },
+                {
+                  "id": 84,
+                  "Otazka": "Does my body have enough blood to donate?",
+                  "Odpoved": "It does. If you weigh more than 50kg, your body contains 4,5 to 6 litres of blood (the volume depends on your weight and height)."
+                },
+                {
+                  "id": 86,
+                  "Otazka": "How can I find out the level of iron in my body?",
+                  "Odpoved": "Your doctor can examine you. Donors have their haemoglobin level (the red blood pigment containing iron) checked before the donation. This is done to protect the donor so that their haemoglobin level is safe for an adult person even after donating blood. The donor can increase their iron level by eating red meat, lentils, dark green vegetables, seaweed, nuts, seeds, cereals, or by taking food supplements containing iron."
+                },
+                {
+                  "id": 85,
+                  "Otazka": "How will I feel after a donation? Could a blood collection do me harm during the donation?",
+                  "Odpoved": "Most people feel well after the donation. In case you felt any sign of discomfort, notify the medical staff immediately. Avoid picking up heavy objects and any exhausting exercise for the next 24 hours after the donation. You can return to your usual activities afterwards as soon and for as long as you feel comfortable. "
+                },
+                {
+                  "id": 87,
+                  "Otazka": "Could I get infected by HIV during donating blood?",
+                  "Odpoved": "No. There is absolutely no risk of you coming into contact with any disease, including HIV virus causing AIDS."
+                }
+              ]
+            },
+            {
+              "id": 26,
+              "Podsekcia": "About blood groups",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 117,
+                  "Otazka": "What is the percentual distribution of blood groups among population?",
+                  "Odpoved": "The approximate distribution of blood types in Slovakia is following: (the occurrence can vary according to specific racial and ethnical groups)\n\n**A RhD positive\t40 %**\n**O RhD positive\t35 %**\n**A RhD negative\t7 %**\n**B RhD positive\t7 %**\n**O RhD negative\t6 %**\n**AB RhD positive\t3 %**\n**B RhD negative\t1.5 %**\n**AB RhD negative\t0.5 %**\n"
+                },
+                {
+                  "id": 118,
+                  "Otazka": "Could my blood be given even to patients with a different blood type than mine?",
+                  "Odpoved": "Unless the blood is divided into red blood cells and plasma, it cannot be given to a patient with a different blood type."
+                },
+                {
+                  "id": 119,
+                  "Otazka": "To whom can be my red blood cells given if my blood type is 0 RhD-?",
+                  "Odpoved": "Your red blood cells can be given to every other blood type, because you are a universal donor of red blood cells. However, you can receive red blood cells only from a donor with blood type 0 RhD-."
+                },
+                {
+                  "id": 120,
+                  "Otazka": "To whom can be my red blood cells given if my blood type is 0 RhD+?",
+                  "Odpoved": "Your red blood cells can be given to all RhD positive blood types 0+, A+, B+, AB+."
+                },
+                {
+                  "id": 121,
+                  "Otazka": "To whom can be my red blood cells given if my blood type is A?",
+                  "Odpoved": "You can donate to people with blood type A or AB. You can receive red blood cells of blood type A or 0."
+                },
+                {
+                  "id": 122,
+                  "Otazka": "To whom can be my red blood cells given if my blood type is B?",
+                  "Odpoved": "You can donate to people with blood type B or AB. You can receive red blood cells of blood type B or 0."
+                },
+                {
+                  "id": 123,
+                  "Otazka": "To whom can be my red blood cells given if my blood type is AB?",
+                  "Odpoved": "In this case, you can donate only to people of the same blood type, which is AB. However, you are a universal receiver; therefore you are able to receive red blood cells of blood type AB, A, B and 0."
+                },
+                {
+                  "id": 124,
+                  "Otazka": "Does an artificial blood substitute exist?",
+                  "Odpoved": "Scientists have not invented such a substance which could successfully replace human blood yet. The only source of blood remain therefore blood donors. This is the main reason why blood donors are so important for those whose life depends on blood transfusion."
+                }
+              ]
+            },
+            {
+              "id": 27,
+              "Podsekcia": "What happens to blood after collection?",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 125,
+                  "Otazka": "How long does it take until my blood is used?",
+                  "Odpoved": "Most of the donated blood is processed immediately (within hours) and divided into individual blood components which are ready to use within 24 hours after collection."
+                },
+                {
+                  "id": 126,
+                  "Otazka": "Is the donated blood stored immediately ‘as is’ and readily available?",
+                  "Odpoved": "No, the collected blood needs to be processed first – it is separated into individual components by centrifugation. The components are red blood cells, white blood cells with platelets and plasma. Red blood cells can be stored at a temperature between 2 to 6 °C up to 42 days. They distribute oxygen and are used to treat anaemia. Plasma is frozen to -35 °C immediately after separation and is used to handle bleeding (to replenish missing clotting factors). Frozen, it can be stored for up to 3 years. Platelets are important to control bleeding and are usually given to patients with leukaemia and other forms of cancer. Platelets are stored at a temperature between 22 to 25 °C and can be used for up to 5 days."
+                }
+              ]
+            },
+            {
+              "id": 28,
+              "Podsekcia": "Criteria for exclusion from blood donation",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 127,
+                  "Otazka": "Who is referred to as an excluded donor?",
+                  "Odpoved": "A person who is not suitable or acceptable to donate blood is excluded from blood donation and is, therefore, referred to as excluded donor. Whether the donor will or will not be excluded temporarily or permanently depends on many criteria (e.g. a donor can be temporarily excluded because of anaemia or other circumstances which are usually just a temporary state). Such a donor is added to the list of excluded donors. In case such a person would try to shorten the period of exclusion, they will not be accepted. Unless there is no other reason to be excluded, the donor may be reinstated on the list of blood donors after the expiry of the exclusion period."
+                },
+                {
+                  "id": 128,
+                  "Otazka": "What are the main criteria for permanent exclusion from donating blood?",
+                  "Odpoved": "Excluded from blood donation are:\n• Those who ever used illegal drugs administered intravenously (into a vein) or intramuscularly (into a muscle)\n• Anyone positively tested for HIV (the virus causing AIDS disease), type B and C hepatitis or anyone whose sexual partner is positive for any of those diseases\n• Men and women who ever provided or received sexual service for money or drugs.\n• Anyone leading a promiscuous lifestyle, frequently changing sexual partners.\n• Anyone with a family history of CJD\n• Anyone who has been exposed to a high-risk situation in terms of CJD transmission and CJD variants.\n• Anyone who stayed in Great Britain between 1980 to 1996 for 6 months or longer.\n• Anyone taking anabolic steroids without a doctors’ prescription.\n• Anyone who suffers from a bleeding disorder (e.g. haemophilia) and is being treated for it with blood products.\n"
+                },
+                {
+                  "id": 129,
+                  "Otazka": "Recently, I was excluded from a donation because of an inconclusive test for type B hepatitis. What is the explanation for my exclusion?",
+                  "Odpoved": "Antibodies for hepatitis B (anti-HBc) are usually formed after overcoming this disease and they may persist in the body for life. They remain positive even after donor is considered cured. It is interesting that a donor often does not even know they overcame hepatitis B."
+                },
+                {
+                  "id": 130,
+                  "Otazka": "Does it mean I am no longer eligible to donate blood once I have been excluded?",
+                  "Odpoved": "In case your exclusion is permanent, you will be notified. Otherwise, the period of your exclusion depends on the reason for your exclusion. Before every donation, you will undergo a small medical examination to find out whether you are suitable to donate blood on that particular day."
+                },
+                {
+                  "id": 131,
+                  "Otazka": "Can I donate blood with a cold of flu?",
+                  "Odpoved": "Only donors with no symptoms, generally in good health condition who feel well can donate blood. If the donor has got a cold or flu, blood donation is possible two weeks after complete recovery and two weeks after finishing antibiotic treatment."
+                },
+                {
+                  "id": 132,
+                  "Otazka": "Can I donate blood when I have got hypertension?",
+                  "Odpoved": "Yes, and even in case you take medication. If you are monitored by a doctor and your blood pressure is under control and stabilised, you may donate blood. However, secondary complications of hypertension (e.g. renal impairment) are a reason for exclusion."
+                },
+                {
+                  "id": 133,
+                  "Otazka": "What if I use aspirin or other medication prescribed by my doctor?",
+                  "Odpoved": "Aspirin and ibuprofen do not interfere with a whole-blood donation. Platelets apheresis forbids using aspirin and aspirin products 5 days prior to donation. Many other medications are acceptable. It is recommended to call the collection centre and ask a doctor about the medications you use."
+                },
+                {
+                  "id": 134,
+                  "Otazka": "Can I donate blood if I am anaemic?",
+                  "Odpoved": "In such case you cannot donate blood. Before you donate blood, tests for haemoglobin or blood count. Afterwards, it is ascertained whether its level is acceptable for the donation to take place."
+                },
+                {
+                  "id": 135,
+                  "Otazka": "What can I do if I am not a suitable donor?",
+                  "Odpoved": "In such a case it may be just a temporary state (because of various reasons) and after a given period of exclusion, you may once again be added to the list of donors. Collection centres always need capable volunteers who support blood donations or organise donations in the field, away from the donation centre. "
+                },
+                {
+                  "id": 137,
+                  "Otazka": "When can I donate blood after getting a tattoo/piercing/permanent make-up?",
+                  "Odpoved": "At our donation centres you can donate blood no sooner than 4 months after getting a new tattoo, piercing, permanent make-up or undergoing acupunture."
+                },
+                {
+                  "id": 139,
+                  "Otazka": "I have returned from abroad, from a EUROPEAN country, when can I donate blood (or blood components)?",
+                  "Odpoved": "After returning from European countries, it is usually possible to donate blood without restrictions - please check the current blood donor guidelines (updated regularly) before donating blood:\n\n- [Guidelines for blood donors on staying in areas with mosquito-borne infectious diseases](https://www.ntssr.sk/en/web/usmernenie_detail?id=7)\n- [Guidelines for blood donors regarding the COVID-19 acute respiratory and pneumonia pandemic caused by the new SARS CoV2 coronavirus](https://www.ntssr.sk/en/web/usmernenie_detail?id=11)\n"
+                },
+                {
+                  "id": 141,
+                  "Otazka": "I have returned from abroad, from a NON-EUROPEAN country, when can I donate blood (or blood components)?",
+                  "Odpoved": "After foreign travel outside Europe, the length of exclusion from blood donation varies depending on the areas visited, but in general it is a minimum of 1 month. We recommend that you contact one of our [Blood Donation Centres](https://www.ntssr.sk/en/web/odberove_centra) or use the contact form [Contact Us](https://www.ntssr.sk/en/web/napiste_nam) (select the medical field of interest) to find out about the length of the deferral period prior to your planned donation.\n\nApproximate length of temporary exclusion from blood donation upon return from selected non-European countries:\n- **Australia:** 1 month\n- **China:** 1 month\n- **Egypt:** 1 month\n- **Israel:** 1 month\n- **South Africa:** 6 months\n- **Canada:** 1 month\n- **Cape Verde:** 1 month\n- **Kenya:** 6 months\n- **Cuba:** 1 month\n- **Maldives:** 1 month\n- **Morocco:** 1 month\n- **Mexico:** 1-6 months, depending on areas visited\n- **United Arab Emirates:** 1 month\n- **United States of America:** 1 month\n- **Thailand:** 1-6 months, depending on areas visited\n- **Tunisia:** 1 month\n- **Turkey:** 0-1 month, depending on regions visited - see [Guidelines for blood donors on staying in areas with mosquito-borne infectious diseases](https://www.ntssr.sk/en/web/usmernenie_detail?id=7)\n- **Vietnam:** 1-6 months, depending on the areas visited\n"
+                }
+              ]
+            },
+            {
+              "id": 30,
+              "Podsekcia": "Can I donate blood if...?",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 166,
+                  "Otazka": "Can I donate blood with a cold of flu?",
+                  "Odpoved": "Only donors with no symptoms, generally in good health condition who feel well can donate blood. If the donor has got a cold or flu, blood donation is possible two weeks after complete recovery and two weeks after finishing antibiotic treatment."
+                },
+                {
+                  "id": 167,
+                  "Otazka": "Can I donate blood when I have got hypertension?",
+                  "Odpoved": "Yes, and even in case you take medication. If you are monitored by a doctor and your blood pressure is under control and stabilised, you may donate blood. However, secondary complications of hypertension (e.g. renal impairment) are a reason for exclusion."
+                },
+                {
+                  "id": 168,
+                  "Otazka": "What if I use aspirin or other medication prescribed by my doctor?",
+                  "Odpoved": "Aspirin and ibuprofen do not interfere with a whole-blood donation. Platelets apheresis forbids using aspirin and aspirin products 5 days prior to donation. Many other medications are acceptable. It is recommended to call the collection centre and ask a doctor about the medications you use."
+                },
+                {
+                  "id": 169,
+                  "Otazka": "Can I donate blood if I am anaemic?",
+                  "Odpoved": "In such case you cannot donate blood. Before you donate blood, tests for haemoglobin or blood count. Afterwards, it is ascertained whether its level is acceptable for the donation to take place."
+                },
+                {
+                  "id": 170,
+                  "Otazka": "When can I donate blood after getting a tattoo/piercing/permanent make-up?",
+                  "Odpoved": "At our donation centres you can donate blood no sooner than 4 months after getting a new tattoo, piercing, permanent make-up or undergoing acupunture."
+                },
+                {
+                  "id": 171,
+                  "Otazka": "I have returned from abroad, from a EUROPEAN country, when can I donate blood (or blood components)?",
+                  "Odpoved": "After returning from European countries, it is usually possible to donate blood without restrictions - please check the current blood donor guidelines (updated regularly) before donating blood:\n\n- [Guidelines for blood donors on staying in areas with mosquito-borne infectious diseases](https://www.ntssr.sk/en/web/usmernenie_detail?id=7)\n- [Guidelines for blood donors regarding the COVID-19 acute respiratory and pneumonia pandemic caused by the new SARS CoV2 coronavirus](https://www.ntssr.sk/en/web/usmernenie_detail?id=11)\n"
+                },
+                {
+                  "id": 172,
+                  "Otazka": "I have returned from abroad, from a NON-EUROPEAN country, when can I donate blood (or blood components)?",
+                  "Odpoved": "After foreign travel outside Europe, the length of exclusion from blood donation varies depending on the areas visited, but in general it is a minimum of 1 month. We recommend that you contact one of our [Blood Donation Centres](https://www.ntssr.sk/en/web/odberove_centra) or use the contact form [Contact Us](https://www.ntssr.sk/en/web/napiste_nam) (select the medical field of interest) to find out about the length of the deferral period prior to your planned donation.\n\nApproximate length of temporary exclusion from blood donation upon return from selected non-European countries:\n- **Australia:** 1 month\n- **China:** 1 month\n- **Egypt:** 1 month\n- **Israel:** 1 month\n- **South Africa:** 6 months\n- **Canada:** 1 month\n- **Cape Verde:** 1 month\n- **Kenya:** 6 months\n- **Cuba:** 1 month\n- **Maldives:** 1 month\n- **Morocco:** 1 month\n- **Mexico:** 1-6 months, depending on areas visited\n- **United Arab Emirates:** 1 month\n- **United States of America:** 1 month\n- **Thailand:** 1-6 months, depending on areas visited\n- **Tunisia:** 1 month\n- **Turkey:** 0-1 month, depending on regions visited - see [Guidelines for blood donors on staying in areas with mosquito-borne infectious diseases](https://www.ntssr.sk/en/web/usmernenie_detail?id=7)\n- **Vietnam:** 1-6 months, depending on the areas visited\n"
+                },
+                {
+                  "id": 173,
+                  "Otazka": "When can I donate blood after surgery?",
+                  "Odpoved": "When can I donate blood after surgery?\nAt our blood donation centres, you can donate blood at least 4 months after surgery, assuming the wound is healed and you have no postoperative complications. The doctor may extend the exclusion period after discussing with the donor and obtaining detailed information about the type of surgery, its course, and associated treatment."
+                },
+                {
+                  "id": 174,
+                  "Otazka": "When can I donate blood after an endoscopy (gastroscopy, colonoscopy, sigmoidoscopy, bronchoscopy)?",
+                  "Odpoved": "At our blood donation centres, you can donate blood at least 4 months after the endoscopy. In case of taking a sample for histological examination, please provide the doctor with results. "
+                },
+                {
+                  "id": 185,
+                  "Otazka": "Can I donate blood during menstruation?",
+                  "Odpoved": "During menstruation, hemoglobin levels drop due to bleeding, so it is recommended to donate blood in the middle of the cycle, approximately 1 week after menstruation, when the blood loss is expected to be replenished."
+                },
+                {
+                  "id": 175,
+                  "Otazka": "When can I donate blood after childbirth/miscarriage?",
+                  "Odpoved": "Blood donation is possible at least 6 months after the end of pregnancy."
+                },
+                {
+                  "id": 177,
+                  "Otazka": "Can I donate blood while breastfeeding?",
+                  "Odpoved": "It is necessary to wait at least 6 months after breastfeeding because of increased iron consumption."
+                },
+                {
+                  "id": 176,
+                  "Otazka": "Can I donate blood after overcoming cancer?",
+                  "Odpoved": "Since these are serious illnesses, blood donation is not possible except for carcinoma in situ of the cervix of uterus and basal cell carcinoma."
+                },
+                {
+                  "id": 179,
+                  "Otazka": "When can I donate blood after minor surgery such as mole removal?",
+                  "Odpoved": "You can donate blood at least 1 week after suture removal; in case of taking a sample for histological examination, it is necessary to wait for its result."
+                },
+                {
+                  "id": 178,
+                  "Otazka": "Can I donate blood with reduced thyroid function?",
+                  "Odpoved": "Yes, if you have been on treatment for at least 3 months and if no adjustment of the medication is needed after the check at endocrinologist."
+                },
+                {
+                  "id": 180,
+                  "Otazka": "Can I donate blood if I have ulcerative colitis or Crohn's disease?",
+                  "Odpoved": "Even though you feel well and are not on treatment for these diagnoses, blood donation is not possible due to these being autoimmune inflammatory diseases characterized by periods of remission and flare-ups."
+                },
+                {
+                  "id": 181,
+                  "Otazka": "When can I donate blood after vaccination against tetanus, influenza, HPV?",
+                  "Odpoved": "We recommend waiting at least 2 days; if there are no adverse reactions such as fever, allergic reaction, local swelling, etc., you can come to donate."
+                }
+              ]
+            }
+          ],
+          "localizations": {
+            "data": [
+              {
+                "id": 1,
+                "attributes": {
+                  "Sekcia": "O DAROVANÍ KRVI",
+                  "createdAt": "2022-06-09T14:27:39.178Z",
+                  "updatedAt": "2024-09-27T13:03:37.859Z",
+                  "locale": "sk",
+                  "publishedAt": "2022-06-09T14:27:39.178Z",
+                  "SekciaID": "o_darovani_krvi"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 7,
+        "attributes": {
+          "Sekcia": "BENEFITS FOR BLOOD DONORS",
+          "createdAt": "2023-04-21T10:20:35.656Z",
+          "updatedAt": "2024-01-19T12:30:30.497Z",
+          "locale": "en",
+          "publishedAt": "2023-04-21T10:20:35.656Z",
+          "SekciaID": null,
+          "Podsekcia_s_otazkami_a_odpovedami": [
+            {
+              "id": 17,
+              "Podsekcia": "Statutory compensations",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 70,
+                  "Otazka": "What are the statutory compensations for blood donors?",
+                  "Odpoved": "The National Blood Transfusion Service of the Slovak Republic provides benefits to blood donors that are in accordance with the legislation of the Slovak Republic. In Slovakia, voluntary blood donation is regulated by Act No. 362/2011 Coll. on medicines and medical aids and on amendment and additions to certain acts, as amended, where § 13 (11) provides for:\n\n\"Blood and blood components can only be collected free of charge. No remuneration, compensation or consideration in any form whatsoever may be promised, given or arranged, directly or indirectly, by a healthcare provider for the collection of blood and blood components, even through a third party, **other than the provision of one-off refreshments and a refreshment allowance of up to 75 % of the meal allowance provided for under a special regulation (the Travel Allowances Act) and the proven cost of travel.**\"\n\nAccording to Section 138(2) of the Labour Code, blood donation and apheresis are a hindrance on the part of the employee for reasons of general interest, for which the employee is entitled to wage compensation in the amount of his/her average earnings. **Time off from work shall be granted for the time strictly necessary for the journey to and from the donation and for the recovery period after the donation, in so far as these interfere with the employee's working time.** Depending on the nature of the donation and the donor's medical condition, the physician may determine that the time required for the donor's recovery is extended, up to a maximum of a period of time that interferes with working hours within 96 hours of the donor's travel time for the donation. In case no collection is carried out, leave of absence with pay in the amount of his/her average earnings shall be granted only for the time of absence from work proven to be strictly necessary.\n"
+                }
+              ]
+            },
+            {
+              "id": 18,
+              "Podsekcia": "Statutory benefits",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 71,
+                  "Otazka": "What are the statutory benefits for blood donors?",
+                  "Odpoved": "According to § 2 (1) (k) of Act No. 577/2004 Coll. on the scope of health care reimbursed on the basis of public health insurance and on reimbursement for services related to the provision of health care, as amended, **one preventive check-up of the insured person is fully reimbursed under public health insurance once a year** to a registered blood donor, organ or tissue donor, by a doctor specialising in general medicine or by a doctor specialising in general care for children and adolescents (compared to one check-up once every two years in the case of insured persons who are not donors).\n\nAccording to § 38 (8) (a) of Act No. 577/2004 Coll. on the scope of health care reimbursed under public health insurance and on reimbursement for services related to the provision of health care, as amended, **the holder of at least a silver Janský plaque is exempted from the obligation to pay for meals and bed-stays when providing inpatient care and inpatient care in hospitals, natural health spas and sanatoriums** (this applies to health care fully or partially reimbursed by public health insurance. Pursuant to Section 38(9) of Act No. 577/2004 Coll., the above does not apply to health insured persons who receive health care in natural health resorts with indications 'B').\n"
+                }
+              ]
+            }
+          ],
+          "localizations": {
+            "data": [
+              {
+                "id": 5,
+                "attributes": {
+                  "Sekcia": "BENEFITY PRE DARCOV KRVI",
+                  "createdAt": "2022-10-15T15:45:24.582Z",
+                  "updatedAt": "2024-10-01T14:50:01.915Z",
+                  "locale": "sk",
+                  "publishedAt": "2022-10-15T15:45:24.582Z",
+                  "SekciaID": null
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 10,
+        "attributes": {
+          "Sekcia": "THE DONOR ZONE AND MOBILE APPLICATION",
+          "createdAt": "2023-04-21T12:59:27.948Z",
+          "updatedAt": "2023-09-29T07:25:00.176Z",
+          "locale": "en",
+          "publishedAt": "2023-04-21T12:59:27.948Z",
+          "SekciaID": null,
+          "Podsekcia_s_otazkami_a_odpovedami": [
+            {
+              "id": 21,
+              "Podsekcia": "Registration",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 88,
+                  "Otazka": "Which data is required for registration?",
+                  "Odpoved": "To register in the Donor zone we require your name, surname, day of birth, donor registration number, phone number and e-mail."
+                },
+                {
+                  "id": 89,
+                  "Otazka": "Where can I find my donor registration number?",
+                  "Odpoved": "Your 10-digit donor registration number can be found on your blood donor card under the barcode."
+                },
+                {
+                  "id": 90,
+                  "Otazka": "There is no registration number on my blood donor card, how can I get this number?",
+                  "Odpoved": "If your donor registration card does not have a barcode, it is probably because you have not donated blood at the NTS SR donation centre (or at a mobile blood-collection unit provided by the NTS SR team), and therefore we do not have your blood donation records in our database yet. To donate blood you can make an appointment online now and [without registration](https://www.ntssr.sk/en/zona_darcu/darca_bez_prihlasenia) – come donate blood and you will be provided with a blood donor registration number on the spot.\nIf you have ever donated blood at any of our donation centres, we will definitely have a record of it and, therefore, we can help you to find your registration number.\nContact us at info@ntssr.sk or web@ntssr.sk and make sure to include the following information:\n- name and surname,\n- date of birth,\n- phone number (which you provided on the donor questionnaire at your last donation at the NTS SR donation centre – this also applies to mobile unit donations),\n- Your default NTS SR donation centre or the location of your last blood donation within NTS SR (in case of donation at mobile donation unit, please state the location where it took place)."
+                },
+                {
+                  "id": 94,
+                  "Otazka": "Can I sign up to Donor zone even if I have not donated blood before?",
+                  "Odpoved": "No, you can not sign up. The Donor zone is available for blood donors, who have donated at least once at the NTS SR workplace (even mobile unit) only.\nHowever, that can be easily changed– come and donate blood. You can make an appointment online even [without registration](https://www.ntssr.sk/en/zona_darcu/neregistrovany). \n"
+                },
+                {
+                  "id": 96,
+                  "Otazka": "I made a typo in my name/surname during the registration, how can I fix it?",
+                  "Odpoved": "After successful registration, it is not possible to simply change your data. However, you may delete your account and re-register with the correct data. Information about your previous donations will not be affected; however, any scheduled appointments will be cancelled.\n\n**For managing your account using web browser:**\n1. log in to the Donor zone,\n2. proceed to Your donor profile\n3. select Delete profile and confirm,\n4. register again with the correct data.\n\n**For managing your account using the NTS SR app:**\n1. go to Profile,\n2. go to Settings,\n3. select Delete account and confirm,\n4. register again with the correct data.\n"
+                },
+                {
+                  "id": 97,
+                  "Otazka": "I lost/cannot find my blood donor card, how can I find out my registration number?",
+                  "Odpoved": "You can request a new blood donor card next time you will donate blood. \n\nIf you want to sign up to Donor zone/mobile app and you have donated blood at some of our donation centres before, we will have a record of your previous donations in our database and, therefore, we can help you to find your registration number (needed for signing up to Donor zone/mobile app).\n\nContact us at info@ntssr.sk or web@ntssr.sk and make sure to include the following information:\n- name and surname,\n- date of birth,\n- phone number (which you provided on the donor questionnaire at your last donation at the NTS SR workplace – this also applies to donations at mobile blood donation unit),\n- Your NTS SR home department or the location of your last appointment – this information is optional; however, it can help to speed up tracking your records.\n"
+                },
+                {
+                  "id": 98,
+                  "Otazka": "I was not able to sign up because “the entered data could not be verified in the NTS SR information system,“ what should I do about it?",
+                  "Odpoved": "During the registration process, the information system verifies the phone number you entered with the one you provided in the questionnaire the last time you donated blood. In case you changed your phone number, and do not possess the original number anymore, a change in our records can be made only in person at any NTS SR donation centre (or at a mobile blood donation unit). "
+                },
+                {
+                  "id": 99,
+                  "Otazka": "Why do I have to personally visit an NTS SR donation centre to change my phone number?",
+                  "Odpoved": "Change of personal data can happen exclusively in person at NTS SR donation centre (or at mobile donation) after verification of the data subject, as their contact details serve as registration and identification data to enter the donor zone, which contains a specific category of personal data related to the health of the donor."
+                }
+              ]
+            },
+            {
+              "id": 23,
+              "Podsekcia": "Mobile application (technical questions)",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 100,
+                  "Otazka": "My old NTS SR app stopped working, what should I do about it?",
+                  "Odpoved": "Since we launched the new NTS SR mobile app, the original _Electronic donor card app_ has been cancelled. You can [download the new app](https://play.google.com/store/apps/details?id=sk.bluelemons.ntssr&hl=sk&gl=US), just register and you can fully use all of the functions from the original app with a new design; moreover, you can create an appointment for blood donation online and all by yourself."
+                },
+                {
+                  "id": 101,
+                  "Otazka": "I’ve had the original Electronic donor card app (former NTS SR app), do I have to register in the new one as well?",
+                  "Odpoved": "**Yes**, in order to use the new app in full range and same functions as in the Electronic donor card app (former NTS SR app), **you have to register again**. The new app also allows you to make an online appointment to donate blood and is fully linked to the Donor zone on the NTS SR website."
+                },
+                {
+                  "id": 102,
+                  "Otazka": "Why cannot I find the new NTS SR app in the Google Play store?",
+                  "Odpoved": "The reason behind it may be that the new app is not compatible with your device because of outdated Android OS version. The new app works only on devices running Android 10 and newer operating systems. In case your device is unable to update at least to OS Android 10, you will not be able to download and install the app. However, you can still reach the Donor zone via a web browser – go to Donor login and you will have the access to all the features offered in the new mobile app."
+                },
+                {
+                  "id": 103,
+                  "Otazka": "I have been logged into the Electronic donor card app (former NTS SR app), but I cannot log in to the new NTS SR app, why?",
+                  "Odpoved": "To access the new app, you need to sign up. Afterwards, you can use the same login information on the web to log into the Donor zone."
+                },
+                {
+                  "id": 104,
+                  "Otazka": "I have installed the new app, but I cannot log in, because I do not know my password. Password recovery does not help either, what should I do?",
+                  "Odpoved": "Before you log in for the first time, you need to sign up (even if you used the Electronic donor card app before). After signing up and confirming the verification email to activate your account, you will be able to log into both the app and the Donor zone on the NTS SR website. "
+                },
+                {
+                  "id": 105,
+                  "Otazka": "I have got a Huawei device with no Google Mobile Services, can I download the NTS SR app?",
+                  "Odpoved": "No, the NTS SR mobile app requires Google Mobile Services for it to function properly. You can use the Donor zone via web browser to access all the features NTS SR mobile app offers. Go to Donor login, sign up, log in and you will have access to the overview of your donations, blood donor card and the possibility to make an appointment to donate blood.\nWe plan to launch the app for Huawei devices in the future.\n"
+                },
+                {
+                  "id": 106,
+                  "Otazka": "I cannot download the app, because the Google Play store tells me that my device is not compatible with this version, why?",
+                  "Odpoved": "The new app works only on devices running Android 10 and newer operating systems. In case your device is unable to update at least to OS Android 10, you will not be able to download and install the app. However, you can still reach the Donor zone via a web browser – go to Donor login and you will have the access to all the features offered in the new mobile app. "
+                },
+                {
+                  "id": 107,
+                  "Otazka": "In the “My awards“ section, the app incorrectly shows 0 donations, what is the issue?",
+                  "Odpoved": "In this case, the error is not in our databases, nor our web, but in the web browser (on your device) and the automatic webpage translation settings. \nDo you use Google Chrome as your web browser? The steps to fix the problem are following:\n·        click on options (three dots in the upper-right corner),\n·        select „Settings“\n·        Select „Languages“,\n·        turn off the „Offer to submit pages in foreign languages to Google Translate“ option,\n·        reload the www.ntssr.sk website, log in and check whether your data is displayed correctly (the number of donations in the „My awards“ section as well).\nIn case you use other browsers (e.g. Microsoft Edge, ...) search and cancel the automatic translation of websites in browser settings.\n"
+                },
+                {
+                  "id": 108,
+                  "Otazka": "Why it is not possible to install the NTS SR app on devices with OS Android version 9 and earlier?",
+                  "Odpoved": "For security reasons, Google's development environment for creating and accepting apps does not allow the introduction of backwards-compatible apps with Android OS versions lower than version 10.\nIn case your device is unable to update at least to OS Android v10, you will not be able to download the app. However, you can register and log into the Donor zone via a web browser and use all the features offered in the NTS SR mobile app (the overview of your donations, blood donor card, blood-donation appointment reservation, etc.)\n"
+                },
+                {
+                  "id": 143,
+                  "Otazka": "Why is only one blood count parameter displayed?",
+                  "Odpoved": "According to the current standards, the full blood count at the time of donation is mandatory only once a year. This option is used for field blood donations, where only the haemoglobin level is tested (Hgb from a finger prick sample). If you regularly donate blood only at mobile blood donations, you will only see the other blood count parameters at one blood donation per year.  "
+                }
+              ]
+            },
+            {
+              "id": 24,
+              "Podsekcia": "Your Donor zone (your profile in the mobile app)",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 109,
+                  "Otazka": "Why is the displayed number of my donations incorrect?",
+                  "Odpoved": "The reason behind this is probably because you have donated blood or blood components in a centre for blood donation outside of NTS SR donation centres network. The next time you visit any NTS SR donation centre, show your blood donor card to the our staff (or prove your actual number of blood donations some other way, e.g. with your Jansky plaque card) and we will correct the number of displayed donations.\nThe change in your Donor zone can take up to 24 hours. \nYou may see detailed information about your blood count in the Donor zone only from the donations made at any NTS SR donation centre (mobile blood donation site included).\n"
+                },
+                {
+                  "id": 110,
+                  "Otazka": "Why cannot I see detailed information from all of my donations?",
+                  "Odpoved": "You can see detailed information (blood count) only from your last ten donations at any of the NTS SR donation centres (mobile blood donation sites included) in the Donor zone and the mobile app. In case you donated blood and blood components in a centre for blood donation outside of NTS SR donation centres network, you will not be able to see information about those donations in the app."
+                }
+              ]
+            },
+            {
+              "id": 25,
+              "Podsekcia": "Making appointments for blood donation",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 111,
+                  "Otazka": "Can I make an appointment for a whole blood donation even if the recommended minimum time of 3 months (men)/ 4 months (women) have not passed since my last donation?",
+                  "Odpoved": "Under certain conditions, this is possible; however, the system is set up in such a way that adequate intervals are maintained between individual donations. We recommend you call the NTS SR donation centre of your choice and ask the staff to book an appointment for blood donation. Our medical staff can consider your case and, if possible, make a reservation for you. "
+                },
+                {
+                  "id": 112,
+                  "Otazka": "I’ve just donated plasma and the app shows that I can go donate whole blood in 14 days already, is that correct?",
+                  "Odpoved": "Yes, it is correct. The interval between donations is set up according to the norms and with regard to your health. In case you are interested, our doctors will provide you with more information directly at any of our donation centres."
+                },
+                {
+                  "id": 113,
+                  "Otazka": "While making an appointment, I chose the wrong NTS SR donation centre by mistake, how can I change that?",
+                  "Odpoved": "It is necessary to cancel the appointment and create a new reservation at the NTS SR donation centre of your choice. "
+                },
+                {
+                  "id": 114,
+                  "Otazka": "Is it possible to make an appointment for a blood donation at a mobile blood donation site?",
+                  "Odpoved": "You cannot make an appointment for a donation at a mobile blood donation site neither via our app/website nor by phone. We recommend you contact the organiser of the mobile blood donation to get more information."
+                },
+                {
+                  "id": 115,
+                  "Otazka": "The last time I wanted to donate blood I was temporarily excluded and the booking system will not allow me to make a reservation earlier than in 3 months (men)/ 4 months (women), is it possible to book an appointment sooner?",
+                  "Odpoved": "The length of temporary blood donation deferral is up to the doctor’s assessment. If the doctor says you can donate, for example, a month after being excluded and you want to go donate blood as you were told to, but the booking system will not allow you to make an appointment sooner than the usual interval between donations, contact our donation centre by phone. After considering your case, our staff can book you a reservation sooner than the usual interval between donations."
+                },
+                {
+                  "id": 116,
+                  "Otazka": "Why should I book an appointment for a blood donation?",
+                  "Odpoved": "Booking is not obligatory, we will not turn you down in case you did not make an appointment for blood donation in advance. However, we do prioritise the donors who set up a donation appointment in advance.\nYou can make an appointment online (even without registration) or by phone. Contacts to our donation centres can be found [HERE](https://www.ntssr.sk/web/odberove_centra).\n"
+                }
+              ]
+            }
+          ],
+          "localizations": {
+            "data": []
+          }
+        }
+      },
+      {
+        "id": 8,
+        "attributes": {
+          "Sekcia": "BLOOD DONOR RECOGNITION",
+          "createdAt": "2023-04-21T10:43:20.546Z",
+          "updatedAt": "2023-04-21T10:51:13.408Z",
+          "locale": "en",
+          "publishedAt": "2023-04-21T10:43:20.546Z",
+          "SekciaID": null,
+          "Podsekcia_s_otazkami_a_odpovedami": [
+            {
+              "id": 19,
+              "Podsekcia": "Recognition of blood donors (Slovak Red Cross awards)",
+              "Otazky_a_odpovede": [
+                {
+                  "id": 72,
+                  "Otazka": "I have got enough donations for the Janský plaque, how will the award be granted to me?",
+                  "Odpoved": "The plaques of MUDr. Jan Janský and the medal of MUDr. Ján Kňazovický for blood donation are awards to voluntary, non-remunerated blood donors granted by the Slovak Red Cross (SRC). After reaching the number of donations necessary for obtaining the Janský plaque (bronze: 10, silver: 20, golden: women 30, men 40, diamond: women 60, men 80) or the Kňazovický medal (women 80 donations, men 100 donations), the donor should fill in a request form \"Award proposal\" ([\"_Návrh na udelenie ocenenia_\"](https://redcross.sk/daruj-krv/wp-content/uploads/sites/39/2021/05/BDK-03-v02-2021-US-V-Navrh-na-udelenie-ocenenia_A4.pdf)), have the number of donations confirmed by the registration staff and put it in the SRC mailbox at the blood collection centre, or send it via post to the relevant Territorial Association of the SRC (\"Územný spolok Slovenského Červeného kríža\"). You will be contacted by SRC for the purpose of presenting the award.\nFor more info, visit the [Slovak Red Cross website](https://redcross.sk/daruj-krv/ocenovanie-darcov-krvi/).\n"
+                },
+                {
+                  "id": 73,
+                  "Otazka": "How is a plasma donation counted?",
+                  "Odpoved": "Plasma donation is counted the same as whole blood donation, i.e. **1 donation**."
+                },
+                {
+                  "id": 74,
+                  "Otazka": "How is a platelets donation counted?",
+                  "Odpoved": "Platelets donation is counted as **2 donations**."
+                },
+                {
+                  "id": 75,
+                  "Otazka": "I applied for an award (plaque), but I have not received it yet, what can be the problem?",
+                  "Odpoved": "Rewarding blood donors is the responsibility of the Slovak Red Cross (SRC), not the National Blood Transfusion Service of the Slovak Republic (NTS SR). Try to contact the relevant branch/territorial association of the SRC. \nOn the donor’s request, the NTS SR will confirm the number of completed donations on the filled-in proposal for the award ([SRC form](https://redcross.sk/daruj-krv/wp-content/uploads/sites/39/2021/05/BDK-03-v02-2021-US-V-Navrh-na-udelenie-ocenenia_A4.pdf)) – the donor can then put the form in the SRC mailbox, which is located at each NTS SR workplace, or send it via email (scan) or by post to the relevant SRC territorial association, which will then contact the donor for the purpose of handing over/sending the award.\nIn case a longer period of time has passed since handing out the request, please, contact the SRC coordinator of blood donation and ask about the current status of your request at the relevant SRC territorial association.\nFor more info about rewarding non-contributory blood donors and steps to get an award, [visit the Slovak Red Cross website](https://redcross.sk/daruj-krv/ocenovanie-darcov-krvi/).\n"
+                }
+              ]
+            }
+          ],
+          "localizations": {
+            "data": [
+              {
+                "id": 6,
+                "attributes": {
+                  "Sekcia": "OCEŇOVANIE DARCOV, PLAKETY",
+                  "createdAt": "2022-10-15T15:49:28.920Z",
+                  "updatedAt": "2024-01-25T11:53:54.678Z",
+                  "locale": "sk",
+                  "publishedAt": "2022-10-15T15:49:28.920Z",
+                  "SekciaID": null
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "meta": {
+      "pagination": {
+        "page": 1,
+        "pageSize": 25,
+        "pageCount": 1,
+        "total": 4
+      }
+    }
+  }

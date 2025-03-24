@@ -1,0 +1,211 @@
+flows:
+  search_faiss:
+    description: Trigger this flow, if the user asks anything related to blood donation. Do not start this flow, if the user asks anything related  to the booking a blood donation, cancelling a booking, past blood donations or free time slots. Spusti tento flow, ak sa používateľ spýta na niečo týkajúce sa darovania krvi. Nespúšťaj tento flow, ak sa používateľ spýta na niečo týkajúce sa rezervácie darovania krvi, zrušenia rezervácie, minulých darovaní krvi alebo dostupných termínov pre darovanie krvi.
+    steps:
+      - action: action_initiate
+      - action: action_search_faiss
+      - link: flow_feedback
+  
+  flow_feedback:
+    description: This flow allows user feedback collection.
+    if: False
+    persisted_slots:
+      - slot_feedback
+    steps:
+      - action: action_initiate
+      - collect: slot_feedback
+        description: Ask the user for feedback. Spýtaj sa používateľa na jeho spätnú väzbu.
+        utter: utter_ask_feedback
+        ask_before_filling: true
+        next:
+          - if: slots.slot_feedback is "pass"
+            then: END
+          - else: step_ask_feedback
+      - action: action_collect_feedback
+        id: step_ask_feedback
+        next: END
+  
+  flow_book_donation_slot:
+    description: Trigger this flow, if the user asks for  blood donation booking. Spusti tento flow, ak sa používateľ spýta na rezerváciu  termínu pre darovanie krvi.
+    persisted_slots:
+      - slot_user_email
+      - slot_access_code
+    steps:
+      - action: action_initiate
+      - call: flow_authenticate_user
+        next:
+          - if: slots.slot_user_email is not null and slots.slot_email_valid is true and slots.slot_access_code_valid is true
+            then: step_find_last_booking
+          - else: step_not_authenticated
+      - id: step_not_authenticated
+        action: utter_could_not_authenticate
+        next: END
+      - action: action_find_last_booking
+        id: step_find_last_booking
+        next:
+          - if: slots.slot_future_booking is null
+            then: step_ask_slot_location
+          - else: step_ask_rebook
+      - collect: slot_rebook
+        id: step_ask_rebook
+        description: Ask the user if they want to rebook the last booking. Spýtaj sa používateľa, či chce zmeniť poslednú rezerváciu.
+        utter: utter_ask_rebook
+        next:
+          - if: slots.slot_rebook is true
+            then: step_call_rebook_location
+          - else: step_ask_slot_location
+      - call: flow_cancel_booking
+        id: step_call_rebook_location
+      - collect: slot_location
+        id: step_ask_slot_location
+        description: Ask the user for the location of the blood donation center. Spýtaj sa používateľa na miesto centra na darovanie krvi.
+      - action: action_check_location
+        next:
+          - if: slots.slot_location_status = "found"
+            then: step_ask_slot_lookup_date
+          - else: step_let_choose_location
+      - collect: slot_location_choice
+        id: step_let_choose_location
+        description: Ask the user to select the location of the blood donation center. Spýtaj sa používateľa, aby vybral miesto centra na darovanie krvi.
+        utter: action_ask_slot_location_choice
+        ask_before_filling: true
+        next: step_ask_slot_lookup_date
+      - collect: slot_lookup_date
+        id: step_ask_slot_lookup_date
+        description: Ask the user for the date of the blood donation. Try to map the user message to the following values [today, tomorrow, this week, next week] or to the date formats MM-DD or DD.MM. E.g. 13.5. or 13.05. is the same as 05-13. Spýtaj sa používateľa na dátum darovania krvi. Skús namapovať správu používateľa na nasledujúce hodnoty [today, tomorrow, this week, next week] alebo ak je zadaný dátum, na formát MM-DD alebo DD.MM. Napr. 13.5. alebo 13.05. je to isté ako 05-13.
+        ask_before_filling: true
+      - action: action_validate_elligibility
+        next:
+          - if: slots.slot_elligible_for_donation is true
+            then: step_ask_slot_booking_time
+          - else: step_ask_slot_lookup_date
+      - collect: slot_booking_time
+        id: step_ask_slot_booking_time
+        description: User specifies the booking time in unix minutes.
+        utter: action_ask_slot_booking_time
+      - action: action_book_slot
+      - collect: slot_start_questionnaire
+        description: Ask the user if they want to start the questionnaire. Spýtaj sa používateľa, či chce začať s dotazníkom.
+        utter: utter_ask_start_questionnaire
+        next:
+          - if: slots.slot_start_questionnaire is true
+            then: step_start_questionnaire
+          - else: END
+      - call: flow_donation_questionnaire
+        id: step_start_questionnaire
+        next: END      
+
+
+  flow_cancel_booking:
+    description: Trigger this flow, if the user asks for cancelling or rebooking a blood donation booking. Spusti tento flow, ak sa používateľ spýta na zrušenie alebo zmenu rezervácie darovania krvi.
+    persisted_slots:
+      - slot_user_email
+      - slot_access_code
+    steps:
+      - action: action_initiate
+      - call: flow_authenticate_user
+        next:
+          - if: slots.slot_user_email is not null and slots.slot_email_valid is true and slots.slot_access_code_valid is true
+            then: step_find_last_booking
+          - else: step_not_authenticated
+      - id: step_not_authenticated
+        action: utter_could_not_authenticate
+        next: END
+      - action: action_find_last_booking
+        id: step_find_last_booking
+        next:
+          - if: slots.slot_future_booking is not null
+            then: step_cancel_booking
+          - else: step_no_booking
+      - id: step_no_booking
+        action: utter_no_booking
+        next: END
+      - action: action_cancel_booking
+        id: step_cancel_booking
+        next: END
+
+  flow_authenticate_user:
+    if: False
+    description: Trigger this flow, if the user asks for authentication. Spusti tento flow, ak sa používateľ spýta na autentifikáciu.
+    steps:
+      - noop: true
+        next:
+          - if: slots.slot_user_email is not null and slots.slot_email_valid is true and slots.slot_access_code_valid is true
+            then: END
+          - else: step_ask_authenticate
+      - collect: slot_auth_agree
+        id: step_ask_authenticate
+        description: Ask the user if they want to authenticate. Spýtaj sa používateľa, či sa chce autentifikovať.
+        utter: utter_ask_slot_auth_agree
+        next:
+          - if: slots.slot_auth_agree is true
+            then: step_ask_slot_user_email
+          - else: END
+      - collect: slot_user_email
+        id: step_ask_slot_user_email
+        description: Ask the user for their email address. Spýtaj sa používateľa na jeho e-mailovú adresu.
+      - action: action_validate_email
+        next:
+          - if: slots.slot_email_valid is true
+            then: step_validate_access_code
+          - else: 
+            - action: utter_invalid_email
+              next: step_slot_wants_to_register
+      - collect: slot_wants_to_register
+        id: step_slot_wants_to_register
+        description: Ask the user if they want to register. Spýtaj sa používateľa, či sa chce zaregistrovať.
+        utter: utter_ask_slot_wants_to_register
+        next:
+          - if: slots.slot_wants_to_register is true
+            then: step_register_user
+          - else: 
+            - action: utter_message_must_register
+              next: END
+      - call: flow_register_user
+        id: step_register_user
+      - action: action_validate_access_code
+        id: step_validate_access_code
+        next:
+          - if: slots.slot_access_code_valid is true
+            then: END
+          - else: step_send_access_code
+      - action: action_send_access_code
+        id: step_send_access_code
+      - collect: slot_access_code
+        id: step_get_access_code
+        description: Ask the user for the access code. Spýtaj sa používateľa na prístupový kód.
+      - action: action_validate_access_code
+        next:
+          - if: slots.slot_access_code_valid is true
+            then: END
+          - else: 
+            - action: utter_incorrect_access_code
+              next: END
+
+  flow_register_user:
+    if: False
+    description: Trigger this flow, if the user wants to register. Spusti tento flow, ak sa používateľ chce zaregistrovať.
+    steps:
+      - collect: slot_user_email
+        id: step_ask_slot_user_email
+        description: Ask the user for their email address. Spýtaj sa používateľa na jeho e-mailovú adresu.
+        utter: utter_ask_slot_user_email
+      - collect: slot_user_name_and_surname
+        description: Ask the user for their name and surname. Spýtaj sa používateľa na jeho meno a priezvisko.
+        utter: utter_ask_slot_user_name_and_surname
+      - collect: slot_user_phone
+        description: Ask the user for their phone number. Spýtaj sa používateľa na jeho telefónne číslo.
+        utter: utter_ask_slot_user_phone
+      - collect: slot_user_address
+        description: Ask the user for their address. Spýtaj sa používateľa na jeho adresu.
+        utter: utter_ask_slot_user_address
+      - collect: slot_user_dob
+        description: Ask the user for their date of birth. Spýtaj sa používateľa na jeho dátum narodenia.
+        utter: utter_ask_slot_user_dob
+      - collect: slot_user_gender
+        description: Ask the user for their gender. Spýtaj sa používateľa na jeho pohlavie.
+      - action: action_register_user
+        next: END
+
+ 
+
