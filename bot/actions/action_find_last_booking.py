@@ -6,6 +6,7 @@ from rasa_sdk.events import SlotSet, SessionStarted, ActionExecuted, EventType
 from actions.common_utils import detect_language
 from actions.calendar_utils import get_lookup_date, get_unix_minutes, format_timestamp
 import sqlite3
+from actions.orm import SessionLocal, Booking, Base
 import logging
 from datetime import datetime
 logger = logging.getLogger(__name__)
@@ -24,31 +25,44 @@ class ActionFindLastBooking(Action):
 
         email = tracker.get_slot("slot_user_email")
         lang = tracker.get_slot("slot_lang")
-        conn = sqlite3.connect("../data/calendar.db")
-        cursor = conn.cursor()
-        query = '''
-        SELECT timestamp, location, success, status
-        FROM booking
-        WHERE email = ?
-        ORDER BY timestamp DESC
-        '''
-
+        session = SessionLocal()
         try:
-            cursor.execute(query, (email,))
-            bookings = cursor.fetchall()
-            conn.close()
-            last_donation = next((row for row in bookings if row[2]== 1) ,None)
-            future_booking = next((row for row in bookings if row[0] > get_unix_minutes(datetime.now())),None)
-            logger.info(f"Bookings:{bookings}")
-            logger.info(f"Future booking: {format_timestamp(future_booking[0]) if future_booking else None}")
-            logger.info(f"Last booking: {format_timestamp(last_donation[0]) if last_donation else None}")
-            last_donation_timestamp = last_donation[0] if last_donation else None
-            last_location = last_donation[1] if last_donation else None
-            last_success = last_donation[2] if last_donation else None
+            # Get all bookings for the email, ordered by most recent
+            bookings = (
+                session.query(Booking)
+                .filter(Booking.email == email)
+                .order_by(Booking.timestamp.desc())
+                .all()
+            )
+
+            # Extract last successful donation
+            last_donation = next((b for b in bookings if b.success is True), None)
+
+            # Extract next upcoming booking (timestamp > now)
+            future_booking = next(
+                (b for b in bookings if b.timestamp > get_unix_minutes(datetime.now())), 
+                None
+            )
+
+            logger.info(f"Bookings: {bookings}")
+            logger.info(
+                f"Future booking: {format_timestamp(future_booking.timestamp) if future_booking else None}"
+            )
+            logger.info(
+                f"Last booking: {format_timestamp(last_donation.timestamp) if last_donation else None}"
+            )
+
+            last_donation_timestamp = last_donation.timestamp if last_donation else None
+            last_location = last_donation.location if last_donation else None
+            last_success = last_donation.success if last_donation else None
+
         except Exception as e:
             logger.error(f"Could not retrieve last booking: {e}")
+
+        finally:
+            session.close()
         if future_booking:
-            return [SlotSet("slot_future_booking", dict(timestamp=future_booking[0],location=future_booking[1]))]
+            return [SlotSet("slot_future_booking", dict(timestamp=future_booking.timestamp,location=future_booking.location))]
         if last_location:
             return [SlotSet("slot_last_donation_timestamp", last_donation_timestamp), SlotSet("slot_last_location", last_location), SlotSet("slot_last_donation_success", last_success)]
         else:

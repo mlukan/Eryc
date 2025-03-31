@@ -6,6 +6,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet, SessionStarted, ActionExecuted, EventType
 from actions.common_utils import detect_language
 from actions.calendar_utils import date_to_unix
+from actions.orm import SessionLocal, User, Base
 import sqlite3
 import logging
 logger = logging.getLogger(__name__)
@@ -28,21 +29,27 @@ class ActionRegisterUser(Action):
         slot_user_address = tracker.get_slot("slot_user_address")
         slot_user_dob = date_to_unix(tracker.get_slot("slot_user_dob"))
         slot_user_gender = tracker.get_slot("slot_user_gender") 
+        session = SessionLocal()
+
         try:
-            conn = sqlite3.connect("../data/calendar.db")
-            cursor = conn.cursor()
-            cursor.execute("INSERT INTO  users (email, name, phone, address, dob, sex) VALUES (?, ?, ?, ?, ?, ?)",
-                            (slot_user_email,slot_user_name_and_surname, slot_user_phone, slot_user_address, slot_user_dob, slot_user_gender,))
-            conn.commit()
-            conn.close
-            if lang == "en":
-                dispatcher.utter_message(text=f"You are now registered with e-mail {slot_user_email}.")
-            else:
-                dispatcher.utter_message(text=f"Vaša registrácia bola úspešná s e-mailom {slot_user_email}.")
-            return []
+            new_user = User(
+                email=slot_user_email,
+                name=slot_user_name_and_surname,
+                phone=slot_user_phone,
+                address=slot_user_address,
+                dob=slot_user_dob,
+                sex=slot_user_gender
+            )
+
+            session.add(new_user)
+            session.commit()
         except Exception as e:
-            logger.error(f"Error registrating user {slot_user_email}: {e}")
+            session.rollback()
+            logger.error(f"Error registering user {slot_user_email}: {e}")
+
             if lang == "en":
                 dispatcher.utter_message(text=f"Error registering user {slot_user_email}.")
             else:
-                dispatcher.utter_message(text=f"Reistrácia používateľa {slot_user_email} nebola možná.")
+                dispatcher.utter_message(text=f"Registrácia používateľa {slot_user_email} nebola možná.")
+        finally:
+            session.close()

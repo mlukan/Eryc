@@ -1,6 +1,6 @@
 flows:
-  search_faiss:
-    description: Trigger this flow, if the user asks anything related to blood donation. Do not start this flow, if the user asks anything related  to the booking a blood donation, cancelling a booking, past blood donations or free time slots. Spusti tento flow, ak sa používateľ spýta na niečo týkajúce sa darovania krvi. Nespúšťaj tento flow, ak sa používateľ spýta na niečo týkajúce sa rezervácie darovania krvi, zrušenia rezervácie, minulých darovaní krvi alebo dostupných termínov pre darovanie krvi.
+  flow_search_faiss:
+    description: Trigger this flow, if the user asks anything related to blood donation, what is your name or what do you do. Do not start this flow, if the user asks anything related  to the booking a blood donation, cancelling a booking, past blood donations or free time slots. Spusti tento flow, ak sa používateľ spýta na niečo týkajúce sa darovania krvi, ak sa spýta ako sa voláš, alebo čo robíš. Nespúšťaj tento flow, ak sa používateľ spýta na niečo týkajúce sa rezervácie darovania krvi, zrušenia rezervácie, minulých darovaní krvi alebo dostupných termínov pre darovanie krvi.
     steps:
       - action: action_initiate
       - action: action_search_faiss
@@ -67,7 +67,7 @@ flows:
       - collect: slot_location_choice
         id: step_let_choose_location
         description: Ask the user to select the location of the blood donation center. Spýtaj sa používateľa, aby vybral miesto centra na darovanie krvi.
-        utter: action_ask_slot_location_choice
+        # utter: action_ask_slot_location_choice
         ask_before_filling: true
         next: step_ask_slot_lookup_date
       - collect: slot_lookup_date
@@ -82,7 +82,7 @@ flows:
       - collect: slot_booking_time
         id: step_ask_slot_booking_time
         description: User specifies the booking time in unix minutes.
-        utter: action_ask_slot_booking_time
+        #utter: action_ask_slot_booking_time
       - action: action_book_slot
       - collect: slot_start_questionnaire
         description: Ask the user if they want to start the questionnaire. Spýtaj sa používateľa, či chce začať s dotazníkom.
@@ -144,6 +144,9 @@ flows:
       - collect: slot_user_email
         id: step_ask_slot_user_email
         description: Ask the user for their email address. Spýtaj sa používateľa na jeho e-mailovú adresu.
+        rejections:
+          - if: not (slots.slot_user_email matches "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
+            utter: utter_invalid_email_format
       - action: action_validate_email
         next:
           - if: slots.slot_email_valid is true
@@ -190,20 +193,34 @@ flows:
         id: step_ask_slot_user_email
         description: Ask the user for their email address. Spýtaj sa používateľa na jeho e-mailovú adresu.
         utter: utter_ask_slot_user_email
+        rejections:
+          - if: not (slots.slot_user_email matches "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
+            utter: utter_invalid_email_format
       - collect: slot_user_name_and_surname
         description: Ask the user for their name and surname. Spýtaj sa používateľa na jeho meno a priezvisko.
         utter: utter_ask_slot_user_name_and_surname
       - collect: slot_user_phone
         description: Ask the user for their phone number. Spýtaj sa používateľa na jeho telefónne číslo.
         utter: utter_ask_slot_user_phone
+        rejections:
+          - if: not (slots.slot_user_phone matches "^[0-9+\-]+$")
+            utter: utter_invalid_phone_number
       - collect: slot_user_address
         description: Ask the user for their address. Spýtaj sa používateľa na jeho adresu.
         utter: utter_ask_slot_user_address
+
       - collect: slot_user_dob
         description: Ask the user for their date of birth. Spýtaj sa používateľa na jeho dátum narodenia.
         utter: utter_ask_slot_user_dob
+        rejections:
+          - if: not (slots.slot_user_dob matches "^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[0-2])\.(19|20)\d\d$")
+            utter: utter_invalid_dob_format
       - collect: slot_user_gender
-        description: Ask the user for their gender. Spýtaj sa používateľa na jeho pohlavie.
+        description: Ask the user for their gender. Spýtaj sa používateľa na jeho pohlavie
+        rejections:
+          - if: not "{'M' 'F' '0'} contains slots.slot_user_gender"
+            utter: utter_invalid_gender
+
       - action: action_register_user
         next: END
 

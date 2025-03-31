@@ -3,13 +3,14 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
-import sqlite3
-from ics import Calendar, Event
 import os
-from actions.calendar_utils import get_lookup_date, get_time_slots, format_timestamp, get_next_booking_for_user
+from actions.calendar_utils import get_lookup_date, get_time_slots, format_timestamp, generate_ics
+from actions.common_utils import detect_language, send_ics_email
 from actions.constants import LOCATIONS
+from actions.orm import SessionLocal, User, Booking, Slot, Base
 import logging
 logger = logging.getLogger(__name__)
+
 class ActionAskSlotBookingTime(Action):
 
     def name(self) -> Text:
@@ -32,12 +33,12 @@ class ActionAskSlotBookingTime(Action):
         
         if not start_time or not end_time:
             if slot_lang=="en":
-                dispatcher.utter_message(text="Please provide a valid date.")
+                dispatcher.utter_message(text="Please provide a valid date as e.g. 05-13.")
             else:    
-                dispatcher.utter_message(text="Prosím, zadajte platný dátum.")
-            return []
+                dispatcher.utter_message(text="Prosím, zadajte platný dátum, napr. 13.05.")
+            return [SlotSet("slot_lookup_date", None)]
 
-        free_slots = get_time_slots("../data/calendar.db", location, start_time, end_time)
+        free_slots = get_time_slots(location, start_time, end_time)
         if not free_slots:
             if slot_lang=="en":
                 dispatcher.utter_message(text=f"No free booking slots available on {lookup_date}, please try another day or come without booking.")
@@ -46,10 +47,7 @@ class ActionAskSlotBookingTime(Action):
             return [SlotSet("slot_lookup_date", None)]
 
         buttons = [{"title": format_timestamp(slot), "payload": f"/SetSlots(slot_booking_time={slot})"} for slot in free_slots]
-        if slot_lang=="en":
-            dispatcher.utter_message(response="utter_lookup_slot_booking_time", buttons=buttons)
-        else:
-            dispatcher.utter_message(text="utter_lookup_slot_booking_time", buttons=buttons)
+        dispatcher.utter_message(response="utter_lookup_slot_booking_time", buttons=buttons)
         return []
 
 
@@ -58,6 +56,52 @@ class ActionBookSlot(Action):
     def name(self) -> Text:
         return "action_book_slot"
 
+    def book_time_slot(self,email, location, time_slot, donation_type, slot_lang, dispatcher):
+        session = SessionLocal()
+        try:
+            # Check if slot exists and has remaining capacity
+            slot = (
+                session.query(Slot)
+                .filter(Slot.timestamp == time_slot, Slot.location == location)
+                .with_for_update()  # Lock the row for concurrent safety
+                .first()
+            )
+
+            if not slot or slot.slots_remaining == 0:
+                message = (
+                    f"Sorry, the slot {format_timestamp(time_slot)} in {location} is already booked."
+                    if slot_lang == "en"
+                    else f"Ľutujem, termín {format_timestamp(time_slot)} v {location} je už obsadený, príďte osobne."
+                )
+                dispatcher.utter_message(text=message)
+                return []
+
+            # Book the slot
+            booking = Booking(
+                location=location,
+                email=email,
+                timestamp=time_slot,
+                donation_type=donation_type,
+                success=False,
+                status="confirmed"
+            )
+            session.add(booking)
+
+            # Update slot availability
+            slot.slots_remaining -= 1
+
+            session.commit()
+            return []
+
+        except Exception as e:
+            session.rollback()
+            logger.error(f"Error booking slot: {e}")
+            dispatcher.utter_message(text="An error occurred while booking your slot. Please try again.")
+            return []
+        finally:
+            session.close()
+
+
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
         email = tracker.get_slot("slot_user_email")
         time_slot = tracker.get_slot("slot_booking_time")
@@ -65,24 +109,20 @@ class ActionBookSlot(Action):
         email = email if email else "mlukan@gmail.com"
         slot_lang = tracker.get_slot("slot_lang")
         donation_type = "whole blood"
-        conn = sqlite3.connect("../data/calendar.db")
-        cursor = conn.cursor()
+        self.book_time_slot(email, location, time_slot, donation_type, slot_lang, dispatcher)
 
-        # Check if the slot is already booked
-        cursor.execute("SELECT slots_remaining FROM slots WHERE timestamp = ? and location = ?", (time_slot, location))
-        if cursor.fetchone()[0]== 0:
-            if slot_lang=="en":
-                dispatcher.utter_message(text=f"Sorry, the slot {format_timestamp(time_slot)}  in {location} is already booked.")
-            else:
-                dispatcher.utter_message(text=f"Ľutujem, termín {format_timestamp(time_slot)} v {location} je už obsadený, príďte osobne.")
-            conn.close()
-            return []
+        dt = datetime.fromtimestamp(time_slot*60)
+        date = dt.strftime("%Y-%m-%d")  # '20250330'
+        starttime = dt.strftime("%H:%M:%S")  # '1530'
+        endtime = (dt + timedelta(minutes=30)).strftime("%H:%M:%S")  # '1600'
 
-        # Book the slot
-        cursor.execute("INSERT INTO booking (location, email, timestamp, donation_type, success, status) VALUES (?, ?, ?, ?, ?, ?)", (location, email, time_slot, donation_type, False, "confirmed"))
-        cursor.execute("UPDATE slots SET slots_remaining = slots_remaining - 1 WHERE timestamp = ? and location = ?", (time_slot, location))
-        conn.commit()
-        conn.close()
+        try: 
+            ics_content = generate_ics(date, starttime, endtime, slot_lang)
+            send_ics_email(email, ics_content, language="en")
+            logger.info(f"ICS file sent to {email} for booking at {location} on {time_slot}")
+        except Exception as e:
+            logger.error(f"Could not send ICS file: {e}")
+ 
         if slot_lang=="en":
             dispatcher.utter_message(text=f"Your booking for {format_timestamp(time_slot)} at {location} is confirmed.")
         else:        
@@ -90,86 +130,64 @@ class ActionBookSlot(Action):
         return []
     
 class ActionCancelBooking(Action):
-    def name(self) -> Text:
+    def name(self):
         return "action_cancel_booking"
 
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-        email = tracker.get_slot("slot_user_email")
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain):
+        email = tracker.get_slot("slot_user_email") or "mlukan@gmail.com"
         future_booking = tracker.get_slot("slot_future_booking")
-        email = email if email else "mlukan@gmail.com"
         slot_lang = tracker.get_slot("slot_lang")
-        conn = sqlite3.connect("../data/calendar.db")
-        cursor = conn.cursor()
-        if future_booking:
-            time_slot = future_booking["timestamp"]
-            location = future_booking["location"]
 
-            try:
-                cursor.execute("DELETE from booking  WHERE timestamp = ? and location = ? and email = ?", (time_slot, location, email,))
-                conn.commit()
-                conn.close()
-                if slot_lang=="en":
-                    dispatcher.utter_message(text=f"Your booking for {format_timestamp(time_slot)} at {location} is canceled.")
-                else:
-                    dispatcher.utter_message(text=f"Vaša rezervácia pre {format_timestamp(time_slot)} v odbernom mieste {location} bola zrušená.")
+        if not future_booking:
+            message = (
+                "No future booking found."
+                if slot_lang == "en"
+                else "Nenašla sa žiadna budúca rezervácia."
+            )
+            dispatcher.utter_message(text=message)
+            return []
+
+        time_slot = future_booking["timestamp"]
+        location = future_booking["location"]
+
+        session = SessionLocal()
+        try:
+            # Locate and delete the booking
+            booking = (
+                session.query(Booking)
+                .filter(
+                    Booking.timestamp == time_slot,
+                    Booking.location == location,
+                    Booking.email == email,
+                )
+                .first()
+            )
+
+            if booking:
+                session.delete(booking)
+                session.commit()
+
+                message = (
+                    f"Your booking for {format_timestamp(time_slot)} at {location} is canceled."
+                    if slot_lang == "en"
+                    else f"Vaša rezervácia pre {format_timestamp(time_slot)} v odbernom mieste {location} bola zrušená."
+                )
+                dispatcher.utter_message(text=message)
                 logger.info(f"Booking canceled for {email} at {location} on {time_slot}")
-                return [SlotSet("slot_location",location)]
-            except Exception as e:
-                logger.error(f"Could not cancel booking: {e}")
-                if slot_lang=="en":
-                    dispatcher.utter_message(text=f"Could not cancel booking for {format_timestamp(time_slot)} at {location}.")
-                else:
-                    dispatcher.utter_message(text=f"Nepodarilo sa zrušiť rezerváciu pre {format_timestamp(time_slot)} v odbernom mieste {location}.")
-                return []
-        else:
-            if slot_lang=="en":
-                dispatcher.utter_message(text="No future booking found.")
+                return [SlotSet("slot_location", location)]
             else:
-                dispatcher.utter_message(text="Nenašla sa žiadna budúca rezervácia.")
+                raise ValueError("Booking not found")
+
+        except Exception as e:
+            logger.error(f"Could not cancel booking: {e}")
+            message = (
+                f"Could not cancel booking for {format_timestamp(time_slot)} at {location}."
+                if slot_lang == "en"
+                else f"Nepodarilo sa zrušiť rezerváciu pre {format_timestamp(time_slot)} v odbernom mieste {location}."
+            )
+            dispatcher.utter_message(text=message)
             return []
+        finally:
+            session.close()
 
 
-class ActionGenerateICS(Action):
-    def name(self) -> Text:
-        return "action_generate_ics"
-
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-        slot_lang = tracker.get_slot("slot_lang")
-
-        email = next(tracker.get_latest_entity_values("email"), None)
-        date = next(tracker.get_latest_entity_values("date"), None)
-        time = next(tracker.get_latest_entity_values("time"), None)
-
-        if not email or not date or not time:
-            dispatcher.utter_message(text="Please provide your email, date, and time slot.")
-            return []
-
-        conn = sqlite3.connect("../data/calendar.db")
-        cursor = conn.cursor()
-
-        # Check if booking exists
-        cursor.execute("SELECT COUNT(*) FROM booking WHERE email = ? AND date = ? AND time = ?", (email, date, time))
-        if cursor.fetchone()[0] == 0:
-            dispatcher.utter_message(text="No such booking found.")
-            conn.close()
-            return []
-
-        conn.close()
-
-        # Generate ICS file
-        cal = Calendar()
-        event = Event()
-        event.name = "Appointment Booking"
-        event.begin = f"{date} {time}:00"
-        event.description = f"Appointment booked by {email}"
-        cal.events.add(event)
-
-        ics_filename = f"booking_{email}_{date}_{time.replace(':', '')}.ics"
-        ics_path = os.path.join(os.getcwd(), ics_filename)
-
-        with open(ics_path, "w") as f:
-            f.writelines(cal)
-
-        dispatcher.utter_message(text=f"Here is your ICS file for the booking at {date} {time}.", attachment=ics_filename)
-
-        return []

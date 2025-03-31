@@ -6,7 +6,6 @@ from rasa_sdk.executor import CollectingDispatcher
 import sqlite3
 from ics import Calendar, Event
 import os
-from actions.calendar_utils import get_lookup_date, get_time_slots, format_timestamp, get_next_booking_for_user
 from actions.constants import LOCATIONS
 
 class ActionCheckLocation(Action):

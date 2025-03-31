@@ -1,10 +1,15 @@
 flows:
   flow_donation_questionnaire:
     description: Flow to ask all blood donation questionnaire questions. Flow na získanie všetkých otázok z dotazníka pre darovanie krvi.
+    persisted_slots:
+      - slot_wants_to_register
+      - slot_start_questionnaire
     steps:
     - action: action_initiate
     - call: flow_authenticate_user
     - action: utter_disclaimer
+    - set_slots: 
+      - slot_squat: true
     - collect: slot_q1
       utter: utter_ask_slot_q1
     - collect: slot_q2
@@ -79,6 +84,9 @@ flows:
       utter: utter_ask_slot_q19_2
     - collect: slot_q19_3
       utter: utter_ask_slot_q19_3
+      rejections:
+        - if: not (slots.slot_q19_3 matches "^\d{4}$")
+          utter: utter_invalid_year_format
     - collect: slot_q20
       utter: utter_ask_slot_q20
     - collect: slot_q21
@@ -116,4 +124,8 @@ flows:
       next: END
     - action: utter_reject_declaration
       id: step_reject_declaration
+    - set_slots:
+      - slot_squat: None
+      - slot_wants_to_register: False
+      - slot_start_questionnaire: False
       next: END

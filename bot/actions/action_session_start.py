@@ -18,6 +18,8 @@ class ActionSessionStart(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
         # Retrieve session_id from tracker.sender_id
-        dispatcher.utter_message(response="utter_session_start")
+        #dispatcher.utter_message(response="utter_session_start")
+        dispatcher.utter_message(text="I am the blood donation bot")
+
         return []
      

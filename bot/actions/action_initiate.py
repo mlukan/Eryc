@@ -19,7 +19,7 @@ class ActionInitiate(Action):
     ) -> List[Dict[Text, Any]]:
         # Retrieve session_id from tracker.sender_id
         message = tracker.latest_message.get("text")
-
+        logger.info(f"Detecting language for message: {message}")
         language = detect_language(message)
         logger.info(f"Detected language: {language}")
         return [SlotSet("slot_lang", language)]

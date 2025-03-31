@@ -25,9 +25,10 @@ slots:
   slot_last_location:
     type: text
     mappings:
-    - type: custom
-      action: action_ask_slot_location
-  
+    #- type: custom
+    #  action: action_ask_slot_location
+    - type: from_llm
+
   slot_location_choice:
     type: bool
     mappings:
@@ -135,7 +136,10 @@ slots:
   slot_feedback:
     type: text
     mappings:
-    - type: from_llm
+    # - type: from_llm
+      - type: custom
+        action: action_collect_feedback
+
     initial_value: pending
  
   slot_squat:
@@ -156,8 +160,8 @@ slots:
 responses:
 
   utter_session_start:
-    - text: "Hello! I am B., the blood donation bot. I am eager to help you book your blood donation with the NTS, or just answer any questions you might have related to blood donation. How can I help you today?\n
-             Ahoj! Som B., blot donation bot. Rád pomôžem  s rezerváciou darovania krvi v odberných centrách NTS, alebo zodpoviem  na akékoľvek otázky ohľadom darovania krvi. Ako Vám môžem pomôcť dnes?"
+    - text: "Hi there! I'm Eryc, your assistant for blood donation at NTS. Whether you want to book an appointment or just have a question, I’m here to help! \n\n
+             Ahoj! Som Eryc. \n Ak si chcete rezervovať termín odberu krvi v centrách NTS, alebo sa len na niečo opýtať, rád Vám pomôžem."
 
 
   utter_lookup_slot_booking_time:
@@ -169,12 +173,13 @@ responses:
         value: sk
 
   utter_ask_slot_lookup_date:
-    - text: "When would you like to donate blood in {slot_location}? Today, tomorrow, this week, next week or some other day (MM-DD)?"
-    - text: "Kedy by ste chceli darovať krv v odbernom mieste {slot_location}? Dnes, zajtra, tento týždeň, budúci týždeň alebo v iný deň (DD.MM.)?"
+    - text: "When would you like to donate blood in {slot_location}? Please type a date like 03-24."
+    - text: "Kedy by ste chceli darovať krv v odbernom mieste {slot_location}? Zadajte prosím dátum, napr. 24.03."
       condition:
       - type: slot
         name: slot_lang
         value: sk
+
 
   utter_message_must_register:
     - text: "You cannot proceed without registration. Please use the website or mobile app for user registration."
@@ -215,7 +220,15 @@ responses:
       - type: slot
         name: slot_lang
         value: sk
-  
+
+  utter_invalid_email_format:
+    - text: "You have entered an invalid e-mail address."
+    - text: "Zadali ste neplatnú e-mailovú adresu."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
   utter_can_do_something_else:
   - condition:
     - type: slot
@@ -239,7 +252,15 @@ responses:
       - type: slot
         name: slot_lang
         value: sk
-  
+
+  utter_input_too_long:
+    - text: "The entered textis too long. The length should be a maximum of 120 characters."
+    - text: "Zadali ste príliš dlhý text. Dĺžka nesmie presiahnuť 120 znakov."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
   utter_ask_slot_user_phone:
     - text: "Please enter your phone number."
     - text: "Prosím zadajte svoje telefónne číslo."
@@ -248,6 +269,14 @@ responses:
         name: slot_lang
         value: sk
   
+  utter_invalid_phone_number:
+    - text: "The entered phone number is invalid."
+    - text: "Zadané telefónne číslo je neplatné."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
   utter_ask_slot_user_address:
     - text: "Please enter your address."
     - text: "Prosím zadajte svoju adresu."
@@ -272,6 +301,14 @@ responses:
         name: slot_lang
         value: sk
   
+  utter_invalid_dob_format:
+    - text: "I cannot process the entered date. Please use the format DD.MM.YYYY, such as 24.03.1990."
+    - text: "Zadaný dátum nedokážem spracovať. Zadajte prosím dátum vo formáte DD.MM.RRRR, napr. 24.03.1990."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
   utter_ask_slot_user_gender:
     - text: "Please enter your gender as M or F."
     - text: "Prosím zadajte svoje pohlavie ako M alebo F."
@@ -279,7 +316,15 @@ responses:
       - type: slot
         name: slot_lang
         value: sk
-  
+
+  utter_invalid_gender:
+    - text: "The entered gender is invalid, please enter M, F or 0."
+    - text: "Zadané pohlavie je neplatné, prosím zadajte svoje pohlavie ako M, F alebo 0."
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
+
   utter_invalid_email:
     - text: "The e-mail address {slot_user_email} is not in our database."
     - text: "E-mailovú adresu  {slot_user_email} nemáme v našej databáze."
@@ -380,14 +425,14 @@ responses:
         value: sk
 
   utter_ask_start_questionnaire:
-    - text: "Would you like to start the questionnaire?"
-    - text: "Chceli by ste začať s dotazníkom?"
+    - text: "You have to fill out a questionnaire not more than 24 hours before each blood donation. Do you want to take the questionnaire now?"
+    - text: "Pred každým darovaním krvi musíte vyplniť dotazník, ktorý nesmie byť starší ako 24 hodín. Chcete vyplniť dotazník teraz?"
       condition:
       - type: slot
         name: slot_lang
         value: sk
 actions:
-  - action_session_start
+  #- action_session_start
   - action_search_faiss
   - action_book_slot
   - action_cancel_booking

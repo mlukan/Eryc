@@ -856,8 +856,8 @@ responses:
     - title: Nie
       payload: /SetSlots(slot_q19_2=no)
   utter_ask_slot_q19_3:
-  - text: Since when have you lived in Europe?
-  - text: Od kedy žijete v Európe?
+  - text: Since when have you lived in Europe (year such as 1990)?
+  - text: Od kedy žijete v Európe? (uveďte rok, napr. 1990)
     condition:
     - type: slot
       name: slot_lang
@@ -1084,6 +1084,14 @@ responses:
   utter_reject_declaration:
   - text: "You have not accepted the declaration. The questionnaire is not complete. Before the blood donation, you'll be asked to fill out the same questionnaire again."
   - text: "Vyhlásenie ste neprijali. Dotazník nie je kompletný. Pred odborom krvi budete požiadaný(á) o vyplnenie rovnakého dotazníka znova." 
+    condition:
+    - type: slot
+      name: slot_lang
+      value: sk
+  
+  utter_invalid_year_format:
+  - text: "Please provide a valid year in YYYY format."
+  - text: "Zadajte prosím platný rok vo formáte RRRR."
     condition:
     - type: slot
       name: slot_lang

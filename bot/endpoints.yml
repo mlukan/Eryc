@@ -41,10 +41,25 @@ action_endpoint:
 #  password: password
 #  queue: queue
 
+
+
+cors:
+  origins:
+    - "http://localhost:8000"
+    - "http://127.0.0.1:8000"
+
+
 # Allow rephrasing of responses using a Rasa-hosted model
 nlg:
   type: rephrase
   llm:
-    provider: rasa
-    model: rasa/cmd_gen_codellama_13b_calm_demo
-    api_base: "https://tutorial-llm.rasa.ai"
+    #provider: rasa
+    #model: rasa/cmd_gen_codellama_13b_calm_demo
+    #api_base: "https://tutorial-llm.rasa.ai"
+    provider: azure
+    model: gpt-4o
+    engine: gpt-4o
+    api_type: azure
+    request_timeout: 1
+    api_base: https://voicecast-gpt-sweden-central.openai.azure.com
+    api_version: 2024-02-15-preview

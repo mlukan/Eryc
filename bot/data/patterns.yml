@@ -5,12 +5,14 @@ flows:
     steps:
       - action: action_initiate
       - action: utter_free_chitchat_response
+
   pattern_search:
     description: Flow for handling knowledge-based questions
     name: pattern search
     steps:
       - action: action_initiate
       - action: action_search_faiss
+      - link: flow_feedback
   
   
 
@@ -89,12 +91,12 @@ flows:
     name: pattern correction
     steps:
       - action: action_correct_flow_slot
-        next:
-          - if: not context.is_reset_only
-            then:
-              - action: utter_corrected_previous_input
-                next: END
-          - else: END
+        next: END
+        #  - if: not context.is_reset_only
+        #    then:
+        #      - action: utter_corrected_previous_input
+        #        next: END
+        #  - else: END
 
   pattern_human_handoff:
     description: Conversation repair flow for switching users to a human agent if their request can't be handled
@@ -140,7 +142,7 @@ flows:
     nlu_trigger:
       - intent: session_start
     steps:
-      - action: action_session_start
+      - action: utter_session_start
 
   pattern_skip_question:
     description: Conversation repair flow for managing user intents to skip questions (steps)
@@ -191,10 +193,10 @@ responses:
   utter_ask_still_there:
     - text: "Hello, are you still there?"
       metadata:
-        rephrase: True
+        rephrase: False
     - text: "Ešte ste tam?"
       metadata:
-        rephrase: True
+        rephrase: False
       condition:
       - type: slot
         name: slot_lang
@@ -203,11 +205,11 @@ responses:
   utter_boolean_slot_rejection:
     - text: "Sorry, the value you provided, `{{value}}`, is not valid. Please respond with a valid value."
       metadata:
-        rephrase: True
+        rephrase: False
         template: jinja
     - text: "Prepáčte, ale hodnota, ktorú ste poskytli, `{{value}}`, nie je platná. Prosím, odpovedajte platnou hodnotou."
       metadata:
-        rephrase: True
+        rephrase: False
         template: jinja
       condition:
       - type: slot
@@ -217,10 +219,10 @@ responses:
   utter_can_do_something_else:
     - text: "What else can I help you with?"
       metadata:
-        rephrase: True
+        rephrase: False
     - text: "Čím vám ešte môžem pomôcť?"
       metadata:
-        rephrase: True
+        rephrase: False
       condition:
       - type: slot
         name: slot_lang
@@ -237,11 +239,11 @@ responses:
   utter_categorical_slot_rejection:
     - text: "Sorry, you responded with an invalid value - `{{value}}`. Please select one of the available options."
       metadata:
-        rephrase: True
+        rephrase: False
         template: jinja
     - text: "Prepáčte, ale odpovedali ste neplatnou hodnotou - `{{value}}`. Prosím, vyberte jednu z dostupných možností."
       metadata:
-        rephrase: True
+        rephrase: False
         template: jinja
       condition:
       - type: slot
@@ -251,11 +253,11 @@ responses:
   utter_clarification_options_rasa:
     - text: "I can help, but I need more information. Which of these would you like to do: {{context.clarification_options}}?"
       metadata:
-        rephrase: True
+        rephrase: False
         template: jinja
     - text: "Môžem pomôcť, ale potrebujem viac informácií. Ktorú z týchto možností by ste chceli vykonať: {{context.clarification_options}}?"
       metadata:
-        rephrase: True
+        rephrase: False
         template: jinja
       condition:
       - type: slot
@@ -263,19 +265,26 @@ responses:
         value: sk
 
   utter_corrected_previous_input:
-    - text: "Ok, I am updating {{ context.corrected_slots.keys()|join(', ') }} to {{ context.corrected_slots.values()|join(', ') }} respectively."
+    - text: "Ok, I am updating {{ context.corrected_slots.values()|join(', ') }} to {{ context.corrected_slots.values()|join(', ') }} respectively."
       metadata:
-        rephrase: True
+        rephrase: False
         template: jinja
-
+    - text: "Dobre, aktualizujem {{ context.corrected_slots.values()|join(', ') }} na {{ context.corrected_slots.values()|join(', ') }}."
+      metadata:
+        rephrase: False
+        template: jinja
+      condition:
+      - type: slot
+        name: slot_lang
+        value: sk
   utter_float_slot_rejection:
     - text: "Sorry, it seems the value you provided `{{value}}` is not a valid number. Please provide a valid number in your response."
       metadata:
-        rephrase: True
+        rephrase: False
         template: jinja
     - text: "Prepáčte, ale zadaná hodnota `{{value}}` nie je platné číslo. Prosím, zadajte platné číslo vo vašej odpovedi."
       metadata:
-        rephrase: True
+        rephrase: False
         template: jinja
       condition:
       - type: slot
@@ -302,10 +311,10 @@ responses:
       metadata:
         rephrase: True
         rephrase_prompt: |
-          Ste neuveriteľne priateľský asistent. Vygenerujte krátku odpoveď na komentár používateľa jednoduchým anglickým jazykom.
+          Ste neuveriteľne priateľský asistent. Vytvor krátku  a jednoduchú odpoveď na otázku používateľa. Respond in slovak language.
 
-          Používateľ: {{current_input}}
-          Odpoveď:
+          User: {{current_input}}
+          Response:
       condition:
       - type: slot
         name: slot_lang
@@ -314,10 +323,10 @@ responses:
   utter_human_handoff_not_available:
     - text: I understand you want to be connected to a human agent, but that's something I cannot help you with at the moment. Is there something else I can help you with?
       metadata:
-        rephrase: True
+        rephrase: False
     - text: Chápem, že sa chcete spojiť s ľudským agentom, ale to je niečo, čo vám momentálne nemôžem pomôcť. Môžem vám s niečím iným pomôcť?
       metadata:
-        rephrase: True
+        rephrase: False
       condition:
       - type: slot
         name: slot_lang
@@ -326,10 +335,10 @@ responses:
   utter_inform_code_change:
     - text: There has been an update to my code. I need to wrap up our running dialogue and start from scratch.
       metadata:
-        rephrase: True
+        rephrase: False
     - text: Došlo k aktualizácii môjho kódu. Musím ukončiť našu bežiacu konverzáciu a začať odznova.
       metadata:
-        rephrase: True
+        rephrase: False
       condition:
       - type: slot
         name: slot_lang
@@ -338,7 +347,7 @@ responses:
   utter_inform_hangup:
     - text: It seems you are not there anymore. I will hang up shortly.
       metadata:
-        rephrase: True
+        rephrase: False
 
   utter_internal_error_rasa:
     - text: Sorry, I am having trouble with that. Please try again in a few minutes.
@@ -351,12 +360,12 @@ responses:
   utter_no_knowledge_base:
     - text: I am afraid, I don't know the answer. At this point, I don't have access to a knowledge base.
       metadata:
-        rephrase: True
+        rephrase: False
 
   utter_skip_question_answer:
     - text: I'm here to provide you with the best assistance, and in order to do so, I kindly request that we complete this step together. Your input is essential for a seamless experience!
       metadata:
-        rephrase: True
+        rephrase: False
 
   utter_user_input_empty_error_rasa:
     - text: I see an empty message. What can I assist you with?

@@ -3,7 +3,6 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
-import sqlite3
 from ics import Calendar, Event
 import os
 from actions.constants import LOCATIONS

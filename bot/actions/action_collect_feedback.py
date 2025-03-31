@@ -7,9 +7,19 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet, SessionStarted, ActionExecuted, EventType
 from actions.common_utils import detect_language
 from actions.calendar_utils import get_unix_minutes
+from actions.orm import Base, User, Booking, Slot,Feedback
 import logging
 import sqlite3
 logger = logging.getLogger(__name__)
+
+from sqlalchemy import Column, Integer, String, Text, Boolean, ForeignKey, CheckConstraint
+from sqlalchemy.orm import relationship, sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine
+engine = create_engine("sqlite:///../data/faq_database.db")
+Session = sessionmaker(bind=engine)
+session = Session()
+Base=declarative_base()
 class ActionCollectFeedback(Action):
     def name(self) -> Text:
         return "action_collect_feedback"
@@ -42,14 +52,22 @@ class ActionCollectFeedback(Action):
             logger.info(f"Last question: {last_question}")
             logger.info(f"Last response: {last_response}")
         timestamp = get_unix_minutes(datetime.now())
-        conn = sqlite3.connect("../data/faq_database.db")
-        cursor = conn.cursor()
-        cursor.execute("""
-                       INSERT INTO feedbacks (timestamp, sender, question, response,feedback)
-                       VALUES (?, ?, ?, ?, ?)
-                       """, (timestamp, sender, last_question, last_response, feedback))
-        conn.commit()
-        conn.close()
+        try:
+            new_feedback = Feedback(
+                timestamp=timestamp,
+                sender=sender,
+                question=last_question,
+                response=last_response,
+                feedback=feedback
+            )
+
+            # Add and commit the new feedback
+            session.add(new_feedback)
+            session.commit()
+        except Exception as e:
+            session.rollback()
+            logger.error(f"Error while adding feedback: {e}")
+        session.close()
         if lang == "en":
             dispatcher.utter_message("Thank you for your feedback!")
         else:
