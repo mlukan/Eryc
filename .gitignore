@@ -170,3 +170,4 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 .rasa
+.DS_Store
