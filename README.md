@@ -4,15 +4,13 @@ The blood donation bot, based on the Rasa Pro (CALM) framework.
 This document describes the technical features of the bot. For the use case context, please read the [Introduction to Eryc](web/content/intro.md)
 # Components
 ## Rasa training data
-[Chatbot flows and patterns](./bot/data/) 
-
-[Chatbot Rasa domain file](./bot/domain/) 
-
-[Trained models](./bot/models/) 
+[Chatbot flows and patterns](./bot/data/)  
+[Chatbot Rasa domain file](./bot/domain/)  
+[Trained models](./bot/models/)  
 
 ## Rasa custom actions
 [Action folder](./bot/actions/)  
-[ORM model](./bot/actions/orm.py)   
+[ORM model](./bot/actions/orm.py)    
 [Calendar actions](./bot/actions/calendar_actions.py)   
 [Calendar utils](./bot/actions/calendar_utils.py)  
 [Common utils](./bot/actions/common_utils.py)  
