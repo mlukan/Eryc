@@ -42,7 +42,7 @@ The chatbot uses a custom Azure OpenAI gpt-4o model deployment for the LLM comma
 
 Before running the chatbot, please train a new rasa model with a model of your choice. Change the llm model parameters in the [Rasa config file](./bot/config.yml)
 
-The custom LLM command generator **SingleStepLLMCoGenFaF** used in the Rasa config file can be found in [single_step_llm_cogen_faf.py](./.venv/lib/python3.10/site-packages/rasa/dialogue_understanding/generator/single_step_llm_cogen_faf.py)
+The custom LLM command generator **SingleStepLLMCoGenFaF** used in the Rasa config file can be found in [single_step_llm_cogen_faf.py](./custom/single_step_llm_cogen_faf.py) and before use must be copied to the virtual environment into your Rasa Pro installation.
 
 The **SingleStepLLMCoGenFaF** implements 2 modifications to the default SingleStepLLMCommandGenerator behavior. It allows skipping feedback choice in the feedback flow. 
 
