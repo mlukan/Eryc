@@ -5,8 +5,11 @@ This document describes the technical features of the bot. For the use case cont
 # Components
 ## Rasa training data
 [Chatbot flows and patterns](./bot/data/) 
+
 [Chatbot Rasa domain file](./bot/domain/) 
+
 [Trained models](./bot/models/) 
+
 ## Rasa custom actions
 [Action folder](./bot/actions/) 
 [ORM model](./bot/actions/orm.py) 
