@@ -4,29 +4,29 @@ The blood donation bot, based on the Rasa Pro (CALM) framework.
 This document describes the technical features of the bot. For the use case context, please read the [Introduction to Eryc](web/content/intro.md)
 # Components
 ## Rasa training data
-[Chatbot flows and patterns](./bot/data/)
-[Chatbot Rasa domain file](./bot/domain/)
-[Trained models](./bot/models/)
+[Chatbot flows and patterns](./bot/data/) 
+[Chatbot Rasa domain file](./bot/domain/) 
+[Trained models](./bot/models/) 
 ## Rasa custom actions
-[Action folder](./bot/actions/)
-[ORM model](./bot/actions/orm.py)
-[Calendar actions](./bot/actions/calendar_actions.py)
-[Calendar utils](./bot/actions/calendar_utils.py)
-[Common utils](./bot/actions/common_utils.py)
-[Semantic search action](./bot/actions/action_search_faiss.py)
+[Action folder](./bot/actions/) 
+[ORM model](./bot/actions/orm.py) 
+[Calendar actions](./bot/actions/calendar_actions.py) 
+[Calendar utils](./bot/actions/calendar_utils.py) 
+[Common utils](./bot/actions/common_utils.py) 
+[Semantic search action](./bot/actions/action_search_faiss.py) 
 ## Database files and original FAQ data
-[Calendar DB](./data/calendar.db)
-[FAQ and feedback DB](./data/faq_database.db)
+[Calendar DB](./data/calendar.db) 
+[FAQ and feedback DB](./data/faq_database.db) 
 ## Jupyter notebooks used for initial loading of FAQ DB etc.
-[Notebooks](./notebooks/)
+[Notebooks](./notebooks/) 
 ## Chat widget
-[Chat widget folder](./web/)
-[Frontpage with intro and chat widget](./web/index.html)
+[Chat widget folder](./web/) 
+[Frontpage with intro and chat widget](./web/index.html) 
 
 # Installation
 ## Requirements
-[Python virtual environment](./.venv/)
-[requirements.txt](./requirements.txt)
+[Python virtual environment](./.venv/) 
+[requirements.txt](./requirements.txt) 
 The chatbot uses a **Rasa Pro** installation based on 
 **python=3.10.16
 rasa-pro==3.11.2**
