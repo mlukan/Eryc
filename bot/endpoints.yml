@@ -48,18 +48,28 @@ cors:
     - "http://localhost:8000"
     - "http://127.0.0.1:8000"
 
-
+model_groups:
+  - id: gpt-4o-mini
+    models:
+      - provider: openai
+        model: gpt-4o-mini
+        timeout: 7
+        temperature: 0.0
+  - id: gpt-4-turbo
+    models:
+    - provider: openai
+      model: gpt-4-turbo
+      timeout: 7
+      temperature: 0.0
 # Allow rephrasing of responses using a Rasa-hosted model
 nlg:
   type: rephrase
   llm:
+    model_group: gpt-4o-mini
     #provider: rasa
     #model: rasa/cmd_gen_codellama_13b_calm_demo
     #api_base: "https://tutorial-llm.rasa.ai"
-    provider: azure
-    model: gpt-4o
-    engine: gpt-4o
-    api_type: azure
-    request_timeout: 1
-    api_base: https://voicecast-gpt-sweden-central.openai.azure.com
-    api_version: 2024-02-15-preview
+    #model: gpt-4o
+    #api_type: openai
+    #request_timeout: 1
+    #api_version: 2024-02-15-preview

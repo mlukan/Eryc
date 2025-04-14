@@ -135,6 +135,13 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+*.code-workspace
+.rasa
+# Models
+models
+# Notebooks
+calendar.ipynb
+scratch.ipynb
 
 # Spyder project settings
 .spyderproject

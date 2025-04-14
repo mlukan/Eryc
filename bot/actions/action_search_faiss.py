@@ -24,8 +24,7 @@ engine = create_engine("sqlite:///../data/faq_database.db")
 Session = sessionmaker(bind=engine)
 session = Session()
 Base=declarative_base()
-litellm.api_key = os.getenv("AZURE_API_KEY")
-litellm.api_base = os.getenv("AZURE_API_BASE")
+litellm.api_key = os.getenv("OPENAI_API_KEY")
 logger = logging.getLogger(__name__)
 
 # get embeddings from the SQlite
@@ -66,9 +65,7 @@ def build_faiss_index(embeddings_from_db):
 # Generate embeddings using litellm
 def generate_embeddings(query):
     response = litellm.embedding(
-        model="azure/text-embedding-3-large",
-        deployment_id="text-embedding-3-large",
-        api_version="2023-05-15",
+        model="text-embedding-3-large",
         input=query)
          
     return np.array(response["data"][0]["embedding"], dtype='float32')
@@ -126,8 +123,7 @@ def rephrase(question,response):
    
 
     response = litellm.completion(
-        model="azure/gpt-4",
-        deployment_id="gpt-4-turbo",
+        model="gpt-4o-mini",
         messages=[{ "content": prompt,"role": "user"}])
     result = response.choices[0].message.content
     

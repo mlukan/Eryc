@@ -1,7 +1,7 @@
 # Eryc
 As [Erythrocyte](https://en.wikipedia.org/wiki/Erythrocyte). This chatbot was built during the Rasa-Agent-Building-Challenge as a voluntary initiative to support the [NTS SR](https://www.ntssr.sk) (National Transfusion Service of the Slovak Republic) website with chatbot functionality. The NTS runs 12 blood donation centres around the country,supporting more than 100 thousand regular blood donors and another 200 thousand sporadic donors. Eryc is designed to answer any questions related to blood donation and help users to manage their blood donations. 
 ## Chatbot capabilities:
-1. Semantic search based on FAISS with text-embedding-3-large model embeddings. A response augmenting agent rephrases and enhances the responses.
+1. Semantic search based on FAISS with text-embedding-3-large model [embeddings](content/prep_faq_chart.html). A response augmenting agent rephrases and enhances the responses.
 2. User registration and OTP authentication for any user-specific tasks. Users are authenticated using e-mail and temporary access code before.
 3. Donation appointment booking, cancellation and rebooking.
 4. Handling donor elligibility for donation based on  gender, previous donation date and health condition.
@@ -14,13 +14,14 @@ As [Erythrocyte](https://en.wikipedia.org/wiki/Erythrocyte). This chatbot was bu
 3. Rasa action server for backend actions
 4. SQlite DB with SQLAlchemy ORM to store users, locations, bookings, surveys and feedbacks. 
 #### Rasa CALM Flows
-- flow\_authenticate\_user
-- flow\_book_donation\_slot
+- [flow\_authenticate\_user](content/flow_authenticate_user.html)
+- [flow\_book_donation\_slot](content/flow_book_donation.html)
 - flow\_cancel\_booking
 - flow\_donation\_questionnaire
 - flow\_feedback
 - flow\_register\_user
-- flow\_search\_faiss
+- [flow\_search\_faiss](content/flow_search_faiss.html)
+
 #### Custom features
 - Custom single step LLm command generator, which can handle omitted feedback and unwanted digressions 
 - 18 custom actions
