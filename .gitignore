@@ -140,8 +140,8 @@ venv.bak/
 # Models
 models
 # Notebooks
-calendar.ipynb
-scratch.ipynb
+notebooks/calendar.ipynb
+notebooks/scratch.ipynb
 
 # Spyder project settings
 .spyderproject
