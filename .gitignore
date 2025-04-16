@@ -140,6 +140,7 @@ venv.bak/
 # Models
 bot/models/
 bot/models
+model.tar.gz
 # Notebooks
 notebooks/calendar.ipynb
 notebooks/scratch.ipynb
