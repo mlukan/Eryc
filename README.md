@@ -69,8 +69,9 @@ The **action_collect_feedback** writes  to the FAQ DB the feedback type, user me
 ## Language version handling
 The Slovak or English language is detected by the custom action **action_initiate** at the start of the relevant flows. Conditional responses are used to selet the correct language response variation. 
 
-## Run Rasa server together with chat widget
-Configure the javascript constants [constants.js](./web/static/js/constants.js) in order to set up the correct url and port to your rasa server.
+## Chat widget
+![Chat widget frontend](web/static/img/screenshot.png)
+The project includes a  chat widget implementation which provides a basic theme and configuration. Modify the javascript constants [constants.js](./web/static/js/constants.js).
 Run a web server of your choice from the [web](./web/) directory, exposing the index.html
 Run rasa using the 
 `rasa run --enable-api --cors "*"`
