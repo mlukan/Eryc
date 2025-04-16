@@ -138,7 +138,8 @@ venv.bak/
 *.code-workspace
 .rasa
 # Models
-models/
+bot/models/
+bot/models
 # Notebooks
 notebooks/calendar.ipynb
 notebooks/scratch.ipynb
